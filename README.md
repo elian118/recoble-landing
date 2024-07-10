@@ -6,7 +6,7 @@ ___
 - 디자인 패턴
     - 앱라우트 페이지 MVVM 패턴 정의
         - `constants.ts`: 상수 모음 [M]
-        - `types.d.ts`: 모델 모음 [M]
+        - `types.ts`: 모델 모음 [M]
         - `repositories.ts`: DB 소통 쿼리 계층 [M]
             - `services.ts` 또는 `actions.ts`에서 호출
             - 클라이언트 컴포넌트는 훅에서 직접 `repositories.ts` 함수를 호출할 수도 있다.
@@ -235,6 +235,7 @@ ___
     - Recoble
     - Catchers's
     - svgr
+    - nanumgothic
 
 
 2. 웹스톰 > *.md 파일 > 오류 > 'HTML: 없음', 'Markdown: 없음' 선택
