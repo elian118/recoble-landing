@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Nanum_Gothic } from 'next/font/google';
 import './globals.css';
+import MenuBar from '@/components/MenuBar';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -26,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nanumGothic.variable}`}>{children}</body>
+      <body className={`${nanumGothic.variable}`}>
+        <MenuBar />
+        {children}
+      </body>
     </html>
   );
 }
