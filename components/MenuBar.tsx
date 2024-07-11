@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import ContactBtn from '@/components/ContactBtn';
 import PopMenuBar from '@/components/PopMenuBar';
+import Image from 'next/image';
+import logo from '@/public/images/logo.png';
 
 const MenuBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
@@ -26,12 +28,13 @@ const MenuBar = () => {
       >
         <div className="flex flex-row gap-12 justify-between items-center xl:w-10/12 w-full h-20 px-[30px]">
           <Link
-            className="flex-none text-3xl font-semibold cursor-pointer text-gray-900 btn-bold-hover"
+            className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn-bold-hover"
             href={'/'}
           >
-            Recoble
+            <Image src={logo as string} alt="logo" />
+            <span>Recoble</span>
           </Link>
-          <div className="hidden xl:flex flex-row flex-auto w-4/5 items-center gap-8 cursor-pointer">
+          <div className="hidden xl:flex flex-row flex-auto w-4/5 px-8 items-center gap-8 cursor-pointer">
             {menus
               .filter((e) => e.isMain)
               .map((e) => (
