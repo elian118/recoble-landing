@@ -60,6 +60,10 @@ body {
   .fade-in {
     animation: bounceIn 0.5s ease-in-out 1;
   }
+
+  .bouncing-ball {
+    animation: bounce 2s ease-out infinite;
+  }
 }
 
 /* 덜컹거림 */
@@ -75,5 +79,17 @@ body {
   100% {
     opacity: 100%;
     transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(6px) scale(0.9);
+  }
+  100% {
+    transform: translateY(0) scale(1);
   }
 }
