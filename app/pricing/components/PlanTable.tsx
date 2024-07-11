@@ -37,7 +37,7 @@ export const PlanTable = ({ isSelectedMonthly }: PlanTableProps) => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 mt-12 py-16 h-[200px]">
+          <div className="flex flex-col gap-4 my-8 py-16 h-[200px]">
             {plan.details.map((detail, idx) => (
               <div
                 key={`${plan.title}-detail-${idx}`}
