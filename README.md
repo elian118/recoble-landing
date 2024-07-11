@@ -5,7 +5,7 @@ ___
 - node: v20.11.1
 - 디자인 패턴
     - 앱라우트 페이지 MVVM 패턴 정의
-        - `constants.ts`: 상수 모음 [M]
+        - `constants.tsx`: 상수 모음 [M]
         - `types.ts`: 모델 모음 [M]
         - `repositories.ts`: DB 소통 쿼리 계층 [M]
             - `services.ts` 또는 `actions.ts`에서 호출
