@@ -65,7 +65,7 @@ body {
   }
 
   .plan-table > div {
-    @apply flex w-1/4 flex-col px-8 py-14;
+    @apply flex w-1/4 flex-col px-8 py-14 z-10;
     @apply border-r border-gray-100 bg-slate-50 last:bg-white;
     @apply h-auto xl:last:h-[560px] min-w-80 xl:min-w-72;
     @apply shadow-md last:shadow-xl;
