@@ -3,18 +3,28 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const ContactBtn = () => {
+type ContactBtnProps = {
+  setIsOpenMenu: (val: boolean) => void;
+};
+
+const ContactBtn = ({ setIsOpenMenu }: ContactBtnProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { push } = useRouter();
+
+  const onClickMenuIcon = (pathName) => {
+    push(pathName);
+    setIsOpenMenu(false);
+  };
+
   return (
     <div
-      className="menu-bar text-gray-900 hover:text-white"
+      className="contact-btn text-gray-900 hover:text-white"
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
-      onClick={() => push('/contact-us')}
+      onClick={() => onClickMenuIcon('/contact-us')}
     >
       <div style={{ visibility: 'hidden' }}>문의하기</div>
-      <div className="base-transition z-10 bg-transparent absolute top-2 left-5">
+      <div className="base-transition z-10 bg-transparent absolute top-2 left-0 w-full text-center">
         문의하기
       </div>
       <div
