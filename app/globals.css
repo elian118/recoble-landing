@@ -51,4 +51,24 @@ body {
     @apply base-transition;
     @apply border-gray-900 hover:border-transparent;
   }
+
+  .fade-in {
+    animation: bounceIn 0.5s ease-in-out 1;
+  }
+}
+
+/* 덜컹거림 */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateX(350px);
+  }
+  50% {
+    opacity: 50%;
+    transform: translateX(-6px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
 }

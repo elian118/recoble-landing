@@ -8,18 +8,13 @@ const ContactBtn = () => {
   const { push } = useRouter();
   return (
     <div
-      className="menu-bar"
+      className="menu-bar text-gray-900 hover:text-white"
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
       onClick={() => push('/contact-us')}
     >
       <div style={{ visibility: 'hidden' }}>문의하기</div>
-      <div
-        className={`
-          base-transition z-10 bg-transparent
-          absolute top-2 left-5
-          ${isHovered ? 'text-white' : 'text-gray-900'}`}
-      >
+      <div className="base-transition z-10 bg-transparent absolute top-2 left-5">
         문의하기
       </div>
       <div

@@ -12,7 +12,7 @@ const MenuBar = () => {
   return (
     <div
       className={`
-        flex justify-center w-full border-b-[1px] border-neutral-300 
+        flex justify-center w-full border-b-[1px] border-neutral-300 top-0 left-0 fixed 
         ${
           pathname === '/'
             ? 'bg-neutral-50'
