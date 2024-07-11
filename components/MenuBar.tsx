@@ -23,7 +23,7 @@ const MenuBar = () => {
     >
       <div className="flex flex-row gap-12 justify-between items-center xl:w-10/12 w-full h-20 px-[30px]">
         <Link
-          className="flex-none text-3xl font-bold cursor-pointer text-gray-900"
+          className="flex-none text-3xl font-semibold cursor-pointer text-gray-900 btn-bold-hover"
           href={'/'}
         >
           Recoble
@@ -34,7 +34,7 @@ const MenuBar = () => {
             .map((e) => (
               <Link
                 key={e.name}
-                className={`text-lg ${pathname === e.pathName ? 'text-blue-500' : 'text-gray-900'} hover:scale-105 hover:font-semibold`}
+                className={`text-lg ${pathname === e.pathName ? 'text-blue-500' : 'text-gray-900'} btn-hover`}
                 href={e.pathName}
               >
                 {e.name}
@@ -42,7 +42,7 @@ const MenuBar = () => {
             ))}
         </div>
         <div className="flex flex-row gap-6 justify-end items-center w-[230px] min-w-[230px] text-gray-900">
-          <Link className="cursor-pointer" href={'/contact-us'}>
+          <Link className="btn-hover" href={'/contact-us'}>
             로그인
           </Link>
           <ContactBtn />

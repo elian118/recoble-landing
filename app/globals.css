@@ -34,6 +34,14 @@ body {
   .base-transition {
     @apply transition-all duration-100 ease-in-out;
   }
+
+  .btn-hover {
+    @apply hover:font-semibold hover:scale-105 cursor-pointer base-transition;
+  }
+
+  .btn-bold-hover {
+    @apply hover:font-bold hover:scale-105 cursor-pointer base-transition;
+  }
 }
 
 @layer components {
