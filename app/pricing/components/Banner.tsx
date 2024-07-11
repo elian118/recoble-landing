@@ -43,8 +43,8 @@ export const Banner = ({ isSelectedMonthlyState }: BannerProps) => {
         </div>
       </div>
       {/* 배경 장식 */}
-      <div className="size-[600px] rounded-full border border-gray-400 opacity-25 absolute top-[-70px]" />
-      <div className="size-[800px] rounded-full border border-gray-400 opacity-25 absolute top-[-166px]" />
+      <div className="size-[600px] rounded-full border border-gray-400 opacity-25 absolute top-[-70px] appear" />
+      <div className="size-[800px] rounded-full border border-gray-400 opacity-25 absolute top-[-170px] appear" />
       <div className="py-8 w-full">
         <Ball
           color="via-yellow-400 to-yellow-800"

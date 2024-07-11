@@ -78,6 +78,10 @@ body {
   .bouncing-ball {
     animation: bounce 2s ease-out infinite;
   }
+
+  .appear {
+    animation: scale-out 1s ease-in-out 1;
+  }
 }
 
 /* 덜컹거림 */
@@ -96,6 +100,7 @@ body {
   }
 }
 
+/* 통통거림 */
 @keyframes bounce {
   0% {
     transform: translateY(0) scale(1);
@@ -105,5 +110,15 @@ body {
   }
   100% {
     transform: translateY(0) scale(1);
+  }
+}
+
+/* 커지며 등장 */
+@keyframes scale-out {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -17,7 +17,7 @@ type BallProps = {
 export const Ball = ({ size, color, delay, top, bottom, left, right }: BallProps) => {
   return (
     <div
-      className="absolute"
+      className="absolute appear"
       style={{
         top: top,
         bottom: bottom,
