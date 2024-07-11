@@ -30,4 +30,17 @@ body {
   .text-balance {
     text-wrap: normal;
   }
+
+  .base-transition {
+    @apply transition-all duration-100 ease-in-out;
+  }
+}
+
+@layer components {
+  .menu-bar {
+    @apply rounded-full border-[1px] px-5 py-2 overflow-clip;
+    @apply font-semibold cursor-pointer relative;
+    @apply base-transition;
+    @apply border-gray-900 hover:border-transparent;
+  }
 }

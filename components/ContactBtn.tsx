@@ -1,14 +1,34 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
+
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const ContactBtn = () => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const { push } = useRouter();
   return (
-    <Link
-      className="rounded-full border-gray-900 border-[1px] px-5 py-2 font-semibold cursor-pointer"
-      href={'/contact-us'}
+    <div
+      className="menu-bar"
+      onMouseOver={() => setIsHovered(true)}
+      onMouseOut={() => setIsHovered(false)}
+      onClick={() => push('/contact-us')}
     >
-      문의하기
-    </Link>
+      <div style={{ visibility: 'hidden' }}>문의하기</div>
+      <div
+        className={`
+          base-transition z-10 bg-transparent
+          absolute top-2 left-5
+          ${isHovered ? 'text-white' : 'text-gray-900'}`}
+      >
+        문의하기
+      </div>
+      <div
+        className={`
+          bg-blue-600 w-full h-full absolute top-0 left-0
+          base-transition
+          ${isHovered ? 'translate-x-0 translate-y-0' : '-translate-x-28 -translate-y-12'} `}
+      />
+    </div>
   );
 };
 
