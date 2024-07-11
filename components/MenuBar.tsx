@@ -31,7 +31,7 @@ const MenuBar = () => {
             className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn-bold-hover"
             href={'/'}
           >
-            <Image src={logo as string} alt="logo" />
+            <Image width={90} height={90} src={logo as string} alt="logo" />
             <span>Recoble</span>
           </Link>
           <div className="hidden xl:flex flex-row flex-auto w-4/5 px-8 items-center gap-8 cursor-pointer">

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     default: 'Recoble',
   },
   description: '레코블 인사이트로 고객을 놓치지 마세요!',
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nanumGothic.variable} relative`}>
+      <body className={`${nanumGothic.variable} relative overflow-y-scroll`}>
         <MenuBar />
         {children}
         <Footer />

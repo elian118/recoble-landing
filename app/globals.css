@@ -36,11 +36,11 @@ body {
   }
 
   .btn-hover {
-    @apply hover:font-semibold hover:scale-105 cursor-pointer base-transition;
+    @apply hover:font-semibold hover:scale-105 cursor-pointer base-transition active:scale-95;
   }
 
   .btn-bold-hover {
-    @apply hover:font-bold hover:scale-105 cursor-pointer base-transition;
+    @apply hover:font-bold hover:scale-105 cursor-pointer base-transition active:scale-95;
   }
 }
 
@@ -50,6 +50,12 @@ body {
     @apply font-semibold cursor-pointer relative;
     @apply base-transition;
     @apply border-gray-900 hover:border-transparent;
+  }
+
+  .contact-card {
+    @apply flex flex-row flex-nowrap md:flex-wrap xl:flex-nowrap justify-start;
+    @apply w-full xl:w-8/12 bg-zinc-800 text-white px-12 py-10 overflow-clip;
+    @apply rounded-xl mt-16 md:gap-8 xl:gap-0;
   }
 
   .pop-menu-bar {
