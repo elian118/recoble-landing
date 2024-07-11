@@ -31,7 +31,9 @@ const MenuBar = () => {
             className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn-bold-hover"
             href={'/'}
           >
-            <Image width={90} height={90} src={logo as string} alt="logo" />
+            <div className="size-12">
+              <Image width={100} height={100} src={logo as string} alt="logo" />
+            </div>
             <span>Recoble</span>
           </Link>
           <div className="hidden xl:flex flex-row flex-auto w-4/5 px-8 items-center gap-8 cursor-pointer">
@@ -48,7 +50,7 @@ const MenuBar = () => {
               ))}
           </div>
           <div className="flex flex-row gap-6 justify-end items-center w-[230px] min-w-[230px] text-gray-900">
-            <Link className="hidden lg:flex btn-hover" href={'/contact-us'}>
+            <Link className="hidden lg:flex btn-hover" href={'/home'}>
               로그인
             </Link>
             <div className="hidden lg:flex">
