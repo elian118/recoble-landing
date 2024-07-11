@@ -1,8 +1,9 @@
 import React from 'react';
+import { Ball } from '@/app/about/components/Ball';
 
 export const Answer = () => {
   return (
-    <div className="w-full px-4 lg:w-10/12 lg:px-0 mb-28">
+    <div className="w-full px-4 lg:w-10/12 lg:px-0 mb-28 relative">
       <div
         className="
         w-full h-96 flex flex-col gap-2 lg:gap-6 justify-center items-center
@@ -19,6 +20,34 @@ export const Answer = () => {
         <div className="w-[580px] h-[580px] rounded-full border border-gray-50 opacity-25 absolute top-[-100px] left-2/5" />
         <div className="w-[800px] h-[800px] rounded-full border border-gray-50 opacity-25 absolute top-[-210px] left-2/5" />
       </div>
+      <Ball
+        color="via-gray-100 to-gray-500"
+        size="size-10"
+        delay="delay-0"
+        left="6%"
+        top="14%"
+      />
+      <Ball
+        color="via-yellow-400 to-yellow-800"
+        size="size-8"
+        delay="delay-0"
+        right="5%"
+        top="6%"
+      />
+      <Ball
+        color="via-green-400 to-green-800"
+        size="size-6"
+        delay="delay-200"
+        right="21%"
+        bottom="36%"
+      />
+      <Ball
+        color="via-blue-400 to-blue-800"
+        size="size-8"
+        delay="delay-750"
+        left="12%"
+        bottom="26%"
+      />
     </div>
   );
 };

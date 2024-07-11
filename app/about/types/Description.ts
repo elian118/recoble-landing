@@ -4,4 +4,5 @@ export type Description = {
   title: string;
   titleColor: string;
   comment: ReactNode;
+  imgSrc: string;
 };
