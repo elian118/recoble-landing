@@ -49,15 +49,15 @@ const MenuBar = () => {
                 </Link>
               ))}
           </div>
-          <div className="flex flex-row gap-6 justify-end items-center w-[230px] min-w-[230px] text-gray-900">
-            <Link className="hidden lg:flex btn-hover" href={'/home'}>
+          <div className="flex flex-row gap-6 justify-end items-center w-[230px] text-gray-900">
+            <Link className="hidden lg:flex btn-hover min-w-[50px]" href={'/home'}>
               로그인
             </Link>
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex min-w-[110px]">
               <ContactBtn setIsOpenMenu={setIsOpenMenu} />
             </div>
             <div
-              className="size-10 xl:hidden text-4xl btn-hover"
+              className="size-10 xl:hidden text-4xl btn-hover text-end"
               onClick={() => setIsOpenMenu(!isOpenMenu)}
             >
               {isOpenMenu ? '×' : '≡'}
