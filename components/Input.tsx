@@ -18,7 +18,7 @@ export const _Input = (
         {...rest}
       />
       {errors?.map((err, idx) => (
-        <span key={idx} className="text-red-500 font-medium">
+        <span key={idx} className="text-red-500 font-medium text-sm">
           {err}
         </span>
       ))}
