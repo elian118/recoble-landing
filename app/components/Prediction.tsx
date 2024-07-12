@@ -1,7 +1,11 @@
 import React from 'react';
-import predictionSlide1 from '@/public/images/prediction_slide_1.png';
-import predictionSlide2 from '@/public/images/prediction_slide_2.png';
+import predict1 from '@/public/images/predict_1.png';
+import predict2 from '@/public/images/predict_2.png';
+import predict3 from '@/public/images/predict_3.png';
+import predict4 from '@/public/images/predict_4.png';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 export const Prediction = () => {
   return (
@@ -23,8 +27,29 @@ export const Prediction = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 xl:w-3/5 mb-8 xl:mb-0 flex gap-12 justify-center md:justify-start items-center flex-wrap md:flex-nowrap content card-graph">
-          <Image src={predictionSlide1 as string} alt="recoble customer view" />
-          <Image src={predictionSlide2 as string} alt="recoble customer view" />
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>
+              <Image src={predict1 as string} alt="recoble customer view" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={predict2 as string} alt="recoble customer view" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={predict3 as string} alt="recoble customer view" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={predict4 as string} alt="recoble customer view" />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>

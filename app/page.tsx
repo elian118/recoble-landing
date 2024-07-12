@@ -3,6 +3,9 @@
 import { Analyze, Insight, Personalization, Prediction, Preview } from '@/app/components';
 import AssertRecoble from '@/app/components/AssertRecoble';
 import { useEffect } from 'react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function Home() {
   useEffect(() => {
