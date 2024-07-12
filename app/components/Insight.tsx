@@ -1,17 +1,20 @@
 import React from 'react';
 import graph1 from '@/public/images/graph_1.png';
 import Image from 'next/image';
+import FadeIn from '@/components/FadeIn';
 
 export const Insight = () => {
   return (
     <div className="w-full h-screen bg-blue-600 flex flex-col justify-center items-center gap-6 p-8">
       <div className="m-6">
-        <Image
-          width={900}
-          height={700}
-          src={graph1 as string}
-          alt="recoble composition"
-        />
+        <FadeIn>
+          <Image
+            width={900}
+            height={700}
+            src={graph1 as string}
+            alt="recoble composition"
+          />
+        </FadeIn>
       </div>
       <p className="text-3xl sm:text-5xl font-semibold text-white text-center sm:leading-tight">
         잠재 고객<span className="font-light">부터</span> 충성 고객까지

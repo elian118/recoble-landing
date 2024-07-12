@@ -14,7 +14,7 @@ type BallProps = {
   bottom?: string;
 };
 
-export const Ball = ({ size, color, delay, top, bottom, left, right }: BallProps) => {
+const Ball = ({ size, color, delay, top, bottom, left, right }: BallProps) => {
   return (
     <div
       className="absolute appear"
@@ -32,3 +32,5 @@ export const Ball = ({ size, color, delay, top, bottom, left, right }: BallProps
     </div>
   );
 };
+
+export default Ball;

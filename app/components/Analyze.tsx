@@ -1,6 +1,7 @@
 import React from 'react';
 import imgHomeContent2 from '@/public/images/img_home_content_02.png';
 import Image from 'next/image';
+import FadeIn from '@/components/FadeIn';
 
 export const Analyze = () => {
   return (
@@ -16,7 +17,9 @@ export const Analyze = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2">
-          <Image src={imgHomeContent2 as string} alt="recoble customer view" />
+          <FadeIn>
+            <Image src={imgHomeContent2 as string} alt="recoble customer view" />
+          </FadeIn>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import FadeIn from '@/components/FadeIn';
 import Image from 'next/image';
 import aboutImg from '@/public/images/about.png';
-import { Ball } from '@/app/about/components/Ball';
+import Ball from '@/components/Ball';
 
 export const Banner = () => {
   return (

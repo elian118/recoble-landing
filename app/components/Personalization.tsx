@@ -1,6 +1,7 @@
 import React from 'react';
 import personalizationSlide from '@/public/images/personalization_slide.png';
 import Image from 'next/image';
+import FadeIn from '@/components/FadeIn';
 
 export const Personalization = () => {
   return (
@@ -20,7 +21,9 @@ export const Personalization = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <Image src={personalizationSlide as string} alt="recoble personalization" />
+          <FadeIn>
+            <Image src={personalizationSlide as string} alt="recoble personalization" />
+          </FadeIn>
         </div>
       </div>
     </div>

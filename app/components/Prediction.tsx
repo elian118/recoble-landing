@@ -2,6 +2,7 @@ import React from 'react';
 import predictionSlide1 from '@/public/images/prediction_slide_1.png';
 import predictionSlide2 from '@/public/images/prediction_slide_2.png';
 import Image from 'next/image';
+import FadeIn from '@/components/FadeIn';
 
 export const Prediction = () => {
   return (
@@ -23,8 +24,12 @@ export const Prediction = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 xl:w-3/5 mb-8 xl:mb-0 flex gap-12 justify-center md:justify-start items-center flex-wrap md:flex-nowrap">
-          <Image src={predictionSlide1 as string} alt="recoble customer view" />
-          <Image src={predictionSlide2 as string} alt="recoble customer view" />
+          <FadeIn>
+            <Image src={predictionSlide1 as string} alt="recoble customer view" />
+          </FadeIn>
+          <FadeIn>
+            <Image src={predictionSlide2 as string} alt="recoble customer view" />
+          </FadeIn>
         </div>
       </div>
     </div>

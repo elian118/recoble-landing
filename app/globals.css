@@ -59,8 +59,9 @@ body {
   }
 
   .pop-menu-bar {
+    @apply bg-white z-20;
     @apply flex xl:hidden flex-col gap-4 base-transition;
-    @apply w-full px-8 py-4 bg-white border absolute top-20 left-0;
+    @apply w-full px-8 py-4 bg-white border fixed top-20 left-0;
   }
 
   .plan-table {
@@ -86,7 +87,7 @@ body {
   }
 
   .appear {
-    animation: scale-out 1s ease-in-out 1;
+    animation: scale-out 0.8s ease-in-out 1;
   }
 }
 

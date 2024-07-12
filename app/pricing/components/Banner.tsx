@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Ball } from '@/app/about/components';
+import Ball from '@/components/Ball';
 
 type BannerProps = {
   isSelectedMonthlyState: [boolean, (val: boolean) => void];

@@ -1,17 +1,20 @@
 import React from 'react';
 import composition from '@/public/images/compositon.gif';
 import Image from 'next/image';
+import Appear from '@/components/Appear';
 
 export const Preview = () => {
   return (
     <div className="w-full h-screen bg-gray-200 flex flex-col justify-center items-center gap-6 p-8">
       <div className="m-6">
-        <Image
-          width={200}
-          height={200}
-          src={composition as string}
-          alt="recoble composition"
-        />
+        <Appear>
+          <Image
+            width={200}
+            height={200}
+            src={composition as string}
+            alt="recoble composition"
+          />
+        </Appear>
       </div>
       <p className="text-3xl sm:text-5xl font-bold text-center sm:leading-tight">
         레코블의 인사이트를 통해
