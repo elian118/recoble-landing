@@ -16,13 +16,15 @@ const nanumGothic = Nanum_Gothic({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s, 레코블',
-    default: 'Recoble',
+    template: '레코블 | %s',
+    default: 'Recoble - 레코블',
   },
-  description: '레코블 인사이트로 고객을 놓치지 마세요!',
+  description: '모든 이커머스 플랫폼의 성공전략, "레코블" 지금 바로 확인해보세요',
   icons: {
     icon: '/icon.png',
   },
+  authors: [{ name: 'elian118', url: 'https://github.com/elian118' }],
+  creator: 'Rye & Catchers',
 };
 
 export default function RootLayout({
