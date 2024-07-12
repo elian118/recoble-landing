@@ -79,7 +79,7 @@ body {
   }
 
   .fade-in {
-    animation: bounceIn 0.5s ease-in-out 1;
+    animation: bounceIn 1s ease-in-out 1;
   }
 
   .bouncing-ball {
@@ -88,6 +88,10 @@ body {
 
   .appear {
     animation: scale-out 0.8s ease-in-out 1;
+  }
+
+  .appear-up {
+    animation: fade-in-up 0.8s ease-in-out 1;
   }
 }
 
@@ -107,6 +111,17 @@ body {
   }
 }
 
+/* 아래에서 위로 서서히 등장 */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
 /* 통통거림 */
 @keyframes bounce {
   0% {
