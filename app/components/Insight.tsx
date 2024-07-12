@@ -1,5 +1,5 @@
 import React from 'react';
-import graph1 from '@/public/images/graph_1.png';
+import graph1 from '@/public/images/graph_2.png';
 import Image from 'next/image';
 
 export const Insight = () => {
