@@ -3,7 +3,7 @@ import predict1 from '@/public/images/predict_1.png';
 import predict2 from '@/public/images/predict_2.png';
 import predict3 from '@/public/images/predict_3.png';
 import predict4 from '@/public/images/predict_4.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 
@@ -38,16 +38,16 @@ export const Prediction = () => {
             pagination={{ clickable: true }}
           >
             <SwiperSlide>
-              <Image src={predict1 as string} alt="recoble customer view" />
+              <Image src={predict1 as StaticImageData} alt="recoble customer view" />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict2 as string} alt="recoble customer view" />
+              <Image src={predict2 as StaticImageData} alt="recoble customer view" />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict3 as string} alt="recoble customer view" />
+              <Image src={predict3 as StaticImageData} alt="recoble customer view" />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict4 as string} alt="recoble customer view" />
+              <Image src={predict4 as StaticImageData} alt="recoble customer view" />
             </SwiperSlide>
           </Swiper>
         </div>

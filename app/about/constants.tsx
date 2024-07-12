@@ -3,6 +3,7 @@ import React from 'react';
 import dataDecisionMaking from '@/public/images/data_decision_making.png';
 import solution from '@/public/images/solution.png';
 import serviceImprovement from '@/public/images/service_improvement.png';
+import { StaticImageData } from 'next/image';
 
 export const description: Description[] = [
   {
@@ -15,7 +16,7 @@ export const description: Description[] = [
         &nbsp;어떻게 진행해야 할지 막막하신가요?
       </p>
     ),
-    imgSrc: serviceImprovement as string,
+    imgSrc: serviceImprovement as StaticImageData,
   },
   {
     title: 'solution',
@@ -29,7 +30,7 @@ export const description: Description[] = [
         명확한 해결책을 알고 싶은가요?
       </p>
     ),
-    imgSrc: solution as string,
+    imgSrc: solution as StaticImageData,
   },
   {
     title: 'data decision making',
@@ -41,6 +42,6 @@ export const description: Description[] = [
         &nbsp;어려움을 겪고 계신가요?
       </p>
     ),
-    imgSrc: dataDecisionMaking as string,
+    imgSrc: dataDecisionMaking as StaticImageData,
   },
 ];

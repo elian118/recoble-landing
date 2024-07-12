@@ -5,7 +5,7 @@ import { useFormState } from 'react-dom';
 import Input from '@/components/Input';
 import { contact } from '@/app/contact-us/actions';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import contactImg from '@/public/images/contact.png';
 
 export const InputForms = () => {
@@ -70,7 +70,7 @@ export const InputForms = () => {
           className="w-3/5 md:w-full xl:3/5"
           width={380}
           height={300}
-          src={contactImg as string}
+          src={contactImg as StaticImageData}
           alt="contact image"
         />
       </div>

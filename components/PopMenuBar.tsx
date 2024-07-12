@@ -14,7 +14,7 @@ const PopMenuBar = ({ openMenuState }: MenuBarProps) => {
   const [isOpenMenu, setIsOpenMenu] = openMenuState;
   const pathname = usePathname();
 
-  const onClickMenuIcon = (pathName) => {
+  const onClickMenuIcon = (pathName: string) => {
     push(pathName);
     setIsOpenMenu(false);
   };

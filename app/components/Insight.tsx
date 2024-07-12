@@ -1,6 +1,6 @@
 import React from 'react';
 import graph1 from '@/public/images/graph_2.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export const Insight = () => {
   return (
@@ -9,7 +9,7 @@ export const Insight = () => {
         <Image
           width={900}
           height={700}
-          src={graph1 as string}
+          src={graph1 as StaticImageData}
           alt="recoble composition"
         />
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import composition from '@/public/images/compositon.gif';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export const Preview = () => {
   return (
@@ -9,7 +9,7 @@ export const Preview = () => {
         <Image
           width={200}
           height={200}
-          src={composition as string}
+          src={composition as StaticImageData}
           alt="recoble composition"
         />
       </div>

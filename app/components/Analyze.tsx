@@ -1,6 +1,6 @@
 import React from 'react';
 import imgHomeContent2 from '@/public/images/img_home_content_02.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export const Analyze = () => {
   return (
@@ -16,7 +16,7 @@ export const Analyze = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 content card-graph">
-          <Image src={imgHomeContent2 as string} alt="recoble customer view" />
+          <Image src={imgHomeContent2 as StaticImageData} alt="recoble customer view" />
         </div>
       </div>
     </section>

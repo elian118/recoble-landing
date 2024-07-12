@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import ContactBtn from '@/components/ContactBtn';
 import PopMenuBar from '@/components/PopMenuBar';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import logo from '@/public/images/logo.png';
 
 const MenuBar = () => {
@@ -32,7 +32,7 @@ const MenuBar = () => {
             href={'/'}
           >
             <div className="size-12">
-              <Image width={100} height={100} src={logo as string} alt="logo" />
+              <Image width={100} height={100} src={logo as StaticImageData} alt="logo" />
             </div>
             <span>Recoble</span>
           </Link>

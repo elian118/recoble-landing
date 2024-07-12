@@ -7,7 +7,14 @@ type BallProps = {
     | 'via-green-400 to-green-800'
     | 'via-blue-400 to-blue-800'
     | 'via-gray-100 to-gray-500';
-  delay: 'delay-0' | 'delay-75' | 'delay-100' | 'delay-150' | 'delay-200' | 'delay-500';
+  delay:
+    | 'delay-0'
+    | 'delay-75'
+    | 'delay-100'
+    | 'delay-150'
+    | 'delay-200'
+    | 'delay-500'
+    | 'delay-700';
   top?: string;
   left?: string;
   right?: string;

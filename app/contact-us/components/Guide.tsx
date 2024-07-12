@@ -1,6 +1,6 @@
 import React from 'react';
 import recobleImg from '@/public/images/recoble-img.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export const Guide = () => {
   return (
@@ -8,7 +8,7 @@ export const Guide = () => {
       <div className="flex flex-col gap-4 w-full xl:w-8/12">
         <div className="flex flex-col items-start gap-3">
           <p className="text-3xl font-semibold">Recoble</p>
-          <Image src={recobleImg as string} alt="recoble home" />
+          <Image src={recobleImg as StaticImageData} alt="recoble home" />
         </div>
       </div>
       <div className="flex flex-col gap-4 w-full xl:w-8/12">

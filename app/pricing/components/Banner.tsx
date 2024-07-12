@@ -63,7 +63,7 @@ export const Banner = ({ isSelectedMonthlyState }: BannerProps) => {
         <Ball
           color="via-blue-400 to-blue-800"
           size="size-8"
-          delay="delay-750"
+          delay="delay-700"
           right="-26%"
           bottom="24%"
         />

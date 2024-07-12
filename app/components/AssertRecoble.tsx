@@ -1,6 +1,6 @@
 import React from 'react';
 import assertRecobleSlide from '@/public/images/assert_recoble_slide.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 const AssertRecoble = () => {
   return (
@@ -19,7 +19,7 @@ const AssertRecoble = () => {
         <div className="pl-8 pt-6 lg:pt-0 md:pl-0 w-full lg:w-1/2 flex justify-end content card-graph">
           <Image
             height={490}
-            src={assertRecobleSlide as string}
+            src={assertRecobleSlide as StaticImageData}
             alt="Recommand you Recoble!"
           />
         </div>

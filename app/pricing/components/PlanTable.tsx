@@ -2,7 +2,7 @@ import React from 'react';
 import { plans } from '@/app/pricing/constants';
 import greenChkIco from '@/public/images/green_check_icon.png';
 import blackChkIco from '@/public/images/black_check_icon.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 type PlanTableProps = {
   isSelectedMonthly: boolean;
@@ -46,7 +46,11 @@ export const PlanTable = ({ isSelectedMonthly }: PlanTableProps) => {
                 <Image
                   width={24}
                   height={24}
-                  src={pIdx === 3 ? (blackChkIco as string) : (greenChkIco as string)}
+                  src={
+                    pIdx === 3
+                      ? (blackChkIco as StaticImageData)
+                      : (greenChkIco as StaticImageData)
+                  }
                   alt={detail}
                 />
                 <div className="font-light">{detail}</div>

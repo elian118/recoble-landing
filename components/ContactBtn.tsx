@@ -11,7 +11,7 @@ const ContactBtn = ({ setIsOpenMenu }: ContactBtnProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { push } = useRouter();
 
-  const onClickMenuIcon = (pathName) => {
+  const onClickMenuIcon = (pathName: string) => {
     push(pathName);
     setIsOpenMenu(false);
   };

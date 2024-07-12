@@ -1,6 +1,6 @@
 import React from 'react';
 import personalizationSlide from '@/public/images/personalization_slide.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export const Personalization = () => {
   return (
@@ -20,7 +20,10 @@ export const Personalization = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end content card-graph">
-          <Image src={personalizationSlide as string} alt="recoble personalization" />
+          <Image
+            src={personalizationSlide as StaticImageData}
+            alt="recoble personalization"
+          />
         </div>
       </div>
     </section>

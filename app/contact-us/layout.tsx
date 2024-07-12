@@ -1,4 +1,3 @@
-import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
   creator: 'Rye & Catchers',
 };
 
-const ContactUsLayout = ({ children }: ReactNode) => {
+const ContactUsLayout = ({ children }: { children: React.ReactNode }) => {
   return <div>{children}</div>;
 };
 

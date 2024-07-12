@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeIn from '@/components/FadeIn';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import aboutImg from '@/public/images/about.png';
 import Ball from '@/components/Ball';
 
@@ -14,7 +14,7 @@ export const Banner = () => {
             height={402}
             layout="responsive"
             loading="lazy"
-            src={aboutImg as string}
+            src={aboutImg as StaticImageData}
             alt="about recoble"
           />
           <Ball
@@ -34,7 +34,7 @@ export const Banner = () => {
           <Ball
             color="via-blue-400 to-blue-800"
             size="size-4"
-            delay="delay-750"
+            delay="delay-700"
             left="73%"
             top="34%"
           />

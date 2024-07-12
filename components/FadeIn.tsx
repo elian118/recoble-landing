@@ -1,6 +1,4 @@
-import React, { ReactNode } from 'react';
-
-const FadeIn = ({ children }: ReactNode) => {
+const FadeIn = ({ children }: { children: React.ReactNode }) => {
   return <div className="fade-in">{children}</div>;
 };
 
