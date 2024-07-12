@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .preview-section {
+        @apply w-full h-screen bg-gray-200;
+        @apply flex flex-col justify-center items-center gap-6 p-8;
+    }
+
+    .analyze-section {
+        @apply w-full min-h-screen bg-gray-200 p-8;
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .insight-section {
+        @apply w-full h-screen bg-blue-600;
+        @apply flex flex-col justify-center items-center gap-6 p-8;
+    }
+
+    .prediction-section {
+        @apply w-full min-h-screen bg-white p-8;
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .prediction-text {
+        @apply my-8 xl:my-0;
+        @apply flex flex-col gap-4 w-full;
+        @apply items-center lg:items-start lg:w-2/3 xl:w-2/5;
+    }
+
+    .prediction-swiper-container {
+        @apply w-full lg:w-1/2 xl:w-3/5 mb-8 xl:mb-0;
+        @apply flex gap-12 justify-center md:justify-start;
+        @apply items-center flex-wrap md:flex-nowrap;
+    }
+
+    .personalization-section {
+        @apply w-full h-screen bg-blue-600 p-8;
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .personalization-container {
+        @apply w-full md:w-11/12 xl:w-9/12 gap-24;
+        @apply lg:gap-0 flex flex-wrap justify-between items-center;
+    }
+
+    .personalization-text {
+        @apply flex flex-col gap-4 w-full;
+        @apply items-center lg:items-start lg:w-1/2;
+    }
+
+    .personalization-title {
+        @apply text-white text-3xl sm:text-5xl;
+        @apply font-semibold leading-normal sm:leading-tight;
+        @apply text-center lg:text-start;
+    }
+
+    .assert-recoble-section {
+        @apply w-full max-h-screen bg-black p-8;
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .assert-recoble-container {
+        @apply bg-gray-100 w-full h-full rounded-2xl;
+        @apply sm:pr-0 lg:pt-12 lg:py-12 flex flex-wrap md:flex-nowrap;
+        @apply justify-between gap-0 lg:gap-6;
+    }
+
+    .assert-recoble-text {
+        @apply w-full lg:w-1/2 flex flex-col gap-8;
+        @apply justify-center items-center pt-8 md:pt-0;
+    }
+
+    .assert-recoble-title {
+        @apply text-2xl md:text-3xl xl:text-5xl font-light;
+        @apply leading-normal sm:leading-tight;
+        @apply text-center lg:text-start;
+    }
+}

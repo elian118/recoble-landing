@@ -52,12 +52,6 @@ body {
     @apply border-gray-900 hover:border-transparent;
   }
 
-  .contact-card {
-    @apply flex flex-row flex-nowrap md:flex-wrap xl:flex-nowrap justify-start;
-    @apply w-full xl:w-8/12 bg-zinc-800 text-white px-12 py-10 overflow-clip;
-    @apply rounded-xl mt-16 md:gap-8 xl:gap-0;
-  }
-
   .pop-menu-bar {
     @apply bg-white z-20;
     @apply flex xl:hidden flex-col gap-4 base-transition;
@@ -90,7 +84,7 @@ body {
     animation: scale-out 0.8s ease-in-out 1;
   }
 
-  .appear-up {
+  .appear-up-down {
     animation: fade-in-up 0.8s ease-in-out 1;
   }
 }

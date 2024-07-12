@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import './contact-us.css';
 
 export const metadata: Metadata = {
   title: '문의하기',

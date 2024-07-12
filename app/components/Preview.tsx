@@ -4,9 +4,10 @@ import Image, { StaticImageData } from 'next/image';
 
 export const Preview = () => {
   return (
-    <section className="w-full h-screen bg-gray-200 flex flex-col justify-center items-center gap-6 p-8">
-      <div className="m-6 content card-img">
+    <section className="preview-section">
+      <div className="m-6 content card-img bg-gray-200">
         <Image
+          className="rounded-full animate-spin ease-linear"
           width={200}
           height={200}
           src={composition as StaticImageData}

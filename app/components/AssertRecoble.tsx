@@ -4,10 +4,10 @@ import Image, { StaticImageData } from 'next/image';
 
 const AssertRecoble = () => {
   return (
-    <section className="w-full max-h-screen bg-black p-8 flex flex-row justify-center items-center">
-      <div className="bg-gray-100 w-full h-full rounded-2xl sm:pr-0 lg:pt-12 lg:py-12 flex flex-wrap md:flex-nowrap justify-between gap-0 lg:gap-6">
-        <div className="w-full lg:w-1/2 flex flex-col gap-8 justify-center items-center pt-8 md:pt-0 content card-text">
-          <p className="text-2xl md:text-3xl xl:text-5xl font-light leading-normal sm:leading-tight text-center lg:text-start">
+    <section className="assert-recoble-section">
+      <div className="assert-recoble-container">
+        <div className="assert-recoble-text content card-text">
+          <p className="assert-recoble-title">
             모든 이커머스 플랫폼의
             <br />
             성공전략, <span className="font-semibold">레코블</span>

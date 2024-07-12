@@ -18,12 +18,12 @@ export default function Home() {
             ? entry.target.classList.add('appear')
             : entry.target.classList.contains('card-graph')
               ? entry.target.classList.add('fade-in')
-              : entry.target.classList.add('appear-up')
+              : entry.target.classList.add('appear-up-down')
           : entry.target.classList.contains('card-img')
             ? entry.target.classList.remove('appear')
             : entry.target.classList.contains('card-graph')
               ? entry.target.classList.remove('fade-in')
-              : entry.target.classList.remove('appear-up');
+              : entry.target.classList.remove('appear-up-down');
       });
     });
 

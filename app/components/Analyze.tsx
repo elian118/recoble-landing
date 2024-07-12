@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 
 export const Analyze = () => {
   return (
-    <section className="w-full min-h-screen bg-gray-200 p-8 flex flex-row justify-center items-center">
+    <section className="analyze-section">
       <div className="w-full md:w-11/12 xl:w-9/12 flex flex-wrap justify-between items-center">
         <div className="flex flex-col gap-4 w-full items-center lg:items-start lg:w-1/2 content card-text">
           <p className="text-blue-600 text-2xl">Analyze</p>

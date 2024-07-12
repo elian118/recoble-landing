@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import './pricing.css';
 
 export const metadata: Metadata = {
   title: '요금안내',

@@ -6,7 +6,7 @@ import Ball from '@/components/Ball';
 
 export const Banner = () => {
   return (
-    <div className="flex flex-col gap-4 w-full h-[700px] md:h-[800px] lg:h-screen justify-center items-center bg-blue-50">
+    <div className="banner">
       <FadeIn>
         <div className="py-8 max-w-[536px] relative">
           <Image

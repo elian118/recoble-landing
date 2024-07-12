@@ -4,11 +4,11 @@ import Image, { StaticImageData } from 'next/image';
 
 export const Personalization = () => {
   return (
-    <section className="w-full h-screen bg-blue-600 p-8 flex flex-row justify-center items-center">
-      <div className="w-full md:w-11/12 xl:w-9/12 gap-24 lg:gap-0 flex flex-wrap justify-between items-center">
-        <div className="flex flex-col gap-4 w-full items-center lg:items-start lg:w-1/2 content card-text">
+    <section className="personalization-section">
+      <div className="personalization-container">
+        <div className="personalization-text content card-text">
           <p className="text-white text-2xl">personalization</p>
-          <p className="text-white text-3xl sm:text-5xl font-semibold leading-normal sm:leading-tight text-center lg:text-start">
+          <p className="personalization-title">
             개인화된 맞춤형
             <br />
             경험을 제공합니다.

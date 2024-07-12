@@ -12,7 +12,7 @@ export const InputForms = () => {
   const [state, dispatch] = useFormState(contact, null);
 
   return (
-    <div className="flex justify-center items-center flex-col bg-white w-full md:w-1/2 min-h-screen px-10 py-8">
+    <div className="input-forms">
       <div className="flex flex-col gap-1 w-full xl:w-8/12 mt-20">
         <p className="text-4xl font-semibold">
           <span className="text-blue-600">3개월간 무료</span>
@@ -22,7 +22,7 @@ export const InputForms = () => {
           <span className="text-red-500">!!</span> 추가비용은 없어요{' '}
           <span className="text-red-500">!!</span>
         </p>
-        <p className="py-2 font-light text-sm lg:text-base xl:text-lg">
+        <p className="contact-description fade-in">
           기본 정보를 입력하시면 전담 컨설턴트가&nbsp;
           <br className="flex 2xl:hidden" />
           고객의 고민과 문제를 파악해
@@ -30,10 +30,7 @@ export const InputForms = () => {
           규모/상황별 활용 방안을 안내해드려요.
         </p>
       </div>
-      <form
-        action={dispatch as any}
-        className="flex flex-col gap-4 w-full xl:w-8/12 mt-10"
-      >
+      <form action={dispatch as any} className="contact-form">
         <Input
           name="clientName"
           type="text"
@@ -60,7 +57,7 @@ export const InputForms = () => {
           제출하기
         </Button>
       </form>
-      <div className="contact-card">
+      <div className="contact-card fade-in">
         <div className="flex flex-col gap-3 w-2/5 min-w-[170px]">
           <p className="text-xl font-semibold">전화상담</p>
           <p className="font-bold text-xl">02-6954-0730</p>

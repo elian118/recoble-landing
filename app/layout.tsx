@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Nanum_Gothic } from 'next/font/google';
 import './globals.css';
+import './home.css';
 import MenuBar from '@/components/MenuBar';
 import Footer from '@/components/Footer';
 

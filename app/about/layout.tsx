@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import './about.css';
 
 export const metadata: Metadata = {
   title: '레코블이란?',

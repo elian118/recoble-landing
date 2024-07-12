@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .pricing-banner {
+        @apply flex flex-col gap-6 justify-center items-center;
+        @apply mt-40 mb-12 relative;
+    }
+
+    .pricing-banner-title {
+        @apply text-3xl lg:text-4xl xl:text-6xl font-bold mb-2;
+    }
+
+    .pricing-banner-description {
+        @apply text-base lg:text-xl xl:text-2xl;
+        @apply text-center text-gray-500;
+    }
+
+    .pricing-tab {
+        @apply flex gap-1 rounded-md relative;
+        @apply justify-between items-center;
+        @apply mt-12 -mb-24 p-1 w-60 h-12 bg-neutral-200 z-20;
+    }
+
+    .pricing-tab-period {
+        @apply flex justify-center items-center;
+        @apply rounded-md h-full w-1/2;
+    }
+
+    .pricing-tab-ping-container {
+        @apply relative flex size-3;
+    }
+
+    .pricing-tab-ping {
+        @apply animate-ping absolute inline-flex;
+        @apply h-full w-full rounded-full bg-sky-400 opacity-75;
+    }
+
+    .pricing-tab-ping-ball {
+        @apply relative inline-flex rounded-full size-3 bg-sky-500;
+    }
+
+    .pricing-back-circle1 {
+        @apply size-[600px] rounded-full border border-gray-400;
+        @apply opacity-25 absolute top-[-70px];
+    }
+
+    .pricing-back-circle2 {
+        @apply size-[800px] rounded-full border border-gray-400;
+        @apply opacity-25 absolute top-[-170px];
+    }
+}

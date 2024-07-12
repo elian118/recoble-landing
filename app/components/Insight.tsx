@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 
 export const Insight = () => {
   return (
-    <section className="w-full h-screen bg-blue-600 flex flex-col justify-center items-center gap-6 p-8">
+    <section className="insight-section">
       <div className="m-6 content card-graph">
         <Image
           width={900}
