@@ -20,7 +20,9 @@ const Button = ({
   const { pending } = useFormStatus();
 
   return isLoading ?? pending ? (
-    <Spinner />
+    <div className="h-12">
+      <Spinner />
+    </div>
   ) : (
     <button
       type={type}
