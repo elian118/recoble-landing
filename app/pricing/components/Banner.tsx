@@ -23,6 +23,11 @@ export const Banner = ({ isSelectedMonthlyState }: BannerProps) => {
         &nbsp;SMB 고객의 마케팅 비용절감을 돕습니다.
       </p>
       <div className="pricing-tab">
+        <span className="indicator-item badge badge-secondary badge-sm">
+          <div className="relative">
+            <span className="badge badge-secondary animate-ping absolute -top-2.5 -left-2.5" />
+          </div>
+        </span>
         <div
           className={`pricing-tab-period btn-hover ${isSelectedMonthly ? 'bg-white' : 'bg-neutral-200'} `}
           onClick={() => setIsSelectedMonthly(true)}
@@ -34,12 +39,6 @@ export const Banner = ({ isSelectedMonthlyState }: BannerProps) => {
           onClick={() => setIsSelectedMonthly(false)}
         >
           연간
-        </div>
-        <div className="absolute -top-1 -right-1">
-          <span className="pricing-tab-ping-container">
-            <span className="pricing-tab-ping"></span>
-            <span className="pricing-tab-ping-ball"></span>
-          </span>
         </div>
       </div>
       {/* 배경 장식 */}

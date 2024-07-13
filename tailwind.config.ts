@@ -23,8 +23,8 @@ const config: Config = {
         myTheme: {
           primary: '#2563eb',
           secondary: '#3b82f6',
-          accent: '#009cff',
-          neutral: '#a3a3a3',
+          accent: '#38bdf8',
+          neutral: '#737373',
           'base-100': '#f5f5f5',
           info: '#20c3ff',
           success: '#4ade80',

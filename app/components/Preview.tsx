@@ -28,7 +28,7 @@ export const Preview = () => {
         </p>
 
         <Modal
-          className="btn btn-neutral rounded-full px-8 h-14"
+          className="btn btn-outline bg-black rounded-full px-8 h-14"
           title="알림"
           body="준비중입니다."
         >
