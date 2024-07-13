@@ -18,11 +18,13 @@ const PopMenuBar = ({ openMenuState }: MenuBarProps) => {
     <div className={`pop-menu-bar ${isOpenMenu ? 'translate-y-0' : '-translate-y-full'}`}>
       {menus.map((e, idx) =>
         idx === 3 ? (
-          <ContactBtn key={e.name} setIsOpenMenu={setIsOpenMenu} />
+          <div key={e.name} className="px-4">
+            <ContactBtn setIsOpenMenu={setIsOpenMenu} />
+          </div>
         ) : (
           <Link
             key={e.name}
-            className={`text-lg ${pathname === e.pathName ? 'text-blue-500' : 'text-gray-900'} btn-hover w-[100px]`}
+            className={`text-lg ${pathname === e.pathName ? 'text-blue-500' : 'text-gray-900'} btn btn-ghost font-normal w-[100px]`}
             href={e.pathName}
             onClick={() => setIsOpenMenu(false)}
           >

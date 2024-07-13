@@ -4,6 +4,7 @@ import './globals.css';
 import './home.css';
 import MenuBar from '@/components/MenuBar';
 import Footer from '@/components/Footer';
+import { publicUrls } from '@/libs/contstans';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -33,8 +34,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${nanumGothic.variable} relative overflow-y-scroll`}>
+    /*
+      모달 띄움(showModal() API 실행)은 최상단 html 태그에서 실행되므로,
+      모달 띄움 직후 스크롤바 추가 생성으로 인한 화면 추가 밀림을 방지하려면
+      overflow-y-scroll 역시 최상단 html 요소에 삽입해야 한다. */
+    <html lang="en" data-theme="myTheme" className="overflow-y-scroll">
+      <body className={`${nanumGothic.variable} relative`}>
         <MenuBar />
         {children}
         <Footer />

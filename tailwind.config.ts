@@ -1,6 +1,6 @@
-// import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
-const config = {
+const config: Config = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,6 +15,25 @@ const config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  daisyui: {
+    themes: [
+      'light',
+      'dark',
+      {
+        myTheme: {
+          primary: '#2563eb',
+          secondary: '#3b82f6',
+          accent: '#009cff',
+          neutral: '#25191a',
+          'base-100': '#fff6ed',
+          info: '#20c3ff',
+          success: '#4ade80',
+          warning: '#ffa800',
+          error: '#e11d48',
+        },
+      },
+    ],
+  },
+  plugins: [require('daisyui'), require('@tailwindcss/forms')],
 };
 export default config;

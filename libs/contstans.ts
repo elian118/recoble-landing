@@ -1,5 +1,16 @@
 import { Menu } from '@/libs/types';
 
+type Routes = {
+  [key: string]: boolean;
+};
+
+export const publicUrls: Routes = {
+  '/': true,
+  '/about': true,
+  '/pricing': true,
+  '/contact-us': true,
+};
+
 export const menus: Menu[] = [
   { name: 'Home', isMain: true, pathName: '/' },
   { name: 'About', isMain: true, pathName: '/about' },

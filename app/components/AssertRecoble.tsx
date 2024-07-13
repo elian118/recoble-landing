@@ -16,9 +16,9 @@ const AssertRecoble = () => {
             지금 바로 확인해보세요
           </p>
         </div>
-        <div className="pl-8 pt-6 lg:pt-0 md:pl-0 w-full lg:w-1/2 flex justify-end content card-graph">
+        <div className="pl-8 pt-6 lg:pt-0 md:pl-0 w-full md:w-1/2 flex justify-end content card-graph">
           <Image
-            height={490}
+            className="object-contain object-right-bottom"
             src={assertRecobleSlide as StaticImageData}
             alt="Recommand you Recoble!"
           />

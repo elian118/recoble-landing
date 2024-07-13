@@ -1,6 +1,7 @@
 import React from 'react';
 import composition from '@/public/images/compositon.gif';
 import Image, { StaticImageData } from 'next/image';
+import Modal from '@/components/Modal';
 
 export const Preview = () => {
   return (
@@ -25,11 +26,16 @@ export const Preview = () => {
           <br />
           고객경험 개선에 있습니다.
         </p>
-        <div className="rounded-full p-4 w-40 bg-gray-900 text-gradient-blue-orange text-center btn-hover">
-          <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-100 bg-clip-text text-transparent text-xl font-bold">
+
+        <Modal
+          className="btn btn-neutral rounded-full px-8 h-14"
+          title="알림"
+          body="준비중입니다."
+        >
+          <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-200 bg-clip-text text-transparent text-xl font-bold">
             데모 체험하기
           </div>
-        </div>
+        </Modal>
       </div>
     </section>
   );

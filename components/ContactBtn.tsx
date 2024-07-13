@@ -23,7 +23,7 @@ const ContactBtn = ({ setIsOpenMenu }: ContactBtnProps) => {
       onMouseOut={() => setIsHovered(false)}
       onClick={() => onClickMenuIcon('/contact-us')}
     >
-      <div style={{ visibility: 'hidden' }}>문의하기</div>
+      <div className="invisible">문의하기</div>
       <div className="base-transition z-10 bg-transparent absolute top-2 left-0 w-full text-center">
         문의하기
       </div>

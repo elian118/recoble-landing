@@ -13,7 +13,7 @@ export const Prediction = () => {
       <div className="w-full md:w-11/12 xl:w-9/12 flex flex-wrap justify-between items-center">
         <div className="prediction-text content card-text">
           <p className="text-blue-600 text-2xl">Prediction</p>
-          <p className="text-3xl sm:text-5xl font-semibold leading-normal sm:leading-tight text-center lg:text-start">
+          <p className="prediction-title">
             문제를 발견하여
             <br />
             예측하고 제안합니다.

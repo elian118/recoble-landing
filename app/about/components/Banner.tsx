@@ -1,19 +1,16 @@
 import React from 'react';
 import FadeIn from '@/components/FadeIn';
 import Image, { StaticImageData } from 'next/image';
-import aboutImg from '@/public/images/about.png';
+import aboutImg from '@/public/images/about_banner-cutout.png';
 import Ball from '@/components/Ball';
 
 export const Banner = () => {
   return (
     <div className="banner">
       <FadeIn>
-        <div className="py-8 max-w-[536px] relative">
+        <div className="max-w-[536px] relative">
           <Image
-            width={536}
-            height={402}
-            layout="responsive"
-            loading="lazy"
+            className="size-[250px] sm:size-[320px] md:size-[410px] lg:size-[450px] xl:size-[500px] object-contain"
             src={aboutImg as StaticImageData}
             alt="about recoble"
           />
@@ -21,22 +18,22 @@ export const Banner = () => {
             color="via-yellow-400 to-yellow-800"
             size="size-4"
             delay="delay-0"
-            left="20%"
-            top="12%"
+            left="27%"
+            top="18%"
           />
           <Ball
             color="via-green-400 to-green-800"
             size="size-6"
             delay="delay-200"
-            left="-15%"
-            top="39%"
+            left="0%"
+            top="48%"
           />
           <Ball
             color="via-blue-400 to-blue-800"
             size="size-4"
             delay="delay-700"
-            left="73%"
-            top="34%"
+            right="10%"
+            top="40%"
           />
         </div>
       </FadeIn>
