@@ -26,7 +26,7 @@ const Button = ({
         base-transition
         px-6 ${fullWidth ? 'w-full flex justify-center items-center' : 'w-fit'} 
         ${!fullWidth && 'mx-auto'} 
-        h-12 disabled:bg-base-100 disabled:text-white 
+        h-12 disabled:bg-neutral disabled:text-white 
         disabled:cursor-not-allowed font-semibold active:scale-95 
         ${method === 'delete' ? 'delete-btn' : 'primary-btn'} 
         ${rounded && 'rounded-full'} 
