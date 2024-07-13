@@ -19,18 +19,14 @@ const Button = ({
 }: ButtonProps) => {
   const { pending } = useFormStatus();
 
-  return isLoading ?? pending ? (
-    <div className="h-12">
-      <Spinner />
-    </div>
-  ) : (
+  return (
     <button
       type={type}
       className={`
         base-transition
         px-6 ${fullWidth ? 'w-full flex justify-center items-center' : 'w-fit'} 
         ${!fullWidth && 'mx-auto'} 
-        h-12 disabled:bg-neutral-400 disabled:text-neutral-300 
+        h-12 disabled:bg-base-100 disabled:text-white 
         disabled:cursor-not-allowed font-semibold active:scale-95 
         ${method === 'delete' ? 'delete-btn' : 'primary-btn'} 
         ${rounded && 'rounded-full'} 
@@ -42,12 +38,12 @@ const Button = ({
     >
       {href ? (
         <Link className="flex items-center justify-between gap-2 text-sm" href={href}>
-          {icon && icon}
+          {isLoading ?? pending ? <Spinner /> : icon && icon}
           {children}
         </Link>
       ) : (
-        <div className="flex items-center justify-between gap-2 text-sm">
-          {icon && icon}
+        <div className="w-full flex items-center justify-center gap-2 text-sm">
+          {isLoading ?? pending ? <Spinner /> : icon && icon}
           {children}
         </div>
       )}

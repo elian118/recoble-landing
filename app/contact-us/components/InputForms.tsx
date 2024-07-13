@@ -3,13 +3,13 @@
 import React from 'react';
 import { useFormState } from 'react-dom';
 import Input from '@/components/Input';
-import { contact } from '@/app/contact-us/actions';
+import { contactUs } from '@/app/contact-us/actions';
 import Button from '@/components/Button';
 import Image, { StaticImageData } from 'next/image';
 import contactImg from '@/public/images/contact.png';
 
 export const InputForms = () => {
-  const [state, dispatch] = useFormState(contact, null);
+  const [state, dispatch] = useFormState(contactUs, null);
 
   return (
     <div className="input-forms">
