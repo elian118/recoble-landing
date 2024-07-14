@@ -1,6 +1,7 @@
 import React from 'react';
 import assertRecobleSlide from '@/public/images/assert_recoble_slide.png';
 import Image, { StaticImageData } from 'next/image';
+import FooterInSection from '@/components/FooterInSection';
 
 const AssertRecoble = () => {
   return (
@@ -23,6 +24,9 @@ const AssertRecoble = () => {
             alt="Recommand you Recoble!"
           />
         </div>
+      </div>
+      <div className="w-full">
+        <FooterInSection />
       </div>
     </section>
   );

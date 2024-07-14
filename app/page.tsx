@@ -38,12 +38,26 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-between bg-white h-auto">
-      <Preview />
-      <Insight />
-      <Analyze />
-      <Prediction />
-      <Personalization />
-      <AssertRecoble />
+      <div className="carousel carousel-vertical w-full h-screen">
+        <div className="carousel-item">
+          <Preview />
+        </div>
+        <div className="carousel-item">
+          <Insight />
+        </div>
+        <div className="carousel-item">
+          <Analyze />
+        </div>
+        <div className="carousel-item">
+          <Prediction />
+        </div>
+        <div className="carousel-item">
+          <Personalization />
+        </div>
+        <div className="carousel-item">
+          <AssertRecoble />
+        </div>
+      </div>
     </main>
   );
 }

@@ -29,7 +29,7 @@ const config: Config = {
           info: '#20c3ff',
           success: '#4ade80',
           warning: '#ffa800',
-          error: '#e11d48',
+          error: '#f43f5e',
         },
       },
     ],

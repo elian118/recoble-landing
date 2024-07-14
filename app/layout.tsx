@@ -4,7 +4,6 @@ import './globals.css';
 import './home.css';
 import MenuBar from '@/components/MenuBar';
 import Footer from '@/components/Footer';
-import { publicUrls } from '@/libs/contstans';
 
 // const inter = Inter({ subsets: ['latin'] });
 
