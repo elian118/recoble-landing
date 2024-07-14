@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { useFormState } from 'react-dom';
-import Input from '@/components/Input';
+import Input from '@/components/input';
 import { contactUs } from '@/app/contact-us/actions';
-import Button from '@/components/Button';
+import Button from '@/components/button';
 import Image, { StaticImageData } from 'next/image';
 import contactImg from '@/public/images/contact.png';
 

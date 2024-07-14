@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Nanum_Gothic } from 'next/font/google';
 import './globals.css';
 import './home.css';
-import MenuBar from '@/components/MenuBar';
-import Footer from '@/components/Footer';
+import MenuBar from '@/components/menu-bar';
+import Footer from '@/components/footer';
 
 // const inter = Inter({ subsets: ['latin'] });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import assertRecobleSlide from '@/public/images/assert_recoble_slide.png';
 import Image, { StaticImageData } from 'next/image';
-import FooterInSection from '@/components/FooterInSection';
+import FooterInSection from '@/components/footer-in-section';
 
 const AssertRecoble = () => {
   return (

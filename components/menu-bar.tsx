@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import { menus, publicUrls } from '@/libs/contstans';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import ContactBtn from '@/components/ContactBtn';
-import PopMenuBar from '@/components/PopMenuBar';
+import ContactBtn from '@/components/contact-btn';
+import PopMenuBar from '@/components/pop-menu-bar';
 import Image, { StaticImageData } from 'next/image';
 import logo from '@/public/images/logo.png';
 import { Close, Hamburger } from '@/public/icons';
-import Modal from '@/components/Modal';
+import Modal from '@/components/modal';
 
 const MenuBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);

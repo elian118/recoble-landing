@@ -1,2 +1,2 @@
-export * from './Guide';
-export * from './InputForms';
+export * from './guide';
+export * from './input-forms';

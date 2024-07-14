@@ -3,7 +3,7 @@
 import React from 'react';
 import { menus } from '@/libs/contstans';
 import { usePathname } from 'next/navigation';
-import ContactBtn from '@/components/ContactBtn';
+import ContactBtn from '@/components/contact-btn';
 import Link from 'next/link';
 
 type MenuBarProps = {

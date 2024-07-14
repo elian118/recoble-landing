@@ -1,7 +1,7 @@
 'use client';
 
 import { Analyze, Insight, Personalization, Prediction, Preview } from '@/app/components';
-import AssertRecoble from '@/app/components/AssertRecoble';
+import AssertRecoble from '@/app/components/assert-recoble';
 import { useEffect } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';

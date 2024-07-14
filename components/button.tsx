@@ -3,7 +3,7 @@
 import { useFormStatus } from 'react-dom';
 import Link from 'next/link';
 import { ButtonProps } from '@/libs/types';
-import Spinner from '@/components/Spinner';
+import Spinner from '@/components/spinner';
 
 const Button = ({
   children,

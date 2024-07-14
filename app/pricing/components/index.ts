@@ -1,2 +1,2 @@
-export * from './Banner';
-export * from './PlanTable';
+export * from './banner';
+export * from './plan-table';

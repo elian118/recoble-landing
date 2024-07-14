@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import notFoundImg from '@/public/images/not_found.png';
 import Image, { StaticImageData } from 'next/image';
-import Modal from '@/components/Modal';
 
 const NotFound = () => {
   return (

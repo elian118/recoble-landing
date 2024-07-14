@@ -1,8 +1,8 @@
 import React from 'react';
-import FadeIn from '@/components/FadeIn';
+import FadeIn from '@/components/fade-in';
 import Image, { StaticImageData } from 'next/image';
 import aboutImg from '@/public/images/about_banner-cutout.png';
-import Ball from '@/components/Ball';
+import Ball from '@/components/ball';
 
 export const Banner = () => {
   return (

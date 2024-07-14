@@ -1,7 +1,7 @@
 import React from 'react';
 import composition from '@/public/images/compositon.gif';
 import Image, { StaticImageData } from 'next/image';
-import Modal from '@/components/Modal';
+import Modal from '@/components/modal';
 
 export const Preview = () => {
   return (

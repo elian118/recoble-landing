@@ -1,5 +1,5 @@
 import React from 'react';
-import Ball from '@/components/Ball';
+import Ball from '@/components/ball';
 
 export const Answer = () => {
   return (
