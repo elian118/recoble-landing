@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useId } from 'react';
 
 type ModalProps = {
   title?: string;
@@ -12,6 +12,8 @@ type ModalProps = {
 };
 
 const Modal = ({ title, body, className, confirm, action, children }: ModalProps) => {
+  const modalId = useId();
+
   return (
     <div>
       <button
@@ -22,12 +24,12 @@ const Modal = ({ title, body, className, confirm, action, children }: ModalProps
             => showModal()을 오류라 판단
             => 아래와 같이 타입단언 처리
           */
-          (document.getElementById('modal') as HTMLDialogElement)?.showModal()
+          (document.getElementById(modalId) as HTMLDialogElement)?.showModal()
         }
       >
         {children}
       </button>
-      <dialog id="modal" className="modal modal-bottom sm:modal-middle">
+      <dialog id={modalId} className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg">{title ?? '알림'}</h3>
           <p className="py-4">{body}</p>
