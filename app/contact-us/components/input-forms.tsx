@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { useFormState } from 'react-dom';
-import Input from '@/components/Input';
-import { contact } from '@/app/contact-us/actions';
-import Button from '@/components/Button';
+import Input from '@/components/input';
+import { contactUs } from '@/app/contact-us/actions';
+import Button from '@/components/button';
 import Image, { StaticImageData } from 'next/image';
 import contactImg from '@/public/images/contact.png';
 
 export const InputForms = () => {
-  const [state, dispatch] = useFormState(contact, null);
+  const [state, dispatch] = useFormState(contactUs, null);
 
   return (
     <div className="input-forms">
@@ -65,10 +65,9 @@ export const InputForms = () => {
         </div>
         <Image
           className="w-3/5 md:w-full xl:3/5"
-          width={380}
-          height={300}
           src={contactImg as StaticImageData}
           alt="contact image"
+          style={{ width: 'auto', height: 'auto' }}
         />
       </div>
     </div>

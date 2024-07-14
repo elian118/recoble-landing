@@ -28,11 +28,15 @@ body {
 
 @layer utilities {
   .text-balance {
-    text-wrap: normal;
+    text-wrap: auto;
+  }
+
+  .rapid-transition {
+    @apply transition-all duration-75 ease-in-out;
   }
 
   .base-transition {
-    @apply transition-all duration-100 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
   }
 
   .btn-hover {
@@ -41,6 +45,18 @@ body {
 
   .btn-bold-hover {
     @apply hover:font-bold hover:scale-105 cursor-pointer base-transition active:scale-95;
+  }
+
+  [data-theme="myTheme"] .btn {
+    @apply hover:scale-105 hover:font-bold;
+  }
+
+  [data-theme="myTheme"] .btn-ghost {
+    @apply hover:bg-transparent;
+  }
+
+  .marquee-animation {
+    animation: marquee 1s linear infinite;
   }
 }
 
@@ -73,7 +89,7 @@ body {
   }
 
   .fade-in {
-    animation: bounceIn 1s ease-in-out 1;
+    animation: bounceIn 0.6s ease-in-out 1;
   }
 
   .bouncing-ball {
@@ -95,9 +111,9 @@ body {
     opacity: 0;
     transform: translateX(350px);
   }
-  50% {
+  90% {
     opacity: 50%;
-    transform: translateX(-6px);
+    transform: translateX(-15px);
   }
   100% {
     opacity: 100%;
@@ -136,5 +152,15 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* 오른쪽에서 왼쪽으로 이동 */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

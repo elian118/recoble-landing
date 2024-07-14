@@ -13,7 +13,7 @@ export const Prediction = () => {
       <div className="w-full md:w-11/12 xl:w-9/12 flex flex-wrap justify-between items-center">
         <div className="prediction-text content card-text">
           <p className="text-blue-600 text-2xl">Prediction</p>
-          <p className="text-3xl sm:text-5xl font-semibold leading-normal sm:leading-tight text-center lg:text-start">
+          <p className="prediction-title">
             문제를 발견하여
             <br />
             예측하고 제안합니다.
@@ -38,16 +38,32 @@ export const Prediction = () => {
             pagination={{ clickable: true }}
           >
             <SwiperSlide>
-              <Image src={predict1 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict1 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict2 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict2 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict3 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict3 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict4 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict4 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
           </Swiper>
         </div>

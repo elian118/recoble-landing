@@ -14,11 +14,11 @@ export const _Input = (
       <input
         ref={ref}
         name={name}
-        className="p-4 bg-slate-50 rounded-md border-none"
+        className="p-4 bg-slate-50 rounded-md border-none disabled:bg-base-100"
         {...rest}
       />
       {errors?.map((err, idx) => (
-        <span key={idx} className="text-red-500 font-medium text-sm">
+        <span key={idx} className="text-error font-medium text-sm">
           {err}
         </span>
       ))}

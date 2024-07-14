@@ -16,7 +16,11 @@ export const Analyze = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/2 content card-graph">
-          <Image src={imgHomeContent2 as StaticImageData} alt="recoble customer view" />
+          <Image
+            src={imgHomeContent2 as StaticImageData}
+            alt="recoble customer view"
+            style={{ width: 'auto', height: 'auto' }}
+          />
         </div>
       </div>
     </section>

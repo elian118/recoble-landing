@@ -3,7 +3,7 @@
 import { useFormStatus } from 'react-dom';
 import Link from 'next/link';
 import { ButtonProps } from '@/libs/types';
-import Spinner from '@/components/Spinner';
+import Spinner from '@/components/spinner';
 
 const Button = ({
   children,
@@ -19,16 +19,14 @@ const Button = ({
 }: ButtonProps) => {
   const { pending } = useFormStatus();
 
-  return isLoading ?? pending ? (
-    <Spinner />
-  ) : (
+  return (
     <button
       type={type}
       className={`
         base-transition
         px-6 ${fullWidth ? 'w-full flex justify-center items-center' : 'w-fit'} 
         ${!fullWidth && 'mx-auto'} 
-        h-12 disabled:bg-neutral-400 disabled:text-neutral-300 
+        h-12 disabled:bg-neutral disabled:text-white 
         disabled:cursor-not-allowed font-semibold active:scale-95 
         ${method === 'delete' ? 'delete-btn' : 'primary-btn'} 
         ${rounded && 'rounded-full'} 
@@ -40,12 +38,12 @@ const Button = ({
     >
       {href ? (
         <Link className="flex items-center justify-between gap-2 text-sm" href={href}>
-          {icon && icon}
+          {isLoading ?? pending ? <Spinner /> : icon && icon}
           {children}
         </Link>
       ) : (
-        <div className="flex items-center justify-between gap-2 text-sm">
-          {icon && icon}
+        <div className="w-full flex items-center justify-center gap-2 text-sm">
+          {isLoading ?? pending ? <Spinner /> : icon && icon}
           {children}
         </div>
       )}

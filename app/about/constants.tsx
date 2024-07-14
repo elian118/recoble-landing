@@ -1,4 +1,4 @@
-import { Description } from '@/app/about/types/Description';
+import { Description } from '@/app/about/types/description';
 import React from 'react';
 import dataDecisionMaking from '@/public/images/data_decision_making.png';
 import solution from '@/public/images/solution.png';

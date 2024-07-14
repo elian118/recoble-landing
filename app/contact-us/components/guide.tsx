@@ -12,6 +12,7 @@ export const Guide = () => {
             className="fade-in"
             src={recobleImg as StaticImageData}
             alt="recoble home"
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       </div>

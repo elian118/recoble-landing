@@ -52,6 +52,7 @@ export const PlanTable = ({ isSelectedMonthly }: PlanTableProps) => {
                       : (greenChkIco as StaticImageData)
                   }
                   alt={detail}
+                  style={{ width: 24, height: 24 }}
                 />
                 <div className="font-light">{detail}</div>
               </div>
