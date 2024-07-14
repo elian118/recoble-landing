@@ -5,7 +5,7 @@ import predict3 from '@/public/images/predict_3.png';
 import predict4 from '@/public/images/predict_4.png';
 import Image, { StaticImageData } from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 export const Prediction = () => {
   return (
@@ -28,7 +28,7 @@ export const Prediction = () => {
         </div>
         <div className="prediction-swiper-container content card-graph">
           <Swiper
-            modules={[Pagination, Autoplay]}
+            modules={[Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             autoplay={{
