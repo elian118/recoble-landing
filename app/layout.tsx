@@ -4,6 +4,8 @@ import './globals.css';
 import './home.css';
 import MenuBar from '@/components/menu-bar';
 import Footer from '@/components/footer';
+import ClientLayer from '@/components/client-layer';
+import Modal from '@/components/modal';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -39,8 +41,11 @@ export default function RootLayout({
       overflow-y-scroll 역시 최상단 html 요소에 삽입해야 한다. */
     <html lang="en" data-theme="myTheme" className="overflow-y-scroll">
       <body className={`${nanumGothic.variable} relative`}>
-        <MenuBar />
-        {children}
+        <ClientLayer>
+          <MenuBar />
+          {children}
+          <Modal />
+        </ClientLayer>
         <Footer />
       </body>
     </html>

@@ -1,7 +1,7 @@
 import React from 'react';
 import composition from '@/public/images/compositon.gif';
 import Image, { StaticImageData } from 'next/image';
-import Modal from '@/components/modal';
+import ModalBtn from '@/components/modal-btn';
 
 export const Preview = () => {
   return (
@@ -28,7 +28,7 @@ export const Preview = () => {
           고객경험 개선에 있습니다.
         </p>
 
-        <Modal
+        <ModalBtn
           className="btn btn-outline bg-black rounded-full px-8 h-14"
           title="알림"
           body="준비중입니다."
@@ -36,7 +36,7 @@ export const Preview = () => {
           <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-200 bg-clip-text text-transparent text-xl font-bold">
             데모 체험하기
           </div>
-        </Modal>
+        </ModalBtn>
       </div>
     </section>
   );

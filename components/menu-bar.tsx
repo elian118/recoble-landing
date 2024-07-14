@@ -9,7 +9,7 @@ import PopMenuBar from '@/components/pop-menu-bar';
 import Image, { StaticImageData } from 'next/image';
 import logo from '@/public/images/logo.png';
 import { Close, Hamburger } from '@/public/icons';
-import Modal from '@/components/modal';
+import ModalBtn from '@/components/modal-btn';
 
 const MenuBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
@@ -63,12 +63,12 @@ const MenuBar = () => {
             {/*>*/}
             {/*  로그인*/}
             {/*</Link>*/}
-            <Modal
+            <ModalBtn
               className="hidden lg:flex font-normal btn btn-ghost min-w-[80px] text-base"
               body="준비중입니다."
             >
               로그인
-            </Modal>
+            </ModalBtn>
             <div className="hidden lg:flex min-w-[110px]">
               <ContactBtn setIsOpenMenu={setIsOpenMenu} />
             </div>
