@@ -13,6 +13,7 @@ export const Banner = () => {
             className="size-[250px] sm:size-[320px] md:size-[410px] lg:size-[450px] xl:size-[500px] object-contain"
             src={aboutImg as StaticImageData}
             alt="about recoble"
+            priority
           />
           <Ball
             color="via-yellow-400 to-yellow-800"

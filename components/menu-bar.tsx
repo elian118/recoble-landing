@@ -35,7 +35,11 @@ const MenuBar = () => {
             href={'/'}
           >
             <div className="size-12 flex items-center justify-center">
-              <Image src={logo as StaticImageData} alt="logo" />
+              <Image
+                src={logo as StaticImageData}
+                alt="logo"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </div>
             <span>Recoble</span>
           </Link>

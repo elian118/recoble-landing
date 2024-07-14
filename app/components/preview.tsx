@@ -13,6 +13,7 @@ export const Preview = () => {
           height={200}
           src={composition as StaticImageData}
           alt="recoble composition"
+          style={{ width: 200, height: 200 }}
         />
       </div>
       <div className="flex flex-col content justify-center items-center gap-6 content card-text">

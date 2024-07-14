@@ -38,16 +38,32 @@ export const Prediction = () => {
             pagination={{ clickable: true }}
           >
             <SwiperSlide>
-              <Image src={predict1 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict1 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict2 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict2 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict3 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict3 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={predict4 as StaticImageData} alt="recoble customer view" />
+              <Image
+                src={predict4 as StaticImageData}
+                alt="recoble customer view"
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </SwiperSlide>
           </Swiper>
         </div>

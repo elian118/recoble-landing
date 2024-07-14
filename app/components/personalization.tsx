@@ -23,6 +23,7 @@ export const Personalization = () => {
           <Image
             src={personalizationSlide as StaticImageData}
             alt="recoble personalization"
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       </div>

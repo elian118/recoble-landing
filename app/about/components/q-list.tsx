@@ -7,7 +7,7 @@ export const QList = () => {
     <div className="q-list">
       {description.map((e) => (
         <div key={e.title} className="question">
-          <Image width={60} height={60} src={e.imgSrc} alt={e.title} />
+          <Image src={e.imgSrc} alt={e.title} style={{ width: 60, height: 60 }} />
           <div className="text-center lg:text-start flex flex-col gap-3 w-10/12">
             <div className={`text-lg lg:text-2xl font-medium ${e.titleColor}`}>
               {e.title}
