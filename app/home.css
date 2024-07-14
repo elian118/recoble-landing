@@ -63,7 +63,7 @@
     }
 
     .assert-recoble-section {
-        @apply p-8 w-full h-screen max-h-[853px] bg-black;
+        @apply p-8 w-full h-screen max-h-[887px] bg-black;
         @apply flex flex-col justify-between items-center;
     }
 
