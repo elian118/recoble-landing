@@ -9,23 +9,11 @@ type ModalBtnProps = {
   children?: React.ReactNode;
 } & ModalState;
 
-const ModalBtn = ({
-  title,
-  body,
-  confirm,
-  action,
-  className,
-  children,
-}: ModalBtnProps) => {
-  const { callModal } = useModal();
-
-  const openModal = () => {
-    callModal({ title, body, confirm, action });
-    (document.getElementById('modal') as HTMLDialogElement)?.showModal();
-  };
+const ModalBtn = ({ className, children, ...props }: ModalBtnProps) => {
+  const { openModal } = useModal();
 
   return (
-    <button className={`${className ?? 'btn'}`} onClick={openModal}>
+    <button className={`${className ?? 'btn'}`} onClick={() => openModal(props)}>
       {children}
     </button>
   );

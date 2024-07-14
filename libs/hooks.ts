@@ -9,6 +9,11 @@ export const useModal = () => {
     setModal(props);
   };
 
+  const openModal = (props: ModalState) => {
+    callModal(props);
+    (document.getElementById('modal') as HTMLDialogElement)?.showModal();
+  };
+
   const resetModal = () => {
     setModal({});
   };
@@ -16,6 +21,7 @@ export const useModal = () => {
   return {
     modal,
     callModal,
+    openModal,
     resetModal,
   };
 };
