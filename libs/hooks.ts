@@ -5,12 +5,8 @@ export const useModal = () => {
   const { modalState } = useContext(GlobalContext);
   const [modal, setModal] = modalState;
 
-  const callModal = (props: ModalState) => {
-    setModal(props);
-  };
-
   const openModal = (props: ModalState) => {
-    callModal(props);
+    setModal(props);
     (document.getElementById('modal') as HTMLDialogElement)?.showModal();
   };
 
@@ -20,7 +16,6 @@ export const useModal = () => {
 
   return {
     modal,
-    callModal,
     openModal,
     resetModal,
   };
