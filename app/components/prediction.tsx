@@ -35,7 +35,6 @@ export const Prediction = () => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{ clickable: true }}
           >
             <SwiperSlide>
               <Image
