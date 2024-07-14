@@ -19,6 +19,7 @@ const Modal = () => {
               onClick={() => {
                 action && action();
                 document.getElementById('closeModalBtn')?.click();
+                resetModal();
               }}
             >
               확인
