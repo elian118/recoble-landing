@@ -6,11 +6,7 @@ export const Insight = () => {
   return (
     <section className="insight-section">
       <div className="m-6 content card-graph">
-        <Image
-          src={graph1 as StaticImageData}
-          alt="recoble composition"
-          style={{ width: '100%', height: '100%' }}
-        />
+        <Image src={graph1 as StaticImageData} alt="recoble composition" />
       </div>
       <div className="content card-text flex flex-col justify-center items-center gap-6">
         <p className="text-3xl sm:text-5xl font-semibold text-white text-center sm:leading-tight">

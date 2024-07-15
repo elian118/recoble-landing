@@ -26,18 +26,18 @@
     .prediction-text {
         @apply my-8 xl:my-0;
         @apply flex flex-col gap-4 w-full;
-        @apply items-center lg:items-start lg:w-2/3 xl:w-2/5;
+        @apply items-center xl:items-start lg:w-2/3 xl:w-2/5 xl:min-w-[400px];
     }
 
     .prediction-title {
         @apply text-3xl sm:text-5xl;
         @apply font-semibold leading-normal sm:leading-tight;
-        @apply text-center lg:text-start;
+        @apply text-center xl:text-start;
     }
 
     .prediction-swiper-container {
-        @apply w-full lg:w-1/2 xl:w-3/5 mb-8 xl:mb-0;
-        @apply flex gap-12 justify-center md:justify-start;
+        @apply w-full sm:w-2/3 lg:w-1/2 mb-8 xl:mb-0;
+        @apply flex gap-12 justify-center lg:justify-start;
         @apply items-center flex-wrap md:flex-nowrap;
     }
 
@@ -48,7 +48,7 @@
 
     .personalization-container {
         @apply w-full md:w-11/12 xl:w-9/12 gap-24;
-        @apply lg:gap-0 flex flex-wrap justify-between items-center;
+        @apply lg:gap-0 flex flex-wrap justify-center items-center;
     }
 
     .personalization-text {

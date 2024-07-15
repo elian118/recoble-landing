@@ -10,7 +10,7 @@ import { Autoplay } from 'swiper/modules';
 export const Prediction = () => {
   return (
     <section className="prediction-section">
-      <div className="w-full md:w-11/12 xl:w-9/12 flex flex-wrap justify-between items-center">
+      <div className="w-full md:w-11/12 xl:w-9/12 flex flex-wrap justify-center xl:justify-between items-center">
         <div className="prediction-text content card-text">
           <p className="text-blue-600 text-2xl">Prediction</p>
           <p className="prediction-title">
@@ -18,7 +18,7 @@ export const Prediction = () => {
             <br />
             예측하고 제안합니다.
           </p>
-          <p className="text-lg sm:text-xl lg:mt-6 xl:mb-28 text-center lg:text-start">
+          <p className="text-lg sm:text-xl lg:mt-6 xl:mb-28 text-center xl:text-start">
             전문가 없이도 누구나 쉽고 빠르게
             <br />
             데이터를 활용하여 문제점과 해결책을
