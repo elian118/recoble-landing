@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useMobileMenu } from '@/libs/hooks/useMobileMenu';
+import { useMobileMenu } from '@/libs/hooks';
 
 const ContactBtn = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);

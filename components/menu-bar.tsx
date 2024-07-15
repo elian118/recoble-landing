@@ -11,7 +11,7 @@ import logo from '@/public/images/logo.png';
 import { Close, Hamburger } from '@/public/icons';
 import ModalBtn from '@/components/modal-btn';
 import { useModal } from '@/libs/hooks';
-import { useMobileMenu } from '@/libs/hooks/useMobileMenu';
+import { useMobileMenu } from '@/libs/hooks';
 
 const MenuBar = () => {
   const { isOpenMobileMenu, setIsOpenMobileMenu } = useMobileMenu();

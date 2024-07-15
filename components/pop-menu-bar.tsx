@@ -5,7 +5,7 @@ import { menus } from '@/libs/contstans';
 import { usePathname } from 'next/navigation';
 import ContactBtn from '@/components/contact-btn';
 import Link from 'next/link';
-import { useMobileMenu } from '@/libs/hooks/useMobileMenu';
+import { useMobileMenu } from '@/libs/hooks';
 
 const PopMenuBar = () => {
   const { isOpenMobileMenu, setIsOpenMobileMenu } = useMobileMenu();

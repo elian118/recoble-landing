@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 export const Insight = () => {
   return (
     <section className="insight-section">
-      <div className="m-6 content card-graph">
+      <div className="my-4 content card-graph">
         <Image src={graph1 as StaticImageData} alt="recoble composition" />
       </div>
       <div className="content card-text flex flex-col justify-center items-center gap-6">
