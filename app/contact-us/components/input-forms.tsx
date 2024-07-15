@@ -1,15 +1,46 @@
 'use client';
 
-import React from 'react';
-import { useFormState } from 'react-dom';
+import React, { useRef } from 'react';
 import Input from '@/components/input';
-import { contactUs } from '@/app/contact-us/actions';
 import Button from '@/components/button';
 import Image, { StaticImageData } from 'next/image';
 import contactImg from '@/public/images/contact.png';
+import { contactFormSchema, ContactFormType } from '@/app/contact-us/schemas';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { contactUs } from '@/app/contact-us/actions';
+import { useModal } from '@/libs/hooks';
 
 export const InputForms = () => {
-  const [state, dispatch] = useFormState(contactUs, null);
+  const resetRef = useRef<HTMLInputElement>(null);
+  const { openModal } = useModal();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormType>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  // const reset = (e: any) => e.target.reset();
+
+  const onSubmit = handleSubmit(async (data: ContactFormType) => {
+    const formData = new FormData();
+
+    formData.append('clientName', data.clientName);
+    formData.append('email', data.email);
+    formData.append('phone', data.phone);
+
+    const res = await contactUs(formData);
+
+    // 응답 성공 시
+    if (res) {
+      openModal({ body: `${data.clientName}님의 문의를 제출하였습니다.` });
+      resetRef.current?.click();
+    }
+  });
+
+  const onValid = async () => await onSubmit();
 
   return (
     <div className="input-forms">
@@ -30,32 +61,37 @@ export const InputForms = () => {
           규모/상황별 활용 방안을 안내해드려요.
         </p>
       </div>
-      <form action={dispatch as any} className="contact-form">
+      <form
+        action={onValid}
+        className="contact-form"
+        // onSubmit={(e) => reset(e)}
+      >
         <Input
-          name="clientName"
           type="text"
           placeholder="성함을 입력해주세요"
-          errors={state?.fieldErrors.clientName}
+          errors={[errors.clientName?.message ?? '']}
           minLength={2}
           required
+          {...register('clientName')}
         />
         <Input
-          name="email"
           type="email"
           placeholder="이메일을 입력해주세요"
-          errors={state?.fieldErrors.email}
+          errors={[errors.email?.message ?? '']}
           required
+          {...register('email')}
         />
         <Input
-          name="phone"
           type="text"
           placeholder="연락처를 입력해주세요"
-          errors={state?.fieldErrors.phone}
+          errors={[errors.phone?.message ?? '']}
           required
+          {...register('phone')}
         />
         <Button type="submit" fullWidth rounded>
           제출하기
         </Button>
+        <input className="hidden" ref={resetRef} type="reset"></input>
       </form>
       <div className="contact-card fade-in">
         <div className="flex flex-col gap-3 w-2/5 min-w-[170px]">

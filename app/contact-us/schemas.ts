@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { INVALID } from '@/libs/contstans';
 import validator from 'validator';
 
-export const formSchema = z.object({
+export const contactFormSchema = z.object({
   clientName: z
     .string({
       invalid_type_error: `이름은 ${INVALID.STRING}`,
@@ -20,3 +20,5 @@ export const formSchema = z.object({
       '유효하지 않은 전화번호입니다.',
     ),
 });
+
+export type ContactFormType = z.infer<typeof contactFormSchema>;
