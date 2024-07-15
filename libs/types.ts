@@ -5,6 +5,10 @@ export type SessionContent = {
   user_id?: number;
 };
 
+export type ReactNodeLayout = {
+  children: React.ReactNode;
+};
+
 export type Menu = {
   name: string;
   pathName: string;

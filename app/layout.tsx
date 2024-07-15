@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { Nanum_Gothic } from 'next/font/google';
 import './globals.css';
 import './home.css';
-import MenuBar from '@/components/menu-bar';
 import Footer from '@/components/footer';
 import ClientLayer from '@/components/client-layer';
 import Modal from '@/components/modal';
+import { ReactNodeLayout } from '@/libs/types';
+import MenuBarNav from '@/components/menu-bar-nav';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -29,11 +30,7 @@ export const metadata: Metadata = {
   creator: 'Rye & Catchers',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<ReactNodeLayout>) {
   return (
     /*
       모달 띄움(showModal() API 실행)은 최상단 html 태그에서 실행되므로,
@@ -42,7 +39,7 @@ export default function RootLayout({
     <html lang="en" data-theme="myTheme" className="overflow-y-scroll">
       <body className={`${nanumGothic.variable} relative`}>
         <ClientLayer>
-          <MenuBar />
+          <MenuBarNav />
           {children}
           <Modal />
         </ClientLayer>

@@ -75,7 +75,7 @@ body {
   .pop-menu-bar {
     @apply bg-white z-20;
     @apply flex xl:hidden flex-col gap-4 base-transition;
-    @apply w-full px-8 py-4 bg-white border fixed top-20 left-0;
+    @apply w-full px-8 py-4 bg-white border fixed top-16 left-0;
   }
 
   .plan-table {

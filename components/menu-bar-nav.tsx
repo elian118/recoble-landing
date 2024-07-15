@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { menus, publicUrls } from '@/libs/contstans';
+import { menus } from '@/libs/contstans';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import ContactBtn from '@/components/contact-btn';
@@ -10,26 +10,38 @@ import Image, { StaticImageData } from 'next/image';
 import logo from '@/public/images/logo.png';
 import { Close, Hamburger } from '@/public/icons';
 import ModalBtn from '@/components/modal-btn';
+import { useModal } from '@/libs/hooks';
 
-const MenuBar = () => {
+const MenuBarNav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const pathname = usePathname();
+  const { isOpen } = useModal();
 
   return (
-    <>
+    <div
+      className={`flex flex-row w-full h-16 justify-center items-center border-b-[1px] border-neutral-300 
+      ${(!isOpen() || !isOpenMenu) && 'fixed z-50'}
+      ${
+        pathname === '/'
+          ? 'bg-neutral-50'
+          : pathname === '/about'
+            ? 'bg-blue-50'
+            : 'bg-white'
+      }`}
+    >
       <div
-        style={{ display: Object.keys(publicUrls).includes(pathname) ? 'flex' : 'none' }}
         className={`
-          flex justify-center w-full border-b-[1px] border-neutral-300 top-0 left-0 z-50 fixed
+          navbar flex px-8 w-full xl:w-10/12 h-16 top-0 left-0 z-50 border-b-[1px] border-neutral-300
           ${
             pathname === '/'
               ? 'bg-neutral-50'
               : pathname === '/about'
                 ? 'bg-blue-50'
                 : 'bg-white'
-          }`}
+          }
+          `}
       >
-        <div className="flex flex-row gap-12 justify-between items-center xl:w-10/12 w-full h-20 px-[30px]">
+        <div className="navbar-start">
           <Link
             className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn btn-ghost"
             href={'/'}
@@ -43,7 +55,9 @@ const MenuBar = () => {
             </div>
             <span>Recoble</span>
           </Link>
-          <div className="hidden xl:flex flex-row flex-auto w-4/5 px-8 items-center gap-8 cursor-pointer">
+        </div>
+        <div className="navbar-center pt-1 xl:w-7/12">
+          <div className="hidden xl:flex gap-8 cursor-pointer">
             {menus
               .filter((e) => e.isMain)
               .map((e) => (
@@ -56,7 +70,9 @@ const MenuBar = () => {
                 </Link>
               ))}
           </div>
-          <div className="flex flex-row gap-6 justify-end items-center w-[230px] text-gray-900">
+        </div>
+        <div className="navbar-end">
+          <div className="flex flex-row gap-6 justify-end items-center text-gray-900">
             {/*<Link*/}
             {/*  className="hidden lg:flex font-normal btn btn-ghost min-w-[50px] text-base"*/}
             {/*  href={'/home'}*/}
@@ -86,8 +102,8 @@ const MenuBar = () => {
         </div>
       </div>
       <PopMenuBar openMenuState={[isOpenMenu, setIsOpenMenu]} />
-    </>
+    </div>
   );
 };
 
-export default MenuBar;
+export default MenuBarNav;
