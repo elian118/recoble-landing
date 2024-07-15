@@ -17,10 +17,12 @@ const MenuBar = () => {
   const { isOpenMobileMenu, setIsOpenMobileMenu } = useMobileMenu();
   const pathname = usePathname();
   const { isOpen } = useModal();
+  const isValidRoute = menus.map((e) => e.pathName).includes(pathname);
 
   return (
     <div
-      className={`flex flex-row w-full h-16 justify-center items-center border-b-[1px] border-neutral-300 z-50 
+      className={`flex flex-row w-full h-16 justify-center items-center border-b-[1px] border-neutral-300 z-50
+      ${!isValidRoute && 'hidden'} 
       ${!isOpen() && 'fixed'}
       ${
         pathname === '/'

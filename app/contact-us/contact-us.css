@@ -9,7 +9,7 @@
 
     .guide {
         @apply flex flex-col justify-center items-center gap-10;
-        @apply bg-neutral-100 w-full md:w-1/2 min-h-screen px-10;
+        @apply bg-neutral-100 w-full lg:w-1/2 min-h-screen px-10;
     }
 
     .guide-text {
@@ -23,7 +23,7 @@
 
     .input-forms {
         @apply flex justify-center items-center flex-col;
-        @apply bg-white w-full md:w-1/2 min-h-screen px-10 py-8;
+        @apply bg-white w-full lg:w-1/2 min-h-screen px-10 py-8;
     }
 
     .contact-description {

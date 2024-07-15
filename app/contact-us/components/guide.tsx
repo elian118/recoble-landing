@@ -8,12 +8,14 @@ export const Guide = () => {
       <div className="flex flex-col gap-4 w-full xl:w-8/12">
         <div className="flex flex-col items-start gap-3">
           <p className="text-3xl font-semibold">Recoble</p>
-          <Image
-            className="fade-in"
-            src={recobleImg as StaticImageData}
-            alt="recoble home"
-            style={{ width: 'auto', height: 'auto' }}
-          />
+          <div className="max-h-96">
+            <Image
+              className="fade-in"
+              src={recobleImg as StaticImageData}
+              alt="recoble home"
+              // style={{ width: 'auto', height: 'auto' }}
+            />
+          </div>
         </div>
       </div>
       <div className="guide-text appear-up-down">
