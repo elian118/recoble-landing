@@ -34,7 +34,7 @@ ___
         - `services.ts`: `actions.ts`에서 호출되는 로직 계층. 
             - 로직 없으면 `repositories.ts`로 건너 뜀 [VM+]
             - 서버 컴포넌트 전용 함수 위치 - `'use server'` 적용
-        - `hooks.ts`
+        - `useModal.ts`
             - 클라이언트 컴포넌트 전용 함수 위치 - `'use client'` 적용
         - `utils.ts`
             - 서비스 로직을 제외한 기타 연산 모음

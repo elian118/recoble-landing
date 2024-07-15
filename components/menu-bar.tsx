@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { menus } from '@/libs/contstans';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -11,16 +11,17 @@ import logo from '@/public/images/logo.png';
 import { Close, Hamburger } from '@/public/icons';
 import ModalBtn from '@/components/modal-btn';
 import { useModal } from '@/libs/hooks';
+import { useMobileMenu } from '@/libs/hooks/useMobileMenu';
 
 const MenuBar = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const { isOpenMobileMenu, setIsOpenMobileMenu } = useMobileMenu();
   const pathname = usePathname();
   const { isOpen } = useModal();
 
   return (
     <div
-      className={`flex flex-row w-full h-16 justify-center items-center border-b-[1px] border-neutral-300 
-      ${(!isOpen() || !isOpenMenu) && 'fixed z-50'}
+      className={`flex flex-row w-full h-16 justify-center items-center border-b-[1px] border-neutral-300 z-50 
+      ${!isOpen() && 'fixed'}
       ${
         pathname === '/'
           ? 'bg-neutral-50'
@@ -86,14 +87,14 @@ const MenuBar = () => {
               로그인
             </ModalBtn>
             <div className="hidden lg:flex min-w-[110px]">
-              <ContactBtn setIsOpenMenu={setIsOpenMenu} />
+              <ContactBtn />
             </div>
             <label className="btn btn-circle btn-ghost swap swap-rotate xl:hidden">
               <input
                 className="invisible"
                 type="checkbox"
-                checked={isOpenMenu}
-                onChange={() => setIsOpenMenu(!isOpenMenu)}
+                checked={isOpenMobileMenu}
+                onChange={() => setIsOpenMobileMenu(!isOpenMobileMenu)}
               />
               <Hamburger />
               <Close />
@@ -101,7 +102,7 @@ const MenuBar = () => {
           </div>
         </div>
       </div>
-      <PopMenuBar openMenuState={[isOpenMenu, setIsOpenMenu]} />
+      <PopMenuBar />
     </div>
   );
 };

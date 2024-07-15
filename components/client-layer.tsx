@@ -9,9 +9,11 @@ import {
 } from '@/libs/global-context';
 
 const ClientLayer = ({ children }: { children: React.ReactNode }) => {
+  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState<boolean>(false);
   const [modal, setModal] = useState<ModalState>(initModal);
 
   const value: GlobalContextType = {
+    isOpenMobileState: [isOpenMobileMenu, setIsOpenMobileMenu],
     modalState: [modal, setModal],
   };
 

@@ -2,18 +2,16 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useMobileMenu } from '@/libs/hooks/useMobileMenu';
 
-type ContactBtnProps = {
-  setIsOpenMenu: (val: boolean) => void;
-};
-
-const ContactBtn = ({ setIsOpenMenu }: ContactBtnProps) => {
+const ContactBtn = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const { setIsOpenMobileMenu } = useMobileMenu();
   const { push } = useRouter();
 
   const onClickMenuIcon = (pathName: string) => {
     push(pathName);
-    setIsOpenMenu(false);
+    setIsOpenMobileMenu(false);
   };
 
   return (
