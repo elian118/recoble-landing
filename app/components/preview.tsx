@@ -1,7 +1,7 @@
 import React from 'react';
 import composition from '@/public/images/compositon.gif';
 import Image, { StaticImageData } from 'next/image';
-import ModalBtn from '@/components/modal-btn';
+import Link from 'next/link';
 
 export const Preview = () => {
   return (
@@ -28,15 +28,14 @@ export const Preview = () => {
           고객경험 개선에 있습니다.
         </p>
 
-        <ModalBtn
+        <Link
+          href="http://recoble.ai/demo"
           className="btn btn-outline bg-black rounded-full px-8 h-14"
-          title="알림"
-          body="준비중입니다."
         >
           <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-200 bg-clip-text text-transparent text-xl font-bold">
             데모 체험하기
           </div>
-        </ModalBtn>
+        </Link>
       </div>
     </section>
   );
