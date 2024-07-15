@@ -6,7 +6,7 @@ import Footer from '@/components/footer';
 import ClientLayer from '@/components/client-layer';
 import Modal from '@/components/modal';
 import { ReactNodeLayout } from '@/libs/types';
-import MenuBarNav from '@/components/menu-bar-nav';
+import MenuBar from '@/components/menu-bar';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: Readonly<ReactNodeLayout>) {
     <html lang="en" data-theme="myTheme" className="overflow-y-scroll">
       <body className={`${nanumGothic.variable} relative`}>
         <ClientLayer>
-          <MenuBarNav />
+          <MenuBar />
           {children}
           <Modal />
         </ClientLayer>
