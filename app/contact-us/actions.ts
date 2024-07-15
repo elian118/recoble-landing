@@ -1,7 +1,7 @@
 'use server';
 
 import { postContactUs } from '@/app/contact-us/services';
-import { contactFormSchema } from '@/app/contact-us/schemas';
+import { contactFormScheme } from '@/app/contact-us/schemas';
 import { FormDataType } from '@/app/contact-us/types';
 
 export const contactUs = async (formData: FormData) => {
@@ -11,7 +11,7 @@ export const contactUs = async (formData: FormData) => {
     phone: formData.get('phone'),
   };
 
-  const result = contactFormSchema.safeParse(data);
+  const result = contactFormScheme.safeParse(data);
 
   if (!result.success) return result.error.flatten();
   else {

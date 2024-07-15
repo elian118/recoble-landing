@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { INVALID } from '@/libs/contstans';
 import validator from 'validator';
 
-export const contactFormSchema = z.object({
+export const contactFormScheme = z.object({
   clientName: z
     .string({
       invalid_type_error: `이름은 ${INVALID.STRING}`,
@@ -11,9 +11,13 @@ export const contactFormSchema = z.object({
     .trim()
     .min(2, INVALID.TOO_SHORT)
     .toLowerCase(),
-  email: z.string().email(INVALID.EMAIL).trim().toLowerCase(),
+  email: z
+    .string({ required_error: `이메일을 ${INVALID.INPUT}` })
+    .email(INVALID.EMAIL)
+    .trim()
+    .toLowerCase(),
   phone: z
-    .string()
+    .string({ required_error: `연락처를 ${INVALID.INPUT}` })
     .trim()
     .refine(
       (phone) => validator.isMobilePhone(phone, 'ko-KR'),
@@ -21,4 +25,4 @@ export const contactFormSchema = z.object({
     ),
 });
 
-export type ContactFormType = z.infer<typeof contactFormSchema>;
+export type ContactFormType = z.infer<typeof contactFormScheme>;

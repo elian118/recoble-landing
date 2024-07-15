@@ -5,7 +5,7 @@ import Input from '@/components/input';
 import Button from '@/components/button';
 import Image, { StaticImageData } from 'next/image';
 import contactImg from '@/public/images/contact.png';
-import { contactFormSchema, ContactFormType } from '@/app/contact-us/schemas';
+import { contactFormScheme, ContactFormType } from '@/app/contact-us/schemas';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactUs } from '@/app/contact-us/actions';
@@ -19,10 +19,8 @@ export const InputForms = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<ContactFormType>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(contactFormScheme),
   });
-
-  // const reset = (e: any) => e.target.reset();
 
   const onSubmit = handleSubmit(async (data: ContactFormType) => {
     const formData = new FormData();
@@ -61,37 +59,30 @@ export const InputForms = () => {
           규모/상황별 활용 방안을 안내해드려요.
         </p>
       </div>
-      <form
-        action={onValid}
-        className="contact-form"
-        // onSubmit={(e) => reset(e)}
-      >
+      <form action={onValid} className="contact-form">
         <Input
           type="text"
           placeholder="성함을 입력해주세요"
           errors={[errors.clientName?.message ?? '']}
           minLength={2}
-          required
           {...register('clientName')}
         />
         <Input
           type="email"
           placeholder="이메일을 입력해주세요"
           errors={[errors.email?.message ?? '']}
-          required
           {...register('email')}
         />
         <Input
           type="text"
           placeholder="연락처를 입력해주세요"
           errors={[errors.phone?.message ?? '']}
-          required
           {...register('phone')}
         />
         <Button type="submit" fullWidth rounded>
           제출하기
         </Button>
-        <input className="hidden" ref={resetRef} type="reset"></input>
+        <input className="hidden" ref={resetRef} type="reset" />
       </form>
       <div className="contact-card fade-in">
         <div className="flex flex-col gap-3 w-2/5 min-w-[170px]">
@@ -100,7 +91,7 @@ export const InputForms = () => {
           <p className="font-extralight text-sm">기술 지원 및 견적 문의</p>
         </div>
         <Image
-          className="w-3/5 md:w-full xl:3/5"
+          className="w-3/5 xl:3/5"
           src={contactImg as StaticImageData}
           alt="contact image"
           style={{ width: 'auto', height: 'auto' }}

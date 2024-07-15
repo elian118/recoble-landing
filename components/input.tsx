@@ -10,7 +10,7 @@ export const _Input = (
   ref: ForwardedRef<HTMLInputElement>,
 ) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-1">
       <input
         ref={ref}
         name={name}
@@ -18,7 +18,7 @@ export const _Input = (
         {...rest}
       />
       {errors?.map((err, idx) => (
-        <span key={idx} className="text-error font-medium text-sm">
+        <span key={idx} className="text-error font-medium text-sm px-2">
           {err}
         </span>
       ))}

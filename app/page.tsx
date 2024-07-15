@@ -2,11 +2,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import dynamic from 'next/dynamic';
-import Loading from '@/components/loading';
+import PageLoadingView from '@/components/page-loading-view';
 
 const DynamicHomeContainer = dynamic(() => import('./components/home-container'), {
   ssr: false,
-  loading: () => <Loading />,
+  loading: () => <PageLoadingView />,
 });
 
 export default function Home() {
