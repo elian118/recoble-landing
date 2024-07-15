@@ -15,10 +15,9 @@ export const useWinSize = () => {
 
   useEffect(() => {
     const getWindowDimensions = (): WinDimensions => {
-      const { innerWidth: width, innerHeight: height } = window;
       return {
-        winWidth: width,
-        winHeight: height,
+        winWidth: window.innerWidth,
+        winHeight: window.innerHeight,
       };
     };
 
