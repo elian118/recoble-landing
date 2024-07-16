@@ -64,7 +64,7 @@
 
     .assert-recoble-section {
         @apply w-full h-screen bg-black;
-        @apply flex flex-col justify-center items-center;
+        @apply flex flex-col justify-start items-center;
     }
 
     .assert-recoble-container {
