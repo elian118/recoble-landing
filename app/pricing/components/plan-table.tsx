@@ -1,65 +1,60 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { plans } from '@/app/pricing/constants';
-import greenChkIco from '@/public/images/green_check_icon.png';
-import blackChkIco from '@/public/images/black_check_icon.png';
-import Image, { StaticImageData } from 'next/image';
+import PlanTableView from '@/app/pricing/components/views/plan-table-view';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 
-type PlanTableProps = {
-  isSelectedMonthly: boolean;
-};
-export const PlanTable = ({ isSelectedMonthly }: PlanTableProps) => {
-  return (
-    <div className="plan-table">
+export const PlanTable = () => {
+  const [swiperIndex, setSwiperIndex] = useState(0);
+  const [swiper, setSwiper] = useState<SwiperClass>();
+  const winWidth = window.innerWidth;
+
+  const handlePrev = () => swiper?.slidePrev();
+  const handleNext = () => swiper?.slideNext();
+
+  return winWidth >= 683 ? (
+    <div className="plan-table plan-table-align">
       {plans.map((plan, pIdx) => (
-        <div key={plan.title}>
-          <div className={`text-3xl font-bold ${pIdx === 3 && 'text-blue-500'}`}>
-            {plan.title}
-          </div>
-          <div className="text-sm text-gray-500">({plan.mau})</div>
-          <div className="text-3xl h-12 my-4">
-            <span className="font-bold">
-              {(isSelectedMonthly ? plan.price.monthly : plan.price.yearly) ?? '가격문의'}
-            </span>
-            <span
-              style={{
-                display:
-                  (isSelectedMonthly && plan.price.monthly) || !isSelectedMonthly
-                    ? undefined
-                    : 'none',
-              }}
-            >
-              &nbsp;/ 월
-            </span>
-            <div
-              className={`text-gray-500 text-sm mt-3 ${isSelectedMonthly && 'hidden'}`}
-            >
-              {plan.price.standard}
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-4 my-8 py-16 h-[200px]">
-            {plan.details.map((detail, idx) => (
-              <div
-                key={`${plan.title}-detail-${idx}`}
-                className="flex items-center gap-3 pr-3"
-              >
-                <Image
-                  width={24}
-                  height={24}
-                  src={
-                    pIdx === 3
-                      ? (blackChkIco as StaticImageData)
-                      : (greenChkIco as StaticImageData)
-                  }
-                  alt={detail}
-                  style={{ width: 24, height: 24 }}
-                />
-                <div className="font-light">{detail}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <PlanTableView key={plan.title} plan={plan} pIdx={pIdx} />
       ))}
+    </div>
+  ) : (
+    <div className="plan-table plan-table-mobile-align relative">
+      <Swiper
+        modules={[Pagination]}
+        slidesPerView={1}
+        onActiveIndexChange={(e) => setSwiperIndex(e.realIndex)}
+        onSwiper={(e) => {
+          setSwiper(e);
+        }}
+        pagination
+      >
+        {plans.map((plan, pIdx) => (
+          <SwiperSlide key={plan.title}>
+            <PlanTableView plan={plan} pIdx={pIdx} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div>
+        <div className="w-7 flex justify-start overflow-clip absolute left-1 z-10">
+          <button
+            className={`btn btn-circle opacity-50 hover:opacity-100 ${swiperIndex === 0 && 'invisible'}`}
+            onClick={handlePrev}
+          >
+            ❮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </button>
+        </div>
+        <div className="w-7 flex justify-end overflow-clip absolute right-1 z-10">
+          <button
+            className={`btn btn-circle opacity-50 hover:opacity-100 ${swiperIndex === 3 && 'invisible'}`}
+            onClick={handleNext}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;❯
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

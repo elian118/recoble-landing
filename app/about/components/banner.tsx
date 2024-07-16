@@ -40,12 +40,14 @@ export const Banner = () => {
       </FadeIn>
 
       <p className="font-semibold text-3xl lg:text-4xl xl:text-6xl mb-3">Our Beginning</p>
-      <p className="text-lg lg:text-xl xl:text-3xl w-10/12 sm:w-auto">
+      <p className="text-lg lg:text-xl xl:text-3xl w-10/12 sm:w-auto lg:leading-relaxed xl:leading-relaxed">
         레코블은 부푼 꿈을 안고 시작된&nbsp;
         <br className="flex sm:hidden" />
         우리의 서비스를 운영하면서
         <br />
-        만났던 수 많은 문제점에서 시작되었습니다.
+        만났던 수 많은 문제점에서&nbsp;
+        <br className="flex sm:hidden" />
+        시작되었습니다.
       </p>
       <p className="font-bold text-lg lg:text-xl xl:text-3xl mt-8 w-[300px] md:w-auto">
         우리와 같은 문제들이 반복되지 않도록&nbsp;

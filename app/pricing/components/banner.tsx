@@ -1,13 +1,11 @@
 'use client';
 
-import React from 'react';
-import Ball from '@/components/ball';
+import React, { useContext } from 'react';
+import BackDecorateView from '@/app/pricing/components/views/back-decorate-view';
+import { PricingContext } from '@/app/pricing/pricing-context';
 
-type BannerProps = {
-  isSelectedMonthlyState: [boolean, (val: boolean) => void];
-};
-
-export const Banner = ({ isSelectedMonthlyState }: BannerProps) => {
+export const Banner = () => {
+  const { isSelectedMonthlyState } = useContext(PricingContext);
   const [isSelectedMonthly, setIsSelectedMonthly] = isSelectedMonthlyState;
 
   return (
@@ -41,32 +39,7 @@ export const Banner = ({ isSelectedMonthlyState }: BannerProps) => {
           연간
         </div>
       </div>
-      {/* 배경 장식 */}
-      <div className="pricing-back-circle1 appear" />
-      <div className="pricing-back-circle2 appear" />
-      <div className="py-8 w-full">
-        <Ball
-          color="via-yellow-400 to-yellow-800"
-          size="size-6"
-          delay="delay-0"
-          right="18%"
-          top="-18%"
-        />
-        <Ball
-          color="via-green-400 to-green-800"
-          size="size-10"
-          delay="delay-200"
-          left="-22%"
-          top="39%"
-        />
-        <Ball
-          color="via-blue-400 to-blue-800"
-          size="size-8"
-          delay="delay-700"
-          right="-26%"
-          bottom="24%"
-        />
-      </div>
+      <BackDecorateView />
     </div>
   );
 };

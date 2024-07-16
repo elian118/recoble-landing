@@ -4,8 +4,8 @@
 
 @layer components {
     .pricing-banner {
-        @apply flex flex-col gap-6 justify-center items-center;
-        @apply mt-40 mb-12 relative;
+        @apply w-full h-full flex flex-col gap-6 justify-center items-center;
+        @apply pt-40 pb-20 mb-0 xl:-mb-6 relative overflow-clip;
     }
 
     .pricing-banner-title {
@@ -20,7 +20,7 @@
     .pricing-tab {
         @apply flex gap-1 rounded-md indicator;
         @apply justify-between items-center;
-        @apply mt-12 -mb-24 p-1 w-60 h-12 bg-neutral-200 z-20;
+        @apply mt-8 -mb-24 p-1 w-60 h-12 bg-neutral-200 z-20;
     }
 
     .pricing-tab-period {
@@ -31,10 +31,33 @@
     .pricing-back-circle1 {
         @apply size-[600px] rounded-full border border-gray-400;
         @apply opacity-25 absolute top-[-70px];
+        @apply hidden sm:flex
     }
 
     .pricing-back-circle2 {
         @apply size-[800px] rounded-full border border-gray-400;
         @apply opacity-25 absolute top-[-170px];
     }
+
+    .plan-table {
+        @apply bg-neutral-100 rounded-lg px-4;
+        @apply md:px-0 w-full md:w-8/12 h-auto;
+        @apply overflow-clip;
+    }
+
+    .plan-table-align {
+        @apply flex flex-wrap items-start xl:items-center justify-center gap-y-4;
+    }
+
+    .plan-table-mobile-align {
+        @apply w-[320px] flex items-center justify-center;
+    }
+
+    .plan-table-elms {
+        @apply flex w-1/4 flex-col px-8 py-14 z-10;
+        @apply border-r border-gray-100 bg-slate-50 last:bg-white;
+        @apply h-auto xl:last:h-[560px] min-w-80 xl:min-w-72;
+        @apply shadow-md last:shadow-xl;
+    }
+
 }
