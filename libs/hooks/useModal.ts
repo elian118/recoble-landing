@@ -1,3 +1,5 @@
+'use client';
+
 import { useContext } from 'react';
 import { GlobalContext, initModal, ModalState } from '@/libs/global-context';
 
