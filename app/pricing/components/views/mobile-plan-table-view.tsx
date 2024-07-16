@@ -34,20 +34,34 @@ export const MobilePlanTableView = () => {
       </Swiper>
       <div>
         <div
-          className={`w-6 flex ${winWidth < 400 ? 'justify-end' : 'justify-start'} overflow-clip absolute ${winWidth < 400 ? 'left-0' : '-left-6'} z-10`}
+          className={`
+            w-6 flex overflow-clip absolute z-10
+            ${winWidth < 400 ? 'justify-end' : 'justify-start'} 
+            ${winWidth < 400 ? 'left-0' : '-left-6'}
+          `}
         >
           <button
-            className={`btn btn-circle opacity-50 hover:opacity-100 ${swiperIndex === 0 && 'invisible'}`}
+            className={`
+              btn btn-circle opacity-50 hover:opacity-100 
+              ${swiperIndex === 0 && 'invisible'}
+            `}
             onClick={handlePrev}
           >
             ❮&nbsp;&nbsp;&nbsp;❮
           </button>
         </div>
         <div
-          className={`w-6 flex ${winWidth < 400 ? 'justify-start' : 'justify-end'} overflow-clip absolute ${winWidth < 400 ? 'right-0' : '-right-6'} z-10`}
+          className={`
+            w-6 flex overflow-clip absolute z-10
+            ${winWidth < 400 ? 'justify-start' : 'justify-end'} 
+            ${winWidth < 400 ? 'right-0' : '-right-6'}
+          `}
         >
           <button
-            className={`btn btn-circle opacity-50 hover:opacity-100 ${swiperIndex === 3 && 'invisible'}`}
+            className={`
+              btn btn-circle opacity-50 hover:opacity-100 
+              ${swiperIndex === 3 && 'invisible'}
+            `}
             onClick={handleNext}
           >
             ❯&nbsp;&nbsp;&nbsp;❯
