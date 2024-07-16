@@ -9,11 +9,10 @@ export const Preview = () => {
       <div className="m-6 content card-img bg-gray-200">
         <Image
           className="rounded-full animate-spin ease-linear"
-          width={200}
-          height={200}
           src={composition as StaticImageData}
           alt="recoble composition"
           style={{ width: 200, height: 200 }}
+          unoptimized
         />
       </div>
       <div className="flex flex-col content justify-center items-center gap-6 content card-text">
