@@ -12,7 +12,9 @@ export const QList = () => {
             <div className={`text-lg lg:text-2xl font-medium ${e.titleColor}`}>
               {e.title}
             </div>
-            <div className="text-lg lg:text-2xl font-medium">{e.comment}</div>
+            <div className="text-base sm:text-lg lg:text-2xl font-medium">
+              {e.comment}
+            </div>
           </div>
         </div>
       ))}

@@ -8,7 +8,7 @@ export const Banner = () => {
   return (
     <div className="banner">
       <FadeIn>
-        <div className="max-w-[536px] relative">
+        <div className="relative">
           <Image
             className="size-[250px] sm:size-[320px] md:size-[410px] lg:size-[450px] xl:size-[500px] object-contain"
             src={aboutImg as StaticImageData}

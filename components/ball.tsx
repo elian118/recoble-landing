@@ -1,7 +1,19 @@
 import React from 'react';
 
 type BallProps = {
-  size: 'size-2' | 'size-4' | 'size-6' | 'size-8' | 'size-10' | 'size-12';
+  size:
+    | 'size-2'
+    | 'size-4'
+    | 'size-6'
+    | 'size-8'
+    | 'size-10'
+    | 'size-12'
+    | 'sm:size-4 size-2'
+    | 'sm:size-6 size-4'
+    | 'sm:size-8 size-6'
+    | 'sm:size-10 size-8'
+    | 'sm:size-12 size-10'
+    | 'sm:size-14 size-12';
   color:
     | 'via-yellow-400 to-yellow-800'
     | 'via-green-400 to-green-800'

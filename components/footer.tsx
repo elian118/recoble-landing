@@ -14,6 +14,7 @@ const Footer = () => {
         display:
           !Object.keys(publicUrls).includes(pathname) ||
           pathname === '/contact-us' ||
+          pathname === '/about' ||
           pathname === '/'
             ? 'none'
             : 'inherit',
