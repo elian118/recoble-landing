@@ -1,28 +1,22 @@
 'use client';
 
 import React, { useState } from 'react';
-import { plans } from '@/app/pricing/constants';
-import PlanTableView from '@/app/pricing/components/views/plan-table-view';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { plans } from '@/app/pricing/constants';
+import { PlanTableElmView } from '@/app/pricing/components/views';
 
-export const PlanTable = () => {
+export const MobilePlanTableView = () => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [swiper, setSwiper] = useState<SwiperClass>();
-  const winWidth = window.innerWidth;
 
   const handlePrev = () => swiper?.slidePrev();
   const handleNext = () => swiper?.slideNext();
 
-  return winWidth >= 683 ? (
-    <div className="plan-table plan-table-align">
-      {plans.map((plan, pIdx) => (
-        <PlanTableView key={plan.title} plan={plan} pIdx={pIdx} />
-      ))}
-    </div>
-  ) : (
+  return (
     <div className="plan-table plan-table-mobile-align relative">
       <Swiper
+        className="sm:hidden"
         modules={[Pagination]}
         slidesPerView={1}
         onActiveIndexChange={(e) => setSwiperIndex(e.realIndex)}
@@ -32,8 +26,8 @@ export const PlanTable = () => {
         pagination
       >
         {plans.map((plan, pIdx) => (
-          <SwiperSlide key={plan.title}>
-            <PlanTableView plan={plan} pIdx={pIdx} />
+          <SwiperSlide key={`plan-${pIdx}`} className="sm:hidden">
+            <PlanTableElmView plan={plan} pIdx={pIdx} />
           </SwiperSlide>
         ))}
       </Swiper>

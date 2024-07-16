@@ -1,3 +1,3 @@
 export * from './banner';
-export * from './plan-table';
 export * from './pricing-container';
+export * from './views/plan-table-elm-view';
