@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import blackChkIco from '@/public/images/black_check_icon.png';

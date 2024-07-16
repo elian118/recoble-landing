@@ -14,9 +14,8 @@ export const MobilePlanTableView = () => {
   const handleNext = () => swiper?.slideNext();
 
   return (
-    <div className="plan-table plan-table-mobile-align relative">
+    <div className="plan-table-mobile-align sm:hidden relative">
       <Swiper
-        className="sm:hidden"
         modules={[Pagination]}
         slidesPerView={1}
         onActiveIndexChange={(e) => setSwiperIndex(e.realIndex)}
