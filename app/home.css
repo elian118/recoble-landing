@@ -63,13 +63,13 @@
     }
 
     .assert-recoble-section {
-        @apply p-2 w-full h-screen max-h-[887px] bg-black;
-        @apply flex flex-col justify-between items-center;
+        @apply w-full h-screen bg-black;
+        @apply flex flex-col justify-center items-center;
     }
 
     .assert-recoble-container {
-        @apply bg-gray-100 w-full h-3/5 rounded-2xl;
-        @apply m-8 sm:pr-0 lg:pt-12 lg:py-12 flex flex-wrap md:flex-nowrap;
+        @apply bg-gray-100 w-full sm:h-3/4 xl:h-[90%] rounded-2xl;
+        @apply lg:py-8 flex flex-wrap md:flex-nowrap;
         @apply justify-between gap-0 lg:gap-6 overflow-clip;
     }
 
