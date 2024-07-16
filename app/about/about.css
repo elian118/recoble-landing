@@ -16,7 +16,7 @@
     .question {
         @apply flex flex-col lg:flex-row gap-4 lg:gap-12;
         @apply justify-center items-center;
-        @apply py-8 lg:py-11 border-b last:border-none;
+        @apply py-6 lg:py-11 border-b last:border-none;
     }
 
     .answer {
