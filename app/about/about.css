@@ -4,20 +4,19 @@
 
 @layer components {
     .banner {
-        @apply flex flex-col gap-4 w-full;
-        @apply h-[700px] md:h-[800px] lg:h-screen;
+        @apply flex flex-col gap-4 w-full h-screen;
         @apply justify-center items-center bg-blue-50;
     }
 
     .q-list {
-        @apply flex flex-col py-20 gap-2 sm:gap-4;
-        @apply w-full sm:w-4/5 md:w-3/5 lg:w-2/5 h-auto;
+        @apply flex flex-col py-20;
+        @apply w-4/5 md:w-3/5 lg:w-2/3 xl:w-3/5 2xl:w-2/5 h-auto;
     }
 
     .question {
-        @apply flex flex-col lg:flex-row sm:gap-4 lg:gap-12;
+        @apply flex flex-col lg:flex-row gap-4 lg:gap-12;
         @apply justify-center items-center;
-        @apply py-4 sm:py-8 lg:py-11 border-b last:border-none;
+        @apply py-8 lg:py-11 border-b last:border-none;
     }
 
     .answer {
