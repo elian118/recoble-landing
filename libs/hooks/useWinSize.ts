@@ -1,31 +1,21 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-
-type WinDimensions = {
-  winWidth: number;
-  winHeight: number;
-};
+import { useThrottle } from '@/libs/hooks/useThrottle';
 
 export const useWinSize = () => {
-  const [winDimensions, setWinDimensions] = useState<WinDimensions>({
-    winWidth: 0,
-    winHeight: 0,
-  });
+  const [winWidth, setWinWidth] = useState<number>(0);
+  const [winHeight, setWinHeight] = useState<number>(0);
+
+  const updateWindowSize = useThrottle(() => {
+    winWidth !== window.innerWidth && setWinWidth(window.innerWidth);
+    winHeight !== window.innerHeight && setWinHeight(window.innerHeight);
+  }, 250);
 
   useEffect(() => {
-    const getWindowDimensions = (): WinDimensions => {
-      return {
-        winWidth: window.innerWidth,
-        winHeight: window.innerHeight,
-      };
-    };
-
-    const handleResize = () => setWinDimensions(getWindowDimensions());
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', updateWindowSize);
+    return () => window.removeEventListener('resize', updateWindowSize);
   }, []);
 
-  return winDimensions;
+  return { winWidth, winHeight };
 };
