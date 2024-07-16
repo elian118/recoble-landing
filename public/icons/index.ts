@@ -1,2 +1,2 @@
-export * from './Hamburger';
-export * from './Close';
+export * from './hamburger';
+export * from './close';
