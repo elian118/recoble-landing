@@ -16,10 +16,13 @@ export const MobilePlanTableView = () => {
   const handleNext = () => swiper?.slideNext();
 
   return (
-    <div className="plan-table-mobile-align sm:hidden relative">
+    <div
+      className={`plan-table-mobile-align sm:hidden relative ${winWidth < 400 ? 'px-4' : 'px-8'}`}
+    >
       <Swiper
         modules={[Pagination]}
         slidesPerView={1}
+        direction="horizontal"
         onActiveIndexChange={(e) => setSwiperIndex(e.realIndex)}
         onSwiper={(e) => {
           setSwiper(e);
@@ -27,7 +30,7 @@ export const MobilePlanTableView = () => {
         pagination
       >
         {plans.map((plan, pIdx) => (
-          <SwiperSlide key={`plan-${pIdx}`} className="sm:hidden">
+          <SwiperSlide key={`plan-${pIdx}`}>
             <PlanTableElmView plan={plan} pIdx={pIdx} />
           </SwiperSlide>
         ))}
@@ -37,7 +40,7 @@ export const MobilePlanTableView = () => {
           className={`
             w-6 flex overflow-clip absolute z-10
             ${winWidth < 400 ? 'justify-end' : 'justify-start'} 
-            ${winWidth < 400 ? 'left-0' : '-left-6'}
+            ${winWidth < 400 ? 'left-4' : 'left-2'}
           `}
         >
           <button
@@ -54,7 +57,7 @@ export const MobilePlanTableView = () => {
           className={`
             w-6 flex overflow-clip absolute z-10
             ${winWidth < 400 ? 'justify-start' : 'justify-end'} 
-            ${winWidth < 400 ? 'right-0' : '-right-6'}
+            ${winWidth < 400 ? 'right-4' : 'right-2'}
           `}
         >
           <button

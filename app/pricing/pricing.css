@@ -46,11 +46,11 @@
     }
 
     .plan-table-align {
-        @apply flex flex-wrap items-start xl:items-center justify-center gap-y-4;
+        @apply flex flex-row flex-wrap items-start xl:items-center justify-center gap-y-4;
     }
 
     .plan-table-mobile-align {
-        @apply w-[320px] h-[512px] flex flex-nowrap items-center justify-center;
+        @apply w-full flex flex-row items-center justify-center;
     }
 
     .plan-table-elms {
