@@ -5,10 +5,12 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { plans } from '@/app/pricing/constants';
 import { PlanTableElmView } from '@/app/pricing/components/views';
+import { useWinSize } from '@/libs/hooks';
 
 export const MobilePlanTableView = () => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [swiper, setSwiper] = useState<SwiperClass>();
+  const { winWidth } = useWinSize();
 
   const handlePrev = () => swiper?.slidePrev();
   const handleNext = () => swiper?.slideNext();
@@ -31,20 +33,24 @@ export const MobilePlanTableView = () => {
         ))}
       </Swiper>
       <div>
-        <div className="w-7 flex justify-start overflow-clip absolute left-1 z-10">
+        <div
+          className={`w-6 flex ${winWidth < 400 ? 'justify-end' : 'justify-start'} overflow-clip absolute ${winWidth < 400 ? 'left-0' : '-left-6'} z-10`}
+        >
           <button
             className={`btn btn-circle opacity-50 hover:opacity-100 ${swiperIndex === 0 && 'invisible'}`}
             onClick={handlePrev}
           >
-            ❮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ❮&nbsp;&nbsp;&nbsp;❮
           </button>
         </div>
-        <div className="w-7 flex justify-end overflow-clip absolute right-1 z-10">
+        <div
+          className={`w-6 flex ${winWidth < 400 ? 'justify-start' : 'justify-end'} overflow-clip absolute ${winWidth < 400 ? 'right-0' : '-right-6'} z-10`}
+        >
           <button
             className={`btn btn-circle opacity-50 hover:opacity-100 ${swiperIndex === 3 && 'invisible'}`}
             onClick={handleNext}
           >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;❯
+            ❯&nbsp;&nbsp;&nbsp;❯
           </button>
         </div>
       </div>
