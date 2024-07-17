@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterContents } from '@/components/views';
+import FooterContents from '@/components/views/footer-contents';
 
 const FooterInSection = () => {
   return (

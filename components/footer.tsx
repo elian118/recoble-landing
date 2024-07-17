@@ -3,7 +3,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { publicUrls } from '@/libs/contstans';
-import { FooterContents } from '@/components/views';
+import FooterContents from '@/components/views/footer-contents';
 
 const Footer = () => {
   const pathname = usePathname();

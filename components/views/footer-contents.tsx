@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const FooterContents = () => {
+const FooterContents = () => {
   return (
     <div>
       <p>(주) 라이앤캐처스 | 대표이사: 허윤</p>
@@ -15,3 +15,5 @@ export const FooterContents = () => {
     </div>
   );
 };
+
+export default FooterContents;
