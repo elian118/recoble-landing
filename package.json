@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "Rye & Catchers's solution 'Recoble' landing page",
-  "author": {
-    "email": "arendi@ryencatchers.com",
-    "name": "Kim, Gwang Hoe"
-  },
+  "author": "Kim, Gwang Hoe <arendi@ryencatchers.com>",
+  "contributors": [
+    "Kim, Min Jung <mjay@ryencatchers.com>"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "npx prisma generate && next build",
