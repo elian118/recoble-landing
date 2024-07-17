@@ -12,13 +12,12 @@ ___
     - 스타일: [테일윈드 css](https://tailwindcss.com/) + [데이지 UI](https://daisyui.com/)
         - 3일 이내 빠른 1차 퍼블리싱 완료를 위한 이상적 구성
     - 데이터베이스(이하 'DB')는 라캐 레코블 백엔드 애플리캐이션으로부터 API 호출해 연동
-        - 이에 따라, Prisma ORM은 굳이 도입하지 않았다.
-        - 그 외, 데이터를 복제하거나 가공할 로직을 담을 계층 / 기술스택 생략(불필요)
+        - Prisma ORM은 문의하기 전용으로 한시적 제한적 용도로 도입
 - 디자인 패턴
     - 앱라우트 페이지 MVVM 패턴 정의
         - `constants.tsx`: 상수 모음 [M]
         - `types.ts`: 모델 모음 [M]
-        - `repositories.ts`: DB 소통 쿼리 계층 [M] (불필요)
+        - `repositories.ts`: DB 소통 쿼리 계층 [M]
             - `services.ts` 또는 `actions.ts`에서 호출
             - 클라이언트 컴포넌트는 훅에서 직접 `repositories.ts` 함수를 호출할 수도 있다.
         - `page.ts`: 화면 [V]. (단, `route.ts`가 있다면 단순 경유 페이지에 불과하므로 해당 파일이 없다.)
@@ -42,6 +41,14 @@ ___
             - 대부분의 공통 유틸은 `libs` 폴더 아래 존재
     - 함수가 너무 많아지면, 파일명과 동일 폴더를 생성하고 그 하위에 여러 파일로 구분해 함수를 분류 저장한다.
         - Ex. `services / commandServices.ts, queryServices.ts`
+    - 한 폴더 안에 여러 파일을 저장할 때(특히, 컴포넌트)
+        - 최소 둘 이상이라면 index.ts에 모아 객체로 export
+        - 파일마다 하나의 상수만 선언 및 직접 export 하고 export default 구문 제거 
+        - export 파일들을 구조분해로 import → 한 줄로 여러 컴포넌트 수입 처리 가능
+    - 폴더 안에 단일 상수만 export 할 때 export default 사용 권장
+        - 이 경우, index.ts 파일 불필요.
+        - 사유: 배포 환경에서 빌드 시, 구조분해 import로 단일 export 상수 파일을 가져오지 못하는 경우 종종 발생
+
 
 ## # 기타
 ---
