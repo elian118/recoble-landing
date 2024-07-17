@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useThrottle } from '@/libs/hooks/useThrottle';
 
 export const useWinSize = () => {
-  const [winWidth, setWinWidth] = useState<number>(window.innerWidth);
-  const [winHeight, setWinHeight] = useState<number>(window.innerHeight);
+  const [winWidth, setWinWidth] = useState<number>(0);
+  const [winHeight, setWinHeight] = useState<number>(0);
 
   const updateWindowSize = useThrottle(() => {
     winWidth !== window.innerWidth && setWinWidth(window.innerWidth);
