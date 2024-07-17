@@ -1,4 +1,5 @@
 import React from 'react';
+import mainImg from '@/public/images/main_img.png';
 import composition from '@/public/images/compositon.gif';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
@@ -6,9 +7,9 @@ import Link from 'next/link';
 export const Preview = () => {
   return (
     <section className="preview-section">
-      <div className="m-6 content card-img bg-gray-200">
+      <div className="m-6 content card-img bg-gray-200 sm:hidden">
         <Image
-          className="rounded-full animate-spin ease-linear"
+          className="rounded-full ease-linear"
           src={composition as StaticImageData}
           alt="recoble composition"
           style={{ width: 200, height: 200 }}
@@ -35,6 +36,13 @@ export const Preview = () => {
             데모 체험하기
           </div>
         </Link>
+      </div>
+      <div className="m-6 content card-graph bg-gray-200 h-1/4 hidden sm:block">
+        <Image
+          className="ease-linear sm:object-contain"
+          src={mainImg as StaticImageData}
+          alt="recoble composition"
+        />
       </div>
     </section>
   );
