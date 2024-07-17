@@ -10,6 +10,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactUs } from '@/app/contact-us/actions';
 import { useModal } from '@/libs/hooks';
+import { PostInquiryRes } from '@/app/contact-us/types';
 
 export const InputForms = () => {
   const resetRef = useRef<HTMLInputElement>(null);

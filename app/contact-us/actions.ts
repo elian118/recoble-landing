@@ -14,12 +14,5 @@ export const contactUs = async (formData: FormData) => {
   const result = contactFormScheme.safeParse(data);
 
   if (!result.success) return result.error.flatten();
-  else {
-    try {
-      const res = await postContactUs(result.data);
-      if (res) return res;
-    } catch (err) {
-      //
-    }
-  }
+  else return await postContactUs(result.data);
 };
