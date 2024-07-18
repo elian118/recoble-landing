@@ -7,6 +7,7 @@ import ClientLayer from '@/components/client-layer';
 import Modal from '@/components/modal';
 import { ReactNodeLayout } from '@/libs/types';
 import MenuBar from '@/components/menu-bar';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: Readonly<ReactNodeLayout>) {
           <Modal />
         </ClientLayer>
         <Footer />
+        <GoogleAnalytics gaId="G-HPLS2B6GPV" />
       </body>
     </html>
   );
