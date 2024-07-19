@@ -13,7 +13,7 @@ export const useThrottle = <T extends any[]>(
       timerId.current = setTimeout(() => {
         callback(...params);
         timerId.current = null;
-      }, delay);
+      }, delay ?? 0);
     }
   };
 };

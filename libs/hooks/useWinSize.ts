@@ -15,7 +15,7 @@ export const useWinSize = () => {
   useEffect(() => {
     window.addEventListener('resize', updateWindowSize);
     return () => window.removeEventListener('resize', updateWindowSize);
-  }, []);
+  }, [updateWindowSize]);
 
-  return { winWidth, winHeight };
+  return { winWidth, setWinWidth, winHeight, setWinHeight };
 };

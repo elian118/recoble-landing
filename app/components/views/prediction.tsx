@@ -26,13 +26,13 @@ export const Prediction = () => {
             파악할 수 있어요.
           </p>
         </div>
-        <div className="prediction-swiper-container content card-graph">
+        <div className="prediction-swiper-container content card-graph invisible">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             autoplay={{
-              delay: 2500,
+              delay: 3000,
               disableOnInteraction: false,
             }}
           >

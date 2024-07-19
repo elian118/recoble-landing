@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const Preview = () => {
   return (
     <section className="preview-section">
-      <div className="m-6 content card-img bg-gray-200 sm:hidden">
+      <div className="m-6 content card-img bg-gray-200 sm:hidden invisible">
         <Image
           className="rounded-full ease-linear"
           src={composition as StaticImageData}
@@ -16,7 +16,7 @@ export const Preview = () => {
           unoptimized
         />
       </div>
-      <div className="flex flex-col content justify-center items-center gap-6 content card-text">
+      <div className="flex flex-col content justify-center items-center gap-6 content card-text invisible">
         <p className="text-3xl sm:text-5xl font-bold text-center sm:leading-tight">
           레코블의 인사이트를 통해
           <br />
@@ -37,7 +37,7 @@ export const Preview = () => {
           </div>
         </Link>
       </div>
-      <div className="m-6 content card-graph bg-gray-200 h-1/4 hidden sm:block">
+      <div className="m-6 content card-graph bg-gray-200 h-1/4 hidden sm:block invisible">
         <Image
           className="ease-linear sm:object-contain"
           src={mainImg as StaticImageData}

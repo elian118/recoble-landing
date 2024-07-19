@@ -79,7 +79,7 @@ body {
   }
 
   .fade-in {
-    animation: bounceIn 0.6s ease-in-out 1;
+    animation: bounceIn 0.8s ease-in-out 1;
   }
 
   .bouncing-ball {

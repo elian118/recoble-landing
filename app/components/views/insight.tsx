@@ -5,12 +5,12 @@ import Image, { StaticImageData } from 'next/image';
 export const Insight = () => {
   return (
     <section className="insight-section">
-      <div className="my-4 content card-graph">
+      <div className="mt-4 mb-4 xl:mt-14 content card-graph invisible">
         <Image src={graph1 as StaticImageData} alt="recoble composition" />
       </div>
       <div className="content card-text flex flex-col justify-center items-center gap-6">
         <p className="text-3xl sm:text-5xl font-semibold text-white text-center sm:leading-tight">
-          잠재 고객<span className="font-light">부터</span> 충성 고객까지
+          잠재 고객부터 충성 고객까지
           <br />
           모두 잡을 수 있어요!
         </p>

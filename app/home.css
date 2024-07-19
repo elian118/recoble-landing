@@ -4,22 +4,22 @@
 
 @layer components {
     .preview-section {
-        @apply w-full h-screen bg-gray-200;
+        @apply w-full h-screen bg-gray-200 overflow-clip;
         @apply flex flex-col justify-center items-center gap-6 p-2;
     }
 
     .analyze-section {
-        @apply w-full min-h-screen bg-gray-200 p-8;
+        @apply w-full min-h-screen bg-gray-200 p-8 overflow-clip;
         @apply flex flex-row justify-center items-center;
     }
 
     .insight-section {
-        @apply w-full h-screen bg-blue-600;
+        @apply w-full h-screen bg-blue-600 overflow-clip;
         @apply flex flex-col justify-center items-center gap-6 p-2;
     }
 
     .prediction-section {
-        @apply w-full min-h-screen bg-white p-2;
+        @apply w-full min-h-screen bg-white p-2 overflow-clip;
         @apply flex flex-row justify-center items-center;
     }
 
@@ -42,7 +42,7 @@
     }
 
     .personalization-section {
-        @apply w-full h-screen bg-blue-600 p-2;
+        @apply w-full h-screen bg-blue-600 p-2 overflow-clip;
         @apply flex flex-row justify-center items-center;
     }
 
@@ -63,12 +63,12 @@
     }
 
     .assert-recoble-section {
-        @apply w-full h-screen bg-black;
+        @apply w-full h-screen bg-black overflow-clip;
         @apply flex flex-col justify-start items-center;
     }
 
     .assert-recoble-container {
-        @apply bg-gray-100 w-full sm:h-3/4 xl:h-[90%] rounded-2xl;
+        @apply bg-gray-100 w-full h-full sm:h-3/4 md:h-4/5 xl:h-[90%] xl:mt-6 rounded-2xl;
         @apply lg:py-8 flex flex-wrap md:flex-nowrap;
         @apply justify-between gap-0 lg:gap-6 overflow-clip;
     }
