@@ -13,14 +13,14 @@ export const AssertRecoble = () => {
   return (
     <section className="assert-recoble-section">
       <div className="px-2 pt-24 sm:px-12 h-3/4 w-full">
-        <div id="assert-recoble-container" className={`assert-recoble-container`}>
+        <div className="assert-recoble-container">
           <div className="assert-recoble-text content card-text">
             <p className="assert-recoble-title">
               모든 이커머스 플랫폼의
               <br />
-              성공전략, <span className="font-semibold">레코블</span>
+              성공전략, <span className="font-bold">레코블</span>
             </p>
-            <p className="text-2xl font-semibold md:text-3xl xl:text-5xl lg:mt-6 text-center lg:text-start">
+            <p className="text-2xl font-bold md:text-3xl xl:text-[48px] lg:mt-6 text-center lg:text-start">
               지금 바로 확인해보세요
             </p>
           </div>

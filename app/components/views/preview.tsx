@@ -17,12 +17,12 @@ export const Preview = () => {
         />
       </div>
       <div className="flex flex-col content justify-center items-center gap-6 content card-text invisible">
-        <p className="text-3xl sm:text-5xl font-bold text-center sm:leading-tight">
+        <p className="text-3xl sm:text-5xl xl:text-[66px] font-bold text-center sm:leading-tight xl:leading-[72px]">
           레코블의 인사이트를 통해
           <br />
           고객을 놓치지 마세요!
         </p>
-        <p className="text-lg sm:text-2xl text-center leading-snug">
+        <p className="text-lg sm:text-2xl xl:text-26px font-[400px] text-center leading-snug xl:leading-[30px]">
           고객의 충성도와 구매력을 높이는 핵심은
           <br />
           고객경험 개선에 있습니다.
@@ -37,11 +37,12 @@ export const Preview = () => {
           </div>
         </Link>
       </div>
-      <div className="m-6 content card-graph bg-gray-200 h-1/4 hidden sm:block invisible">
+      <div className="content card-graph bg-gray-200 h-1/4 hidden sm:block invisible">
         <Image
           className="ease-linear sm:object-contain"
           src={mainImg as StaticImageData}
           alt="recoble composition"
+          style={{ width: 'auto', height: 'auto', maxHeight: 562 }}
         />
       </div>
     </section>

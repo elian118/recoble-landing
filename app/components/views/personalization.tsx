@@ -7,19 +7,21 @@ export const Personalization = () => {
     <section className="personalization-section">
       <div className="personalization-container">
         <div className="personalization-text content card-text">
-          <p className="text-white text-2xl">personalization</p>
+          <p className="text-white text-2xl xl:text-[26px] font-[600px]">
+            personalization
+          </p>
           <p className="personalization-title">
             개인화된 맞춤형
             <br />
             경험을 제공합니다.
           </p>
-          <p className="text-white text-lg sm:text-xl lg:mt-6 lg:mb-28 text-center md:text-start">
+          <p className="personalization-describe">
             고객에게 맞춤형 메시지를 보내어 브랜드에
             <br />
             대한 긍정적인 경험을 심어줄 수 있어요.
           </p>
         </div>
-        <div className="w-full sm:w-3/5 lg:w-1/2 justify-center lg:justify-end content card-graph invisible">
+        <div className="w-full sm:w-3/5 lg:w-1/2 xl:w-[715px] justify-center lg:justify-end content card-graph invisible">
           <Image
             src={personalizationSlide as StaticImageData}
             alt="recoble personalization"

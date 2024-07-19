@@ -6,15 +6,20 @@ export const Insight = () => {
   return (
     <section className="insight-section">
       <div className="mt-4 mb-4 xl:mt-14 content card-graph invisible">
-        <Image src={graph1 as StaticImageData} alt="recoble composition" />
+        <Image
+          src={graph1 as StaticImageData}
+          alt="recoble composition"
+          style={{ maxHeight: 468 }}
+        />
       </div>
       <div className="content card-text flex flex-col justify-center items-center gap-6">
-        <p className="text-3xl sm:text-5xl font-semibold text-white text-center sm:leading-tight">
-          잠재 고객부터 충성 고객까지
+        <p className="insight-title">
+          잠재 고객<span className="font-medium">부터</span> 충성 고객
+          <span className="font-medium">까지</span>
           <br />
           모두 잡을 수 있어요!
         </p>
-        <p className="text-lg sm:text-2xl text-white text-center font-light sm:leading-relaxed">
+        <p className="insight-text">
           마케팅비용을 써서 힘들게 모은 고객은&nbsp;
           <br className="sm:hidden" />
           무엇 때문에 이탈할까요? 😢
