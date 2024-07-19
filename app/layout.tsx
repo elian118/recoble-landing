@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Nanum_Gothic } from 'next/font/google';
 import './globals.css';
 import './home.css';
 import Footer from '@/components/footer';
@@ -8,14 +7,20 @@ import Modal from '@/components/modal';
 import { ReactNodeLayout } from '@/libs/types';
 import MenuBar from '@/components/menu-bar';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import localFont from 'next/font/local';
 
 // const inter = Inter({ subsets: ['latin'] });
 
-const nanumGothic = Nanum_Gothic({
-  subsets: ['latin'],
-  weight: ['400', '700', '800'],
-  style: ['normal'],
-  variable: '--nanumgothic',
+// const nanumGothic = Nanum_Gothic({
+//   subsets: ['latin'],
+//   weight: ['400', '700', '800'],
+//   style: ['normal'],
+//   variable: '--nanumgothic',
+// });
+
+const pretendard = localFont({
+  src: '../public/fonts/PretendardVariable.ttf',
+  variable: '--pretendard',
 });
 
 export const metadata: Metadata = {
@@ -38,7 +43,7 @@ export default function RootLayout({ children }: Readonly<ReactNodeLayout>) {
       모달 띄움 직후 스크롤바 추가 생성으로 인한 화면 추가 밀림을 방지하려면
       overflow-y-scroll 역시 최상단 html 요소에 삽입해야 한다. */
     <html lang="en" data-theme="myTheme" className="overflow-y-scroll">
-      <body className={`${nanumGothic.variable} relative`}>
+      <body className={`${pretendard.variable} relative`}>
         <ClientLayer>
           <MenuBar />
           {children}

@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         roboto: 'var(--roboto-text)',
         nanumgothic: 'var(--nanum-gothic)',
+        pretendard: 'var(--pretendard)',
       },
     },
   },

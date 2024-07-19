@@ -18,30 +18,34 @@ export const PlanTableElmView = ({ plan, pIdx }: PlanTableViewProps) => {
 
   return (
     <div className="plan-table-elms">
-      <div className={`text-3xl font-bold ${pIdx === 3 && 'text-blue-500'}`}>
-        {plan.title}
-      </div>
-      <div className="text-sm text-gray-500">({plan.mau})</div>
-      <div className="text-3xl h-12 my-4">
-        <span className="font-bold">
-          {(isSelectedMonthly ? plan.price.monthly : plan.price.yearly) ?? '가격문의'}
-        </span>
-        <span
-          style={{
-            display:
-              (isSelectedMonthly && plan.price.monthly) || !isSelectedMonthly
-                ? undefined
-                : 'none',
-          }}
+      <div className="px-8 pt-14 pb-6">
+        <div
+          className={`text-3xl font-bold ${pIdx === 3 && 'text-blue-500'} ${pIdx === 3 && 'xl:mt-6'}`}
         >
-          &nbsp;/ 월
-        </span>
-        <div className={`text-gray-500 text-sm mt-3 ${isSelectedMonthly && 'hidden'}`}>
-          {plan.price.standard}
+          {plan.title}
+        </div>
+        <div className="text-sm text-[#787f84]">({plan.mau})</div>
+        <div className="text-3xl h-12 mt-[40px]">
+          <span className="font-bold">
+            {(isSelectedMonthly ? plan.price.monthly : plan.price.yearly) ?? '가격문의'}
+          </span>
+          <span
+            className="text-[#787F84] text-[24px]"
+            style={{
+              display:
+                (isSelectedMonthly && plan.price.monthly) || !isSelectedMonthly
+                  ? undefined
+                  : 'none',
+            }}
+          >
+            &nbsp;/ 월
+          </span>
+          <div className={`text-gray-500 text-sm ${isSelectedMonthly && 'hidden'}`}>
+            {plan.price.standard}
+          </div>
         </div>
       </div>
-
-      <div className="flex flex-col gap-4 my-8 py-16 h-[200px]">
+      <div className="flex flex-col gap-6 my-8 pl-8 pr-4 py-14 h-[200px] border-t-[1px]">
         {plan.details.map((detail, idx) => (
           <div
             key={`${plan.title}-detail-${idx}`}
@@ -58,7 +62,7 @@ export const PlanTableElmView = ({ plan, pIdx }: PlanTableViewProps) => {
               alt={detail}
               style={{ width: 24, height: 24 }}
             />
-            <div className="font-light">{detail}</div>
+            <div className="font-[400px]">{detail}</div>
           </div>
         ))}
       </div>

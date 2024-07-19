@@ -1,15 +1,29 @@
 'use client';
 
-import React, { useContext } from 'react';
-import BackDecorateView from '@/app/pricing/components/views/back-decorate-view';
+import React, { useContext, useEffect } from 'react';
 import { PricingContext } from '@/app/pricing/pricing-context';
+import {
+  MobilePlanTableView,
+  PlanTableView,
+  BackDecorateView,
+} from '@/app/pricing/components/views';
+import BallDecorateView from '@/app/pricing/components/views/ball-decorate-view';
+import { useWinSize } from '@/libs/hooks';
 
 export const Banner = () => {
+  const { winWidth, setWinWidth } = useWinSize();
   const { isSelectedMonthlyState } = useContext(PricingContext);
   const [isSelectedMonthly, setIsSelectedMonthly] = isSelectedMonthlyState;
 
+  useEffect(() => {
+    setWinWidth(window.innerWidth);
+  }, [winWidth, setWinWidth]);
+
   return (
-    <div className="pricing-banner">
+    <div
+      className="pricing-banner"
+      style={{ height: winWidth > 640 && winWidth < 1700 ? 1770 : 1140 }}
+    >
       <p className="pricing-banner-title">Pricing plans</p>
       <p className="pricing-banner-description">
         기업의 단계별로 좀 더 세밀하고 합리적인
@@ -40,6 +54,11 @@ export const Banner = () => {
         </div>
       </div>
       <BackDecorateView />
+      <BallDecorateView />
+      <div className="absolute top-[500px] w-full flex justify-center">
+        <PlanTableView />
+        <MobilePlanTableView />
+      </div>
     </div>
   );
 };

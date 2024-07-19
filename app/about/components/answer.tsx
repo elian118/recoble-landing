@@ -1,11 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Ball from '@/components/ball';
 import { useWinSize } from '@/libs/hooks';
 
 export const Answer = () => {
-  const { winWidth } = useWinSize();
+  const { winWidth, setWinWidth } = useWinSize();
+
+  useEffect(() => {
+    setWinWidth(window.innerWidth);
+  }, [winWidth, setWinWidth]);
 
   return (
     <div className="answer">

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { plans } from '@/app/pricing/constants';
@@ -10,10 +10,14 @@ import { useWinSize } from '@/libs/hooks';
 export const MobilePlanTableView = () => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [swiper, setSwiper] = useState<SwiperClass>();
-  const { winWidth } = useWinSize();
+  const { winWidth, setWinWidth } = useWinSize();
 
   const handlePrev = () => swiper?.slidePrev();
   const handleNext = () => swiper?.slideNext();
+
+  useEffect(() => {
+    setWinWidth(window.innerWidth);
+  }, [winWidth, setWinWidth]);
 
   return (
     <div
