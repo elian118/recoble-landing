@@ -36,7 +36,7 @@ body {
   }
 
   .rapid-transition {
-    @apply transition-all duration-75 ease-in-out;
+    @apply transition-all duration-150 ease-in-out;
   }
 
   .base-transition {
@@ -52,7 +52,7 @@ body {
   }
 
   [data-theme="myTheme"] .btn {
-    @apply hover:scale-105 hover:font-bold;
+    @apply hover:scale-105;
   }
 
   [data-theme="myTheme"] .btn-ghost {

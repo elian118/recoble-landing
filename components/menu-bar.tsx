@@ -8,6 +8,7 @@ import ContactBtn from '@/components/contact-btn';
 import PopMenuBar from '@/components/pop-menu-bar';
 import Image, { StaticImageData } from 'next/image';
 import logo from '@/public/images/logo.png';
+import trademark from '@/public/images/trademark.png';
 import { Close, Hamburger } from '@/public/icons';
 import ModalBtn from '@/components/modal-btn';
 import { useModal } from '@/libs/hooks';
@@ -21,7 +22,7 @@ const MenuBar = () => {
 
   return (
     <div
-      className={`flex flex-row w-full h-16 justify-center items-center border-b-[1px] border-neutral-300 z-50
+      className={`flex flex-row w-full h-16 xl:h-[80px] justify-center items-center border-b-[1px] border-neutral-300 z-50
       ${!isValidRoute && 'hidden'} 
       ${!isOpen() && 'fixed'}
       ${
@@ -34,7 +35,7 @@ const MenuBar = () => {
     >
       <div
         className={`
-          navbar flex px-8 w-full xl:w-10/12 h-16 top-0 left-0 z-50 border-b-[1px] border-neutral-300
+          navbar flex px-0 md:px-8 w-full xl:w-[1320px] h-16 xl:h-[80px] top-0 left-0 z-50 border-b-[1px] border-neutral-300
           ${
             pathname === '/'
               ? 'bg-neutral-50'
@@ -49,14 +50,18 @@ const MenuBar = () => {
             className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn btn-ghost"
             href={'/'}
           >
-            <div className="size-12 flex items-center justify-center">
+            <div className="size-[43px] flex items-center justify-center">
               <Image
                 src={logo as StaticImageData}
                 alt="logo"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </div>
-            <span>Recoble</span>
+            <Image
+              src={trademark}
+              alt="trademark"
+              style={{ width: 'auto', height: 'auto' }}
+            />
           </Link>
         </div>
         <div className="navbar-center pt-1 xl:w-7/12">
