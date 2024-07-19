@@ -9,9 +9,6 @@ const FooterContents = () => {
       <p className="text-sm font-light md:text-md md:font-light">
         © Copyright 2024, All Rights Reserved by Recoble
       </p>
-      <br className="hidden md:flex" />
-      <br className="hidden md:flex" />
-      <br />
     </div>
   );
 };
