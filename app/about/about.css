@@ -5,18 +5,18 @@
 @layer components {
     .banner {
         @apply flex flex-col gap-4 w-full h-screen;
-        @apply justify-center items-center bg-blue-50;
+        @apply justify-center items-center bg-[#ebf4ff];
     }
 
     .q-list {
         @apply flex flex-col py-20;
-        @apply w-4/5 md:w-3/5 lg:w-2/3 xl:w-3/5 2xl:w-2/5 h-full;
+        @apply w-4/5 md:w-3/5 lg:w-2/3 xl:w-[900px] h-full;
     }
 
     .question {
         @apply flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-12;
-        @apply justify-center items-center;
-        @apply py-4 sm:py-6 lg:py-11 h-full border-b last:border-none;
+        @apply justify-center xl:justify-start items-center;
+        @apply px-0 py-4 sm:py-6 lg:py-10 w-full h-full border-b border-[#ededed] last:border-none;
     }
 
     .answer {
@@ -25,11 +25,11 @@
     }
 
     .answer-text {
-        @apply w-full h-64 md:h-80 lg:h-96 flex flex-col gap-2 lg:gap-6;
+        @apply w-full h-64 xl:h-[560px] md:h-80 lg:h-96 flex flex-col gap-2 lg:gap-6;
         @apply justify-center items-center;
-        @apply bg-blue-500 rounded-2xl;
-        @apply text-white text-lg sm:text-2xl md:text-3xl;
-        @apply overflow-clip relative;
+        @apply bg-blue-500 rounded-2xl font-[400px];
+        @apply text-white text-lg sm:text-2xl md:text-3xl xl:text-[36px] xl:leading-[72px];
+        @apply overflow-clip relative tracking-[-1px];
     }
 
     .answer-back {

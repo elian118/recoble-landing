@@ -29,7 +29,7 @@ const MenuBar = () => {
         pathname === '/'
           ? 'bg-neutral-50'
           : pathname === '/about'
-            ? 'bg-blue-50'
+            ? 'bg-[#ebf4ff]'
             : 'bg-white'
       }`}
     >
@@ -40,7 +40,7 @@ const MenuBar = () => {
             pathname === '/'
               ? 'bg-neutral-50'
               : pathname === '/about'
-                ? 'bg-blue-50'
+                ? 'bg-[#ebf4ff]'
                 : 'bg-white'
           }
           `}

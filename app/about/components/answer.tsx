@@ -13,6 +13,8 @@ export const Answer = () => {
 
   return (
     <div className="answer">
+      {/* 여백 박스 */}
+      <div className="w-full h-[80px] hidden: xl:block" />
       <div className="answer-text">
         <p>
           레코블은 고객의 문제점을&nbsp;
@@ -20,7 +22,7 @@ export const Answer = () => {
           정확히 파악하고
         </p>
         <p>빠르게 해결책을 제공할 수 있도록</p>
-        <p className="font-semibold leading-loose">
+        <p className="font-bold leading-loose">
           통합된 보고서 지원 및 AI 추천을&nbsp;
           <br className="flex sm:hidden" />
           제공하고 있습니다.

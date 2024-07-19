@@ -10,7 +10,7 @@ export const description: Description[] = [
     title: 'Service Improvement',
     titleColor: 'text-blue-600',
     comment: (
-      <p>
+      <p className="xl:leading-[42px]">
         서비스를 개선 하고 싶으나
         <br className="flex lg:hidden" />
         &nbsp;어떻게 진행해야 할지 막막하신가요?
@@ -22,7 +22,7 @@ export const description: Description[] = [
     title: 'solution',
     titleColor: 'text-green-500',
     comment: (
-      <p>
+      <p className="xl:leading-[42px]">
         구글 애널리틱스나 다른 플랫폼을 통해&nbsp;
         <br className="flex" />
         기본적인 수치는 알고 있으나&nbsp;
@@ -36,7 +36,7 @@ export const description: Description[] = [
     title: 'data decision making',
     titleColor: 'text-amber-400',
     comment: (
-      <p>
+      <p className="xl:leading-[42px]">
         데이터를 정리하여 의사결정 및 설득에
         <br className="flex lg:hidden" />
         &nbsp;어려움을 겪고 계신가요?
