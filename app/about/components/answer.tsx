@@ -27,28 +27,27 @@ export const Answer = () => {
       <Ball
         color="via-gray-100 to-gray-500"
         size="sm:size-8 size-6"
-        delay="delay-0"
         left={winWidth >= 768 ? '4%' : '10%'}
         top={winWidth >= 768 ? '30%' : '34%'}
       />
       <Ball
         color="via-yellow-400 to-yellow-800"
         size="sm:size-6 size-4"
-        delay="delay-0"
+        delay="animation-delay-base"
         right="8%"
         top={winWidth >= 768 ? '34%' : '40%'}
       />
       <Ball
         color="via-green-400 to-green-800"
         size="sm:size-4 size-2"
-        delay="delay-200"
+        delay="animation-delay-rapid"
         right={winWidth >= 768 ? '15%' : '12%'}
         bottom={winWidth >= 768 ? '34%' : '40%'}
       />
       <Ball
         color="via-blue-400 to-blue-800"
         size="sm:size-6 size-4"
-        delay="delay-700"
+        delay="animation-delay-slow"
         left="8.5%"
         bottom={winWidth >= 768 ? '38%' : '35%'}
       />

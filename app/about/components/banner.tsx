@@ -15,24 +15,18 @@ export const Banner = () => {
             alt="about recoble"
             priority
           />
-          <Ball
-            color="via-yellow-400 to-yellow-800"
-            size="size-4"
-            delay="delay-0"
-            left="27%"
-            top="18%"
-          />
+          <Ball color="via-yellow-400 to-yellow-800" size="size-4" left="27%" top="18%" />
           <Ball
             color="via-green-400 to-green-800"
             size="size-6"
-            delay="delay-200"
+            delay="animation-delay-base"
             left="0%"
             top="48%"
           />
           <Ball
             color="via-blue-400 to-blue-800"
             size="size-4"
-            delay="delay-700"
+            delay="animation-delay-slow"
             right="10%"
             top="40%"
           />

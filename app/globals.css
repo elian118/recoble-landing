@@ -93,6 +93,18 @@ body {
   .appear-up-down {
     animation: fade-in-up 0.8s ease-in-out 1;
   }
+
+  .animation-delay-rapid {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-base {
+    animation-delay: 1000ms;
+  }
+
+  .animation-delay-slow {
+    animation-delay: 1500ms;
+  }
 }
 
 /* 덜컹거림 */

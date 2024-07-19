@@ -15,21 +15,20 @@ const BackDecorateView = () => {
         <Ball
           color="via-yellow-400 to-yellow-800"
           size="sm:size-6 size-4"
-          delay="delay-0"
           right="40%"
           top="18%"
         />
         <Ball
           color="via-green-400 to-green-800"
           size="sm:size-10 size-8"
-          delay="delay-200"
+          delay="animation-delay-rapid"
           left={winWidth >= 660 ? '22%' : '5%'}
           top={winWidth >= 660 ? '43%' : '40%'}
         />
         <Ball
           color="via-blue-400 to-blue-800"
           size="sm:size-6 size-4"
-          delay="delay-700"
+          delay="animation-delay-base"
           right={winWidth >= 660 ? '24%' : '5%'}
           bottom={winWidth >= 660 ? '40%' : '35%'}
         />
