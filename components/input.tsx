@@ -14,7 +14,7 @@ export const _Input = (
       <input
         ref={ref}
         name={name}
-        className="p-4 bg-slate-50 rounded-md border-none disabled:bg-base-100"
+        className="px-2 py-2 sm:px-4 sm:py-4 bg-slate-50 rounded-md border-none disabled:bg-base-100"
         {...rest}
       />
       {errors?.map((err, idx) => (

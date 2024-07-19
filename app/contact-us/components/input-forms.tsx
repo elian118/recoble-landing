@@ -10,7 +10,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactUs } from '@/app/contact-us/actions';
 import { useModal } from '@/libs/hooks';
-import { PostInquiryRes } from '@/app/contact-us/types';
 
 export const InputForms = () => {
   const resetRef = useRef<HTMLInputElement>(null);
@@ -43,12 +42,12 @@ export const InputForms = () => {
 
   return (
     <div className="input-forms">
-      <div className="flex flex-col gap-1 w-full xl:w-8/12 mt-20">
-        <p className="text-4xl font-semibold">
+      <div className="flex flex-col gap-1 w-full xl:w-8/12 xl:mt-20">
+        <p className="mt-3 lg:mt-14 xl:mt-0 text-2xl sm:text-4xl font-semibold">
           <span className="text-blue-600">3개월간 무료</span>
           <span>로 사용해보세요</span>
         </p>
-        <p className="text-xl font-semibold">
+        <p className="text-base sm:text-xl font-semibold">
           <span className="text-red-500">!!</span> 추가비용은 없어요{' '}
           <span className="text-red-500">!!</span>
         </p>
@@ -80,9 +79,14 @@ export const InputForms = () => {
           errors={[errors.phone?.message ?? '']}
           {...register('phone')}
         />
-        <Button type="submit" fullWidth rounded>
-          제출하기
-        </Button>
+        <div
+          className="tooltip"
+          data-tip="기본 정보를 입력하시면 전담 컨설턴트가 고객의 고민과 문제를 파악해 규모/상황별 활용 방안을 안내해드려요."
+        >
+          <Button type="submit" fullWidth rounded>
+            제출하기
+          </Button>
+        </div>
         <input className="hidden" ref={resetRef} type="reset" />
       </form>
       <div className="contact-card fade-in">

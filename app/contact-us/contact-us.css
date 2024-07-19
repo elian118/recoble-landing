@@ -8,8 +8,8 @@
     }
 
     .guide {
-        @apply flex flex-col justify-start items-center gap-10 pt-44;
-        @apply bg-neutral-100 w-full lg:w-1/2 min-h-screen px-4 sm:px-8 xl:px-0;
+        @apply flex flex-col justify-center items-center gap-10;
+        @apply bg-neutral-100 w-full h-full lg:w-1/2 min-h-screen px-4 sm:px-8 xl:px-0;
     }
 
     .guide-text {
@@ -22,21 +22,24 @@
     }
 
     .input-forms {
-        @apply flex justify-start items-center flex-col;
-        @apply bg-white w-full lg:w-1/2 min-h-screen px-4 sm:px-8 xl:px-0 py-8 lg:py-14;
+        @apply flex justify-center items-center flex-col;
+        @apply bg-white w-full h-screen lg:w-1/2 px-4 sm:px-8 xl:px-0;
     }
 
     .contact-description {
+        @apply hidden sm:block;
         @apply py-2 font-light text-sm lg:text-base xl:text-lg;
     }
 
     .contact-form {
-        @apply flex flex-col gap-2 w-full xl:w-8/12 mt-8;
+        @apply flex flex-col justify-start gap-2 w-full;
+        @apply xl:w-8/12 mt-8 h-auto;
     }
 
     .contact-card {
         @apply flex flex-row flex-nowrap justify-between;
-        @apply w-full xl:w-8/12 bg-zinc-800 text-white px-12 py-10 overflow-clip;
-        @apply rounded-xl mt-12 md:gap-8 xl:gap-0;
+        @apply w-full xl:w-8/12 bg-zinc-800 text-white;
+        @apply px-8 py-6 sm:px-12 sm:py-10 overflow-clip;
+        @apply rounded-xl mt-6 md:gap-8 xl:gap-0;
     }
 }
