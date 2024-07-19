@@ -47,7 +47,7 @@
     }
 
     .prediction-swiper-container {
-        @apply w-full sm:w-2/3 lg:w-1/2 mb-8 xl:mb-0;
+        @apply w-11/12 h-2/5 sm:w-2/3 lg:w-1/2 mb-8 xl:mb-0 overflow-clip;
         @apply flex gap-12 justify-center lg:justify-start;
         @apply items-center flex-wrap md:flex-nowrap;
     }
@@ -58,7 +58,7 @@
     }
 
     .personalization-container {
-        @apply w-full md:w-11/12 xl:w-9/12 gap-24;
+        @apply w-full h-3/5 md:w-11/12 xl:w-9/12;
         @apply lg:gap-0 flex flex-wrap justify-center lg:justify-between items-center;
     }
 
