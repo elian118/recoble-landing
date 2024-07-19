@@ -1,13 +1,19 @@
 'use client';
 
-export const useThrottle = (callback: () => void, delay: number) => {
-  let timerId: any;
+import { useRef } from 'react';
 
-  return () => {
-    if (timerId) clearTimeout(timerId);
+export const useThrottle = <T extends any[]>(
+  callback: (...params: T) => void,
+  delay: number,
+) => {
+  let timerId = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    timerId = setTimeout(() => {
-      callback();
-    }, delay);
+  return (...params: T) => {
+    if (!timerId.current) {
+      timerId.current = setTimeout(() => {
+        callback(...params);
+        timerId.current = null;
+      }, delay);
+    }
   };
 };

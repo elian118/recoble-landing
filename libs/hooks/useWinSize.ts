@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useThrottle } from '@/libs/hooks/useThrottle';
+import { useThrottle } from '@/libs/hooks';
 
 export const useWinSize = () => {
   const [winWidth, setWinWidth] = useState<number>(0);

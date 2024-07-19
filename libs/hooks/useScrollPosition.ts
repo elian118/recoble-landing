@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useThrottle } from '@/libs/hooks/useThrottle';
+import { useThrottle } from '@/libs/hooks';
 
 export const useScrollPosition = () => {
   const [scrollX, setScrollX] = useState(0);

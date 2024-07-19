@@ -7,11 +7,12 @@ import {
   Personalization,
   Prediction,
   Preview,
+  AssertRecoble,
 } from '@/app/components/views';
-import AssertRecoble from '@/app/components/views/assert-recoble';
+import { useWinSize } from '@/libs/hooks';
 
 const HomeContainer = () => {
-  const winWidth = window.innerWidth;
+  const { winWidth } = useWinSize();
 
   useEffect(() => {
     const contentElems = document.querySelectorAll('.content');

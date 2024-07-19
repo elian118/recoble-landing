@@ -3,7 +3,7 @@ import assertRecobleSlide from '@/public/images/assert_recoble_slide.png';
 import Image, { StaticImageData } from 'next/image';
 import FooterInSection from '@/components/footer-in-section';
 
-const AssertRecoble = () => {
+export const AssertRecoble = () => {
   return (
     <section className="assert-recoble-section">
       <div className="px-2 pt-24 sm:px-12 h-3/4 w-full">
@@ -34,5 +34,3 @@ const AssertRecoble = () => {
     </section>
   );
 };
-
-export default AssertRecoble;
