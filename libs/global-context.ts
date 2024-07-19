@@ -9,7 +9,8 @@ export type ModalState = {
 };
 
 export type GlobalContextType = {
-  isOpenMobileState: [boolean, (val: boolean) => void];
+  isMobileDeviceState: [boolean, (val: boolean) => void];
+  isOpenMobileMenuState: [boolean, (val: boolean) => void];
   modalState: [modal: ModalState, setModal: (val: ModalState) => void];
 };
 
@@ -18,7 +19,8 @@ export const initModal: ModalState = {
 };
 
 export const initGlobalContext: GlobalContextType = {
-  isOpenMobileState: [false, () => {}],
+  isMobileDeviceState: [false, () => {}],
+  isOpenMobileMenuState: [false, () => {}],
   modalState: [{ isOpen: false }, () => {}],
 };
 

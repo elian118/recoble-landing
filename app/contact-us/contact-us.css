@@ -23,7 +23,7 @@
 
     .input-forms {
         @apply flex justify-center items-center flex-col;
-        @apply bg-white w-full h-screen lg:w-1/2 px-4 sm:px-8 xl:px-0;
+        @apply bg-white w-full h-screen lg:w-1/2 px-4 sm:px-8 xl:px-0 pt-8 sm:pt-0;
     }
 
     .contact-description {

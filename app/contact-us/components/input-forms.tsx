@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import Input from '@/components/input';
 import Button from '@/components/button';
 import Image, { StaticImageData } from 'next/image';
@@ -10,8 +10,12 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactUs } from '@/app/contact-us/actions';
 import { useModal } from '@/libs/hooks';
+import { GlobalContext } from '@/libs/global-context';
 
 export const InputForms = () => {
+  const { isMobileDeviceState } = useContext(GlobalContext);
+  const [isMobile] = isMobileDeviceState;
+
   const resetRef = useRef<HTMLInputElement>(null);
   const { openModal } = useModal();
   const {
@@ -79,8 +83,9 @@ export const InputForms = () => {
           errors={[errors.phone?.message ?? '']}
           {...register('phone')}
         />
+
         <div
-          className="tooltip"
+          className={`${isMobile && 'tooltip'}`}
           data-tip="기본 정보를 입력하시면 전담 컨설턴트가 고객의 고민과 문제를 파악해 규모/상황별 활용 방안을 안내해드려요."
         >
           <Button type="submit" fullWidth rounded>

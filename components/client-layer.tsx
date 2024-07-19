@@ -1,19 +1,28 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   initModal,
   GlobalContext,
   GlobalContextType,
   ModalState,
 } from '@/libs/global-context';
+import { isMobile } from '@/libs/utils';
 
 const ClientLayer = ({ children }: { children: React.ReactNode }) => {
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState<boolean>(false);
   const [modal, setModal] = useState<ModalState>(initModal);
 
+  useEffect(() => {
+    if (isMobile()) {
+      setIsMobileDevice(true);
+    }
+  }, []);
+
   const value: GlobalContextType = {
-    isOpenMobileState: [isOpenMobileMenu, setIsOpenMobileMenu],
+    isMobileDeviceState: [isMobileDevice, setIsMobileDevice],
+    isOpenMobileMenuState: [isOpenMobileMenu, setIsOpenMobileMenu],
     modalState: [modal, setModal],
   };
 
