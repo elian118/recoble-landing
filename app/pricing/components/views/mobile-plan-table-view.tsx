@@ -1,17 +1,16 @@
 'use client';
 
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { plans } from '@/app/pricing/constants';
 import { PlanTableElmView } from '@/app/pricing/components/views';
-import { GlobalContext } from '@/libs/global-context';
+import { useWinSize } from '@/libs/hooks';
 
 export const MobilePlanTableView = () => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [swiper, setSwiper] = useState<SwiperClass>();
-  const { winWidthState } = useContext(GlobalContext);
-  const [winWidth, setWinWidth] = winWidthState;
+  const { winWidth, setWinWidth } = useWinSize();
 
   const handlePrev = () => swiper?.slidePrev();
   const handleNext = () => swiper?.slideNext();

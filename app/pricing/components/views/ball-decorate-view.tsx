@@ -1,12 +1,11 @@
 'use client';
 
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Ball from '@/components/ball';
-import { GlobalContext } from '@/libs/global-context';
+import { useWinSize } from '@/libs/hooks';
 
 const BallDecorateView = () => {
-  const { winWidthState } = useContext(GlobalContext);
-  const [winWidth, setWinWidth] = winWidthState;
+  const { winWidth, setWinWidth } = useWinSize();
 
   useEffect(() => {
     setWinWidth(window.innerWidth);

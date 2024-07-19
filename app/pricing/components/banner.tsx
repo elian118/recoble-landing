@@ -3,16 +3,15 @@
 import React, { useContext, useEffect } from 'react';
 import { PricingContext } from '@/app/pricing/pricing-context';
 import {
+  BackDecorateView,
   MobilePlanTableView,
   PlanTableView,
-  BackDecorateView,
 } from '@/app/pricing/components/views';
 import BallDecorateView from '@/app/pricing/components/views/ball-decorate-view';
-import { GlobalContext } from '@/libs/global-context';
+import { useWinSize } from '@/libs/hooks';
 
 export const Banner = () => {
-  const { winWidthState } = useContext(GlobalContext);
-  const [winWidth, setWinWidth] = winWidthState;
+  const { winWidth, setWinWidth } = useWinSize();
   const { isSelectedMonthlyState } = useContext(PricingContext);
   const [isSelectedMonthly, setIsSelectedMonthly] = isSelectedMonthlyState;
 
