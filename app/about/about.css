@@ -10,18 +10,18 @@
 
     .q-list {
         @apply flex flex-col py-20;
-        @apply w-4/5 md:w-3/5 lg:w-2/3 xl:w-3/5 2xl:w-2/5 h-auto;
+        @apply w-4/5 md:w-3/5 lg:w-2/3 xl:w-3/5 2xl:w-2/5 h-full;
     }
 
     .question {
-        @apply flex flex-col lg:flex-row gap-4 lg:gap-12;
+        @apply flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-12;
         @apply justify-center items-center;
-        @apply py-6 lg:py-11 border-b last:border-none;
+        @apply py-4 sm:py-6 lg:py-11 h-full border-b last:border-none;
     }
 
     .answer {
-        @apply w-full h-full px-4 lg:w-10/12 lg:px-0 pt-40;
-        @apply flex flex-col justify-start items-center relative;
+        @apply w-full h-full px-4 lg:w-10/12 lg:px-0;
+        @apply flex flex-col justify-center items-center relative;
     }
 
     .answer-text {
