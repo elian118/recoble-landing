@@ -17,9 +17,8 @@ export const Analyze = () => {
             개선 방법을 손쉽게 찾아볼 수 있어요.
           </p>
         </div>
-        <div className="w-full sm:w-3/5 lg:w-1/2 content card-graph invisible">
+        <div className="w-full sm:w-3/5 lg:w-1/2 xl:w-[531px] content card-graph invisible">
           <Image
-            className="object-scale-down"
             src={imgHomeContent2 as StaticImageData}
             alt="recoble customer view"
             style={{ width: 'auto', height: 'auto' }}
