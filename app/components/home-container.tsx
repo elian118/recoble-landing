@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import {
   Analyze,
   AssertRecoble,
@@ -14,16 +14,19 @@ import { useDebounce, useWinSize } from '@/libs/hooks';
 const HomeContainer = () => {
   const { winWidth, setWinWidth } = useWinSize();
 
-  const setClassName = (tIdx: number) =>
-    tIdx === 0
-      ? 'appear'
-      : tIdx === 1
-        ? winWidth >= 400
-          ? 'fade-in'
-          : 'appear'
-        : tIdx === 2
-          ? 'appear-up-down'
-          : 'fade-in';
+  const setClassName = useCallback(
+    (tIdx: number) =>
+      tIdx === 0
+        ? 'appear'
+        : tIdx === 1
+          ? winWidth >= 400
+            ? 'fade-in'
+            : 'appear'
+          : tIdx === 2
+            ? 'appear-up-down'
+            : 'fade-in',
+    [winWidth],
+  );
 
   const animateIntersectingImg = useDebounce((targetElements: NodeListOf<Element>[]) => {
     targetElements.forEach((targets, tIdx) => {
