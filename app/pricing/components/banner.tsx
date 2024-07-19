@@ -8,10 +8,11 @@ import {
   BackDecorateView,
 } from '@/app/pricing/components/views';
 import BallDecorateView from '@/app/pricing/components/views/ball-decorate-view';
-import { useWinSize } from '@/libs/hooks';
+import { GlobalContext } from '@/libs/global-context';
 
 export const Banner = () => {
-  const { winWidth, setWinWidth } = useWinSize();
+  const { winWidthState } = useContext(GlobalContext);
+  const [winWidth, setWinWidth] = winWidthState;
   const { isSelectedMonthlyState } = useContext(PricingContext);
   const [isSelectedMonthly, setIsSelectedMonthly] = isSelectedMonthlyState;
 

@@ -21,7 +21,7 @@ export const Personalization = () => {
             대한 긍정적인 경험을 심어줄 수 있어요.
           </p>
         </div>
-        <div className="w-full sm:w-3/5 lg:w-1/2 xl:w-[715px] justify-center lg:justify-end content card-graph invisible">
+        <div className="personalization-image-container content card-graph">
           <Image
             src={personalizationSlide as StaticImageData}
             alt="recoble personalization"

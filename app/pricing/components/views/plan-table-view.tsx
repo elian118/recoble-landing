@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { plans } from '@/app/pricing/constants';
 import { PlanTableElmView } from '@/app/pricing/components/views';
-import { useWinSize } from '@/libs/hooks';
+import { GlobalContext } from '@/libs/global-context';
 
 export const PlanTableView = () => {
-  const { winWidth, setWinWidth } = useWinSize();
+  const { winWidthState } = useContext(GlobalContext);
+  const [winWidth, setWinWidth] = winWidthState;
 
   useEffect(() => {
     setWinWidth(window.innerWidth);

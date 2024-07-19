@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import {
   Analyze,
   AssertRecoble,
@@ -9,10 +9,12 @@ import {
   Prediction,
   Preview,
 } from '@/app/components/views';
-import { useDebounce, useWinSize } from '@/libs/hooks';
+import { useDebounce } from '@/libs/hooks';
+import { GlobalContext } from '@/libs/global-context';
 
 const HomeContainer = () => {
-  const { winWidth, setWinWidth } = useWinSize();
+  const { winWidthState } = useContext(GlobalContext);
+  const [winWidth, setWinWidth] = winWidthState;
 
   const setClassName = useCallback(
     (tIdx: number) =>

@@ -59,7 +59,7 @@
 
     .personalization-container {
         @apply w-full md:w-11/12 xl:w-9/12 gap-24;
-        @apply lg:gap-0 flex flex-wrap justify-center items-center;
+        @apply lg:gap-0 flex flex-wrap justify-center lg:justify-between items-center;
     }
 
     .personalization-text {
@@ -77,6 +77,11 @@
         @apply text-white text-lg sm:text-xl xl:text-[26px];
         @apply xl:leading-[40px] font-medium;
         @apply lg:mt-6 lg:mb-28 text-center md:text-start;
+    }
+
+    .personalization-image-container {
+        @apply w-full sm:w-3/5 lg:w-1/2 2xl:w-[715px];
+        @apply justify-center lg:justify-end invisible;
     }
 
     .assert-recoble-section {
