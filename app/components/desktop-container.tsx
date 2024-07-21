@@ -11,7 +11,7 @@ import {
 } from '@/app/components/views';
 import { useDebounce, useWinSize } from '@/libs/hooks';
 
-const HomeContainer = () => {
+const DesktopContainer = () => {
   const { winWidth, setWinWidth } = useWinSize();
 
   const setClassName = useCallback(
@@ -30,8 +30,6 @@ const HomeContainer = () => {
 
   const animateIntersectingImg = useDebounce((targetElements: NodeListOf<Element>[]) => {
     targetElements.forEach((targets, tIdx) => {
-      targets.forEach((t) => t.classList.add('visible'));
-      targets.forEach((t) => t.classList.remove('invisible'));
       targets.forEach((t) => t.classList.add(setClassName(tIdx)));
     });
   }, 600);
@@ -45,16 +43,13 @@ const HomeContainer = () => {
     const targetElements = [cardImages, cardGraphs, cardTexts];
 
     const observer = new IntersectionObserver((entries) => {
+      targetElements.forEach((targets, tIdx) => {
+        targets.forEach((t) => t.classList.remove('visible'));
+        targets.forEach((t) => t.classList.add('invisible'));
+        targets.forEach((t) => t.classList.remove(setClassName(tIdx)));
+      });
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateIntersectingImg(targetElements);
-        } else {
-          targetElements.forEach((targets, tIdx) => {
-            targets.forEach((t) => t.classList.remove('visible'));
-            targets.forEach((t) => t.classList.add('invisible'));
-            targets.forEach((t) => t.classList.remove(setClassName(tIdx)));
-          });
-        }
+        entry.isIntersecting && animateIntersectingImg(targetElements);
       });
     });
 
@@ -68,29 +63,15 @@ const HomeContainer = () => {
   }, [winWidth, setWinWidth, setClassName, animateIntersectingImg]);
 
   return (
-    <main className="flex flex-col items-center justify-between bg-white h-auto">
-      <div className="carousel carousel-vertical w-full h-screen">
-        <div className="carousel-item">
-          <Preview />
-        </div>
-        <div className="carousel-item">
-          <Insight />
-        </div>
-        <div className="carousel-item">
-          <Analyze />
-        </div>
-        <div className="carousel-item">
-          <Prediction />
-        </div>
-        <div className="carousel-item">
-          <Personalization />
-        </div>
-        <div className="carousel-item">
-          <AssertRecoble />
-        </div>
-      </div>
+    <main className="hidden xl:flex flex-col items-center justify-between bg-white h-auto">
+      <Preview />
+      <Insight />
+      <Analyze />
+      <Prediction />
+      <Personalization />
+      <AssertRecoble />
     </main>
   );
 };
 
-export default HomeContainer;
+export default DesktopContainer;
