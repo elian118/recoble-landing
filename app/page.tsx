@@ -1,14 +1,8 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import MobileContainer from '@/app/components/mobile-container';
-import DesktopContainer from '@/app/components/desktop-container';
+import HomeContainer from '@/app/components/home-container';
 
 export default function Home() {
-  return (
-    <>
-      <MobileContainer />
-      <DesktopContainer />
-    </>
-  );
+  return <HomeContainer />;
 }

@@ -11,7 +11,7 @@ import {
 } from '@/app/components/views';
 import { useDebounce, useWinSize } from '@/libs/hooks';
 
-const DesktopContainer = () => {
+const HomeContainer = () => {
   const { winWidth, setWinWidth } = useWinSize();
 
   const setClassName = useCallback(
@@ -30,6 +30,8 @@ const DesktopContainer = () => {
 
   const animateIntersectingImg = useDebounce((targetElements: NodeListOf<Element>[]) => {
     targetElements.forEach((targets, tIdx) => {
+      targets.forEach((t) => t.classList.add('visible'));
+      targets.forEach((t) => t.classList.remove('invisible'));
       targets.forEach((t) => t.classList.add(setClassName(tIdx)));
     });
   }, 600);
@@ -63,15 +65,29 @@ const DesktopContainer = () => {
   }, [winWidth, setWinWidth, setClassName, animateIntersectingImg]);
 
   return (
-    <main className="hidden xl:flex flex-col items-center justify-between bg-white h-auto">
-      <Preview />
-      <Insight />
-      <Analyze />
-      <Prediction />
-      <Personalization />
-      <AssertRecoble />
+    <main className="flex flex-col items-center justify-between bg-white h-auto">
+      <div className="carousel carousel-vertical w-full h-screen">
+        <div className="carousel-item">
+          <Preview />
+        </div>
+        <div className="carousel-item">
+          <Insight />
+        </div>
+        <div className="carousel-item">
+          <Analyze />
+        </div>
+        <div className="carousel-item">
+          <Prediction />
+        </div>
+        <div className="carousel-item">
+          <Personalization />
+        </div>
+        <div className="carousel-item">
+          <AssertRecoble />
+        </div>
+      </div>
     </main>
   );
 };
 
-export default DesktopContainer;
+export default HomeContainer;
