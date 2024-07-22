@@ -64,3 +64,50 @@ ___
 
 
 2. 웹스톰 > *.md 파일 > 오류 > 'HTML: 없음', 'Markdown: 없음' 선택
+
+
+3. 배포
+    
+    프로젝트 배포는 deploy 폴더 아래 restart_server.sh 파일을 실행해 간편하게 진행한다.<br/>
+    단, 맥에서 셀 스크립트를 실행하려면 아래와 같이 실행을 위한 환경을 로컬에 설정해야 한다.<br/><br/>
+
+   3-1. 홈브루에서 sshpass 설치<br/>
+    ```
+    brew install hudochenkov/sshpass/sshpass
+    ```
+   3-2 sshpass를 처음 실행하는 경우, 최초 ssh 원격 접속에 필요한 인증 수행 
+    - restart_server.sh 스크립트 중 아무거나 터미널에서 실행(반드시 ssh 이하 명령만)
+    ```
+    ssh  mjay@lab.bibly.kr "cd recoble_landing/recoble-landing/;git pull origin main"
+    ```
+    - 그러면 아래와 같이 연결을 계속 진행할 건지 물어본다. yes를 입력한다.
+    ```
+    ssh  mjay@lab.bibly.kr "cd recoble_landing/recoble-landing/;git pull origin main"
+    The authenticity of host 'lab.bibly.kr (112.218.103.78)' can't be established.
+    ED25519 key fingerprint is SHA256:CtO2s34zySuTXah8LCAL6ioy2x+GuEYHNoiuFqtohlI.
+    This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:4: lab.bigle.ai
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+    ```
+    다음 단계에서 비밀번호를 입력한다.
+    ```
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+    Warning: Permanently added 'lab.bibly.kr' (ED25519) to the list of known hosts.
+    mjay@lab.bibly.kr's password:
+    ```
+    비밀번호가 맞으면, 아래 로그가 뜨며 sshpass 실행에 필요한 최초 인증이 완료되고 명령 프롬프트로 복귀된다.
+    ```
+    From https://lab.bibly.kr/gitlab/recoble/recoble-landing
+    * branch            main       -> FETCH_HEAD
+    Already up to date.
+    ```
+   3-3. sh 파일 실행
+    - 비밀번호는 최초 ssh 원격 접속 인증에 사용한 것과 동일
+    - 모르면, mjay@ryencatchers.com 으로 문의
+    ```
+    sh restart_server.sh [원격접속 비밀번호]
+    ```
+    - 실행 안 될 경우, 아래 명령을 먼저 내려 권한 부여 후 sh 파일 실행
+    ```
+    chmod 755 restart_server.sh
+    ```
