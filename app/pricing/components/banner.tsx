@@ -36,8 +36,8 @@ export const Banner = () => {
       </p>
       <div className="pricing-tab">
         <span className="indicator-item badge badge-secondary badge-sm">
-          <div className="relative">
-            <span className="badge badge-secondary animate-ping absolute -top-2.5 -left-2.5" />
+          <div className="relative indicator">
+            <span className="badge badge-secondary badge-outline animate-ping absolute -top-2.5 -left-2.5" />
           </div>
         </span>
         <div

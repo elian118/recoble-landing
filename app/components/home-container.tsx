@@ -38,7 +38,7 @@ const HomeContainer = () => {
 
   useEffect(() => {
     setWinWidth(window.innerWidth);
-    const contentElems = document.querySelectorAll('.content');
+    const contentElems = document?.querySelectorAll('.content');
     const cardImages = document?.querySelectorAll('.card-img');
     const cardGraphs = document?.querySelectorAll('.card-graph');
     const cardTexts = document?.querySelectorAll('.card-text');
