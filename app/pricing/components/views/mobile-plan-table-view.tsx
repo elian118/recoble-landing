@@ -31,6 +31,7 @@ export const MobilePlanTableView = () => {
         onSwiper={(e) => {
           setSwiper(e);
         }}
+        onSlideChange={() => console.log('slide change')}
         pagination
       >
         {plans.map((plan, pIdx) => (
