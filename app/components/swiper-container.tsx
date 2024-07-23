@@ -53,9 +53,6 @@ const SwiperContainer = () => {
         direction="vertical"
         speed={1000}
         mousewheel
-        pagination={{
-          clickable: true,
-        }}
         slidesPerView={1}
         onSwiper={() => onChangeSlide()}
         onSlideChange={() => onChangeSlide()}

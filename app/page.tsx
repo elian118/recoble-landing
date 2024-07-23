@@ -6,7 +6,6 @@ import SwiperContainer from '@/app/components/swiper-container';
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between bg-white">
-      {/*<HomeContainer />*/}
       <SwiperContainer />
     </main>
   );
