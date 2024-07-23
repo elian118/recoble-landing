@@ -55,7 +55,7 @@ export const InputForms = () => {
           <span className="text-red-500">!!</span> 추가비용은 없어요{' '}
           <span className="text-red-500">!!</span>
         </p>
-        <p className="contact-description fade-in">
+        <p className="contact-description">
           기본 정보를 입력하시면 전담 컨설턴트가&nbsp;
           <br className="flex 2xl:hidden" />
           고객의 고민과 문제를 파악해
@@ -94,7 +94,7 @@ export const InputForms = () => {
         </div>
         <input className="hidden" ref={resetRef} type="reset" />
       </form>
-      <div className="contact-card fade-in">
+      <div className="contact-card">
         <div className="flex flex-col gap-3 w-2/5 min-w-[170px]">
           <p className="text-xl font-semibold">전화상담</p>
           <p className="font-bold text-xl">02-6954-0730</p>

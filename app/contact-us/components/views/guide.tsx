@@ -10,7 +10,6 @@ export const Guide = () => {
           <p className="text-3xl font-semibold">Recoble</p>
           <div className="max-h-96">
             <Image
-              className="fade-in"
               src={recobleImg as StaticImageData}
               alt="recoble home"
               // style={{ width: 'auto', height: 'auto' }}
@@ -18,7 +17,7 @@ export const Guide = () => {
           </div>
         </div>
       </div>
-      <div className="guide-text appear-up-down">
+      <div className="guide-text">
         <p className="text-xl md:text-2xl font-semibold">레코블을 사용해 보세요!</p>
         <ul className="guide-description">
           <li>

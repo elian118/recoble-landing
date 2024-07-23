@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Banner, QList, Answer } from '@/app/about/components';
+import { Banner, QList, Answer } from '@/app/about/components/views';
 import FooterInSection from '@/components/footer-in-section';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper/modules';
