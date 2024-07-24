@@ -11,6 +11,7 @@ export const Prediction = () => {
   return (
     <section className="prediction-section">
       <div className="prediction-section-container">
+        {/* invisible */}
         <div className="prediction-text content card-text">
           <p className="text-blue-600 text-2xl xl:text-[26px] font-semibold">
             Prediction
@@ -28,7 +29,8 @@ export const Prediction = () => {
             파악할 수 있어요.
           </p>
         </div>
-        <div className="prediction-swiper-container content card-graph invisible">
+        {/* invisible */}
+        <div className="prediction-swiper-container content card-graph">
           <Swiper
             modules={[Autoplay, Mousewheel]}
             spaceBetween={660}

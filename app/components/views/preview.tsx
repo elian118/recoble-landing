@@ -8,7 +8,8 @@ export const Preview = () => {
   return (
     <section className="preview-section">
       <div className="preview-section-container">
-        <div className="m-6 xl:m-0 content card-img bg-gray-200 sm:hidden invisible">
+        {/* invisible */}
+        <div className="m-6 xl:m-0 content card-img bg-gray-200 sm:hidden">
           <Image
             className="rounded-full ease-linear"
             src={composition as StaticImageData}
@@ -17,7 +18,8 @@ export const Preview = () => {
             unoptimized
           />
         </div>
-        <div className="flex flex-col content justify-center items-center gap-6 content card-text invisible pt-0 sm:pt-36">
+        {/* invisible */}
+        <div className="flex flex-col content justify-center items-center gap-6 content card-text pt-0 sm:pt-36">
           <p className="text-3xl sm:text-5xl xl:text-[66px] font-bold text-center sm:leading-tight xl:leading-[72px]">
             레코블의 인사이트를 통해
             <br />
@@ -38,7 +40,8 @@ export const Preview = () => {
             </div>
           </Link>
         </div>
-        <div className="content card-graph bg-gray-200 w-full hidden sm:flex justify-center items-end invisible">
+        {/* invisible */}
+        <div className="content card-graph bg-gray-200 w-full hidden sm:flex justify-center items-end">
           <Image
             className="ease-linear sm:object-contain xl:w-[1220px] xl:max-h-[562px] px-8 xl:px-0 h-2/5"
             src={mainImg as StaticImageData}

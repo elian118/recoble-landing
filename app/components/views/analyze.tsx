@@ -6,6 +6,7 @@ export const Analyze = () => {
   return (
     <section className="analyze-section">
       <div className="analyze-section-container">
+        {/* invisible */}
         <div className="flex flex-col gap-4 w-full items-center lg:items-start content card-text">
           <p className="text-blue-600 text-2xl xl:text-[26px] font-semibold">analyze</p>
           <p className="text-3xl sm:text-5xl xl:text-[52px] font-bold">
@@ -17,6 +18,7 @@ export const Analyze = () => {
             개선 방법을 손쉽게 찾아볼 수 있어요.
           </p>
         </div>
+        {/* invisible */}
         <Image
           className="object-contain w-[380px] xl:w-[531px] xl:[h-562px] content card-graph"
           src={imgHomeContent2 as StaticImageData}

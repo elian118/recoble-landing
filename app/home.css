@@ -102,7 +102,7 @@
 
     .personalization-image {
         @apply sm:w-3/5 lg:w-1/2 xl:w-[715px] xl:h-[445px];
-        @apply object-contain px-4 xl:px-0 invisible;
+        @apply object-contain px-4 xl:px-0;
     }
 
     .assert-recoble-section {

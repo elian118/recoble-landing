@@ -6,7 +6,8 @@ export const Insight = () => {
   return (
     <section className="insight-section">
       <div className="insight-section-container">
-        <div className="mt-4 mb-4 xl:mt-14 content card-graph invisible">
+        {/* invisible */}
+        <div className="mt-4 mb-4 xl:mt-14 content card-graph">
           <Image
             className="object-contain max-h-[468px]"
             src={graph1 as StaticImageData}
@@ -14,6 +15,7 @@ export const Insight = () => {
             style={{ height: 'auto' }}
           />
         </div>
+        {/* invisible */}
         <div className="content card-text flex flex-col justify-center items-center gap-6">
           <p className="insight-title">
             잠재 고객<span className="font-medium">부터</span> 충성 고객

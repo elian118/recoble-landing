@@ -92,7 +92,11 @@ body {
   }
 
   .appear-up-down {
-    animation: fade-in-up 0.8s ease-in-out 1;
+    /*animation: fade-in-up 0.8s ease-in-out 1;*/
+  }
+
+  .appear-down-up {
+    /*animation: fade-in-down 0.8s ease-in-out 1;*/
   }
 
   .animation-delay-rapid {
@@ -129,6 +133,17 @@ body {
   0% {
     opacity: 0;
     transform: translateY(-100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+/* 위에서 아래로 서서히 등장 */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
   }
   100% {
     opacity: 100%;

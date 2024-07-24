@@ -14,6 +14,7 @@ export const AssertRecoble = () => {
     <section className="assert-recoble-section">
       <div className="px-2 pt-24 sm:px-12 h-3/4 w-full">
         <div className="assert-recoble-container">
+          {/* invisible */}
           <div className="assert-recoble-text content card-text">
             <p className="assert-recoble-title">
               모든 이커머스 플랫폼의
@@ -24,7 +25,8 @@ export const AssertRecoble = () => {
               지금 바로 확인해보세요
             </p>
           </div>
-          <div className="pl-8 pt-6 lg:pt-0 md:pl-0 w-full md:w-1/2 flex justify-end content card-graph invisible">
+          {/* invisible */}
+          <div className="pl-8 pt-6 lg:pt-0 md:pl-0 w-full md:w-1/2 flex justify-end content card-graph">
             <Image
               className="object-contain object-right-bottom"
               src={assertRecobleSlide as StaticImageData}

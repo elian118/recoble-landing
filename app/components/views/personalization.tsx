@@ -6,6 +6,7 @@ export const Personalization = () => {
   return (
     <section className="personalization-section">
       <div className="personalization-container">
+        {/* invisible */}
         <div className="personalization-text content card-text">
           <p className="text-white text-2xl xl:text-[26px] font-semibold">
             personalization
@@ -21,6 +22,7 @@ export const Personalization = () => {
             대한 긍정적인 경험을 심어줄 수 있어요.
           </p>
         </div>
+        {/* invisible */}
         <Image
           className="personalization-image content card-graph"
           src={personalizationSlide as StaticImageData}
