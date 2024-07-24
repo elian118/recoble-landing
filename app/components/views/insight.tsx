@@ -7,9 +7,10 @@ export const Insight = () => {
     <section className="insight-section">
       <div className="mt-4 mb-4 xl:mt-14 content card-graph invisible">
         <Image
+          className="object-contain max-h-[468px]"
           src={graph1 as StaticImageData}
           alt="recoble composition"
-          style={{ maxHeight: 468 }}
+          style={{ width: 'auto', height: 'auto' }}
         />
       </div>
       <div className="content card-text flex flex-col justify-center items-center gap-6">

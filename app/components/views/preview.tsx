@@ -39,10 +39,10 @@ export const Preview = () => {
       </div>
       <div className="content card-graph bg-gray-200 w-full hidden sm:flex justify-center items-end invisible">
         <Image
-          className="ease-linear sm:object-contain xl:w-[1220px] px-8 h-2/5"
+          className="ease-linear sm:object-contain xl:w-[1220px] xl:max-h-[562px] px-8 h-2/5"
           src={mainImg as StaticImageData}
           alt="recoble composition"
-          style={{ width: 'auto', height: 'auto', maxHeight: 562 }}
+          style={{ width: 'auto', height: 'auto' }}
         />
       </div>
     </section>
