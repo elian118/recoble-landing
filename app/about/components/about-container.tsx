@@ -1,22 +1,15 @@
 'use client';
 
 import React from 'react';
-import { Banner, QList, Answer } from '@/app/about/components/views';
+import { Answer, Banner, QList } from '@/app/about/components/views';
 import FooterInSection from '@/components/footer-in-section';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { SwiperSlide } from 'swiper/react';
+import VerticalScreenSwiper from '@/components/vertical-screen-swiper';
 
 const AboutContainer = () => {
   return (
     <div className="w-full h-full">
-      <Swiper
-        className="h-screen" // 수직(vertical) 방향이면 반드시 높이를 지정해야 버그가 없다.
-        modules={[Mousewheel]}
-        direction="vertical"
-        speed={1000}
-        mousewheel
-        slidesPerView={1}
-      >
+      <VerticalScreenSwiper>
         <SwiperSlide>
           <Banner />
         </SwiperSlide>
@@ -33,7 +26,7 @@ const AboutContainer = () => {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>
+      </VerticalScreenSwiper>
     </div>
   );
 };

@@ -10,8 +10,8 @@ import {
   Preview,
 } from '@/app/components/views';
 import { useDebounce } from '@/libs/hooks';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { SwiperSlide } from 'swiper/react';
+import VerticalScreenSwiper from '@/components/vertical-screen-swiper';
 
 const SwiperContainer = () => {
   const setClassName = (tIdx: number) =>
@@ -29,7 +29,7 @@ const SwiperContainer = () => {
       targets.forEach((t) => t.classList.remove('invisible'));
       targets.forEach((t) => t.classList.add(setClassName(tIdx)));
     });
-  }, 600);
+  }, 800);
 
   const onChangeSlide = () => {
     const cardImages = document?.querySelectorAll('.card-img');
@@ -47,13 +47,7 @@ const SwiperContainer = () => {
 
   return (
     <div className="w-full h-full">
-      <Swiper
-        className="h-screen" // 수직(vertical) 방향이면 반드시 높이를 지정해야 버그가 없다.
-        modules={[Mousewheel]}
-        direction="vertical"
-        speed={1000}
-        mousewheel
-        slidesPerView={1}
+      <VerticalScreenSwiper
         onSwiper={() => onChangeSlide()}
         onSlideChange={() => onChangeSlide()}
       >
@@ -75,7 +69,7 @@ const SwiperContainer = () => {
         <SwiperSlide>
           <AssertRecoble />
         </SwiperSlide>
-      </Swiper>
+      </VerticalScreenSwiper>
     </div>
   );
 };
