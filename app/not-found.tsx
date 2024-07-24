@@ -12,7 +12,7 @@ const NotFound = () => {
         className="animate-bounce"
         src={notFoundImg as StaticImageData}
         alt="페이지를 찾을 수 없습니다."
-        style={{ width: 'auto', height: 'auto' }}
+        style={{ height: 'auto' }}
       />
       <p className="text-gray-900 text-5xl font-semibold fade-in"> Page not found...</p>
       <Link

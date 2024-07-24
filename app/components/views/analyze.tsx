@@ -5,8 +5,8 @@ import Image, { StaticImageData } from 'next/image';
 export const Analyze = () => {
   return (
     <section className="analyze-section">
-      <div className="w-full h-full md:w-11/12 xl:w-10/12 flex flex-col lg:flex-row justify-center lg:justify-between items-center">
-        <div className="flex flex-col gap-4 w-full items-center xl:pl-24 lg:items-start lg:w-3/5 content card-text">
+      <div className="analyze-section-container">
+        <div className="flex flex-col gap-4 w-full items-center lg:items-start content card-text">
           <p className="text-blue-600 text-2xl xl:text-[26px] font-semibold">analyze</p>
           <p className="text-3xl sm:text-5xl xl:text-[52px] font-bold">
             고객을 깊이 탐구하세요
@@ -17,14 +17,12 @@ export const Analyze = () => {
             개선 방법을 손쉽게 찾아볼 수 있어요.
           </p>
         </div>
-        <div className="w-full sm:w-3/5 p-10 xl:p-0 lg:w-2/5 flex justify-end content card-graph invisible">
-          <Image
-            className="object-contain xl:w-[531px] xl:[h-562px]"
-            src={imgHomeContent2 as StaticImageData}
-            alt="recoble customer view"
-            style={{ width: 'auto', height: 'auto' }}
-          />
-        </div>
+        <Image
+          className="object-contain w-[380px] xl:w-[531px] xl:[h-562px] content card-graph"
+          src={imgHomeContent2 as StaticImageData}
+          alt="recoble customer view"
+          style={{ height: 'auto' }}
+        />
       </div>
     </section>
   );

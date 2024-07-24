@@ -12,7 +12,7 @@ export const Guide = () => {
             <Image
               src={recobleImg as StaticImageData}
               alt="recoble home"
-              // style={{ width: 'auto', height: 'auto' }}
+              // style={{ height: 'auto' }}
             />
           </div>
         </div>

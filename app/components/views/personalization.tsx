@@ -7,7 +7,7 @@ export const Personalization = () => {
     <section className="personalization-section">
       <div className="personalization-container">
         <div className="personalization-text content card-text">
-          <p className="text-white text-2xl xl:text-[26px] font-[600px]">
+          <p className="text-white text-2xl xl:text-[26px] font-semibold">
             personalization
           </p>
           <p className="personalization-title">
@@ -21,14 +21,12 @@ export const Personalization = () => {
             대한 긍정적인 경험을 심어줄 수 있어요.
           </p>
         </div>
-        <div className="personalization-image-container content card-graph">
-          <Image
-            className="xl:w-[715px] xl:h-[445px] object-contain px-4 xl:px-0"
-            src={personalizationSlide as StaticImageData}
-            alt="recoble personalization"
-            style={{ width: 'auto', height: 'auto' }}
-          />
-        </div>
+        <Image
+          className="personalization-image content card-graph"
+          src={personalizationSlide as StaticImageData}
+          alt="recoble personalization"
+          style={{ height: 'auto' }}
+        />
       </div>
     </section>
   );

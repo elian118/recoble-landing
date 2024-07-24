@@ -29,7 +29,7 @@ export const AssertRecoble = () => {
               className="object-contain object-right-bottom"
               src={assertRecobleSlide as StaticImageData}
               alt="Recommand you Recoble!"
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ height: 'auto' }}
             />
           </div>
         </div>

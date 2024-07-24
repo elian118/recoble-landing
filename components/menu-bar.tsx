@@ -35,7 +35,7 @@ const MenuBar = () => {
     >
       <div
         className={`
-          navbar flex px-0 md:px-8 w-full xl:w-[1320px] h-16 xl:h-[80px] top-0 left-0 z-50 border-b-[1px] border-neutral-300
+          navbar flex px-0 md:px-8 xl:px-0 xl:mx-2 w-full xl:w-[1320px] h-16 xl:h-[80px] top-0 left-0 z-50 border-b-[1px] border-neutral-300
           ${
             pathname === '/'
               ? 'bg-neutral-50'
@@ -47,22 +47,20 @@ const MenuBar = () => {
       >
         <div className="navbar-start">
           <Link
-            className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn btn-ghost"
+            className="flex xl:p-0 items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn btn-ghost"
             href={'/'}
           >
-            <div className="flex items-center justify-center">
-              <Image
-                className="size-[43px] object-contain"
-                src={logo as StaticImageData}
-                alt="logo"
-                style={{ width: 'auto', height: 'auto' }}
-              />
-            </div>
+            <Image
+              className="size-[43px] object-contain flex items-center justify-center"
+              src={logo as StaticImageData}
+              alt="logo"
+              style={{ height: 'auto' }}
+            />
             <Image
               className="w-[110px] object-contain"
               src={trademark}
               alt="trademark"
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ height: 'auto' }}
             />
           </Link>
         </div>
@@ -95,7 +93,7 @@ const MenuBar = () => {
             >
               로그인
             </ModalBtn>
-            <div className="hidden lg:flex min-w-[110px]">
+            <div className="hidden lg:flex">
               <ContactBtn />
             </div>
             <label className="btn btn-circle btn-ghost swap swap-rotate xl:hidden">

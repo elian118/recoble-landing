@@ -5,7 +5,12 @@
 @layer components {
     .preview-section {
         @apply w-full h-screen min-h-[420px] bg-gray-200 overflow-clip;
-        @apply flex flex-col justify-center sm:justify-between items-center gap-6 px-2;
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .preview-section-container {
+        @apply w-full xl:max-w-[1320px] h-full px-2;
+        @apply flex flex-col justify-center sm:justify-between items-center gap-6;
     }
 
     .analyze-section {
@@ -13,9 +18,19 @@
         @apply flex flex-col justify-center items-center;
     }
 
+    .analyze-section-container {
+        @apply w-full md:w-11/12 xl:w-full xl:max-w-[1320px] px-2;
+        @apply flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-8;
+    }
+
     .insight-section {
         @apply w-full h-screen bg-blue-600 overflow-clip;
-        @apply flex flex-col justify-center items-center gap-6 p-2;
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .insight-section-container {
+        @apply w-full xl:max-w-[1320px] px-8 xl:px-2;
+        @apply flex flex-col justify-center items-center gap-6;
     }
 
     .insight-title {
@@ -34,8 +49,13 @@
         @apply flex flex-col justify-center items-center;
     }
 
+    .prediction-section-container {
+        @apply w-full md:w-11/12 lg:w-9/12 xl:w-full xl:max-w-[1320px];
+        @apply flex flex-wrap justify-center xl:justify-between items-center;
+    }
+
     .prediction-text {
-        @apply my-8 xl:my-0;
+        @apply my-8 xl:my-0 xl:pl-2;
         @apply flex flex-col gap-4 w-full;
         @apply items-center xl:items-start lg:w-2/3 xl:w-2/5 xl:min-w-[400px];
     }
@@ -59,13 +79,13 @@
     }
 
     .personalization-container {
-        @apply w-full h-3/5 md:w-11/12 xl:w-9/12 gap-6;
+        @apply w-full h-3/5 md:w-11/12 xl:w-full xl:max-w-[1320px] px-2 gap-6;
         @apply lg:gap-0 flex flex-wrap justify-center lg:justify-between items-center;
     }
 
     .personalization-text {
         @apply flex flex-col gap-4 w-full;
-        @apply items-center lg:items-start lg:w-1/2 xl:w-2/5
+        @apply items-center lg:items-start lg:w-1/2 xl:w-2/5;
     }
 
     .personalization-title {
@@ -80,9 +100,9 @@
         @apply lg:mt-6 lg:mb-28 text-center md:text-start;
     }
 
-    .personalization-image-container {
-        @apply w-full sm:w-3/5 lg:w-1/2;
-        @apply justify-center lg:justify-end invisible;
+    .personalization-image {
+        @apply sm:w-3/5 lg:w-1/2 xl:w-[715px] xl:h-[445px];
+        @apply object-contain px-4 xl:px-0 invisible;
     }
 
     .assert-recoble-section {
@@ -91,7 +111,8 @@
     }
 
     .assert-recoble-container {
-        @apply bg-[#d8e1e8] w-full h-full sm:h-3/4 md:h-4/5 xl:h-[96%] xl:max-h-[716px] xl:mt-6 rounded-2xl;
+        @apply bg-[#d8e1e8] w-full h-full sm:h-3/4 md:h-4/5 xl:h-[96%];
+        @apply xl:max-h-[716px] xl:mt-6 rounded-2xl;
         @apply lg:py-8 flex flex-wrap md:flex-nowrap;
         @apply justify-between gap-0 lg:gap-6 overflow-clip;
     }

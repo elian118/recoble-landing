@@ -104,7 +104,7 @@ export const InputForms = () => {
           className="w-3/5 xl:3/5"
           src={contactImg as StaticImageData}
           alt="contact image"
-          style={{ width: 'auto', height: 'auto' }}
+          style={{ height: 'auto' }}
         />
       </div>
     </div>

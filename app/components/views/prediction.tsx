@@ -10,9 +10,11 @@ import { Autoplay, Mousewheel } from 'swiper/modules';
 export const Prediction = () => {
   return (
     <section className="prediction-section">
-      <div className="w-full md:w-11/12 xl:w-9/12 flex flex-wrap justify-center xl:justify-between items-center">
+      <div className="prediction-section-container">
         <div className="prediction-text content card-text">
-          <p className="text-blue-600 text-2xl xl:text-[26px]">Prediction</p>
+          <p className="text-blue-600 text-2xl xl:text-[26px] font-semibold">
+            Prediction
+          </p>
           <p className="prediction-title">
             문제를 발견하여
             <br />
@@ -43,28 +45,28 @@ export const Prediction = () => {
               <Image
                 src={predict1 as StaticImageData}
                 alt="recoble customer view"
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ height: 'auto' }}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
                 src={predict2 as StaticImageData}
                 alt="recoble customer view"
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ height: 'auto' }}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
                 src={predict3 as StaticImageData}
                 alt="recoble customer view"
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ height: 'auto' }}
               />
             </SwiperSlide>
             <SwiperSlide>
               <Image
                 src={predict4 as StaticImageData}
                 alt="recoble customer view"
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ height: 'auto' }}
               />
             </SwiperSlide>
           </Swiper>
