@@ -5,7 +5,7 @@
 @layer components {
     .preview-section {
         @apply w-full h-screen min-h-[420px] bg-gray-200 overflow-clip;
-        @apply flex flex-col justify-center items-center gap-6 p-2;
+        @apply flex flex-col justify-center sm:justify-between items-center gap-6 px-2;
     }
 
     .analyze-section {

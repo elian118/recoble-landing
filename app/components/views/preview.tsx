@@ -16,7 +16,7 @@ export const Preview = () => {
           unoptimized
         />
       </div>
-      <div className="flex flex-col content justify-center items-center gap-6 content card-text invisible">
+      <div className="flex flex-col content justify-center items-center gap-6 content card-text invisible pt-0 sm:pt-36">
         <p className="text-3xl sm:text-5xl xl:text-[66px] font-bold text-center sm:leading-tight xl:leading-[72px]">
           레코블의 인사이트를 통해
           <br />
@@ -37,9 +37,9 @@ export const Preview = () => {
           </div>
         </Link>
       </div>
-      <div className="content card-graph bg-gray-200 h-1/4 hidden sm:block invisible">
+      <div className="content card-graph bg-gray-200 w-full hidden sm:flex justify-center items-end invisible">
         <Image
-          className="ease-linear sm:object-contain"
+          className="ease-linear sm:object-contain xl:w-[1220px] px-8 h-2/5"
           src={mainImg as StaticImageData}
           alt="recoble composition"
           style={{ width: 'auto', height: 'auto', maxHeight: 562 }}

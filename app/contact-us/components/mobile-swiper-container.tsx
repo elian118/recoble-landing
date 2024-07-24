@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Guide, InputForms } from '@/app/contact-us/components/views';
 import { Mousewheel } from 'swiper/modules';
 
-const SwiperContainer = () => {
+const MobileSwiperContainer = () => {
   return (
     <div className="lg:hidden w-full h-full">
       <Swiper
@@ -27,4 +27,4 @@ const SwiperContainer = () => {
   );
 };
 
-export default SwiperContainer;
+export default MobileSwiperContainer;
