@@ -11,27 +11,24 @@ import logo from '@/public/images/logo.png';
 import trademark from '@/public/images/trademark.png';
 import { Close, Hamburger } from '@/public/icons';
 import ModalBtn from '@/components/modal-btn';
-import { useModal } from '@/libs/hooks';
 import { useMobileMenu } from '@/libs/hooks';
 
 const MenuBar = () => {
   const { isOpenMobileMenu, setIsOpenMobileMenu } = useMobileMenu();
   const pathname = usePathname();
-  const { isOpen } = useModal();
   const isValidRoute = menus.map((e) => e.pathName).includes(pathname);
 
   return (
     <div
-      className={`flex flex-row w-full h-16 xl:h-[80px] justify-center items-center border-b-[1px] border-neutral-300 z-50
-      ${!isValidRoute && 'hidden'} 
-      ${!isOpen() && 'fixed'}
-      ${
-        pathname === '/'
-          ? 'bg-neutral-50'
-          : pathname === '/about'
-            ? 'bg-[#ebf4ff]'
-            : 'bg-white'
-      }`}
+      className={`menu-bar
+        ${!isValidRoute && 'hidden'} 
+        ${
+          pathname === '/'
+            ? 'bg-neutral-50'
+            : pathname === '/about'
+              ? 'bg-[#ebf4ff]'
+              : 'bg-white'
+        }`}
     >
       <div
         className={`
@@ -80,7 +77,7 @@ const MenuBar = () => {
           </div>
         </div>
         <div className="navbar-end">
-          <div className="flex flex-row gap-6 justify-end items-center text-gray-900">
+          <div className="flex flex-row gap-6 justify-end items-center text-gray-900 pr-2">
             {/*<Link*/}
             {/*  className="hidden lg:flex font-normal btn btn-ghost min-w-[50px] text-base"*/}
             {/*  href={'/home'}*/}

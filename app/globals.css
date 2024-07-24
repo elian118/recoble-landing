@@ -73,10 +73,16 @@ body {
     @apply border-gray-900 hover:border-transparent;
   }
 
+  .menu-bar {
+    @apply w-screen h-16 xl:h-[80px];
+    @apply flex flex-row justify-center items-center;
+    @apply border-b-[1px] border-neutral-300 z-50 fixed;
+  }
+
   .pop-menu-bar {
-    @apply bg-white z-20;
-    @apply flex xl:hidden flex-col gap-4 base-transition;
-    @apply w-full px-8 py-4 bg-white border fixed top-16 left-0;
+    @apply bg-white border z-20;
+    @apply xl:hidden base-transition;
+    @apply w-screen px-8 py-4 fixed top-16 left-0;
   }
 
   .fade-in {
