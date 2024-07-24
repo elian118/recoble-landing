@@ -14,8 +14,12 @@ export const PlanTableView = () => {
 
   return (
     <div
-      className={`plan-table plan-table-align hidden sm:flex ${winWidth >= 1536 && winWidth <= 1740 ? 'z-10' : ''}`}
-      style={{ width: winWidth >= 1280 && winWidth < 1547 ? '55%' : undefined }}
+      className={`
+        plan-table plan-table-align hidden sm:flex
+        ${winWidth >= 971 && winWidth < 1024 ? 'w-[85%]' : ''}
+        ${winWidth >= 1280 && winWidth < 1547 ? 'w-[55%]' : ''}
+        ${winWidth >= 1536 && winWidth <= 1740 ? 'z-10' : ''}
+      `}
     >
       {plans.map((plan, pIdx) => (
         <PlanTableElmView key={plan.title} plan={plan} pIdx={pIdx} />
