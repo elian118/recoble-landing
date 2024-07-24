@@ -22,7 +22,7 @@ export const Banner = () => {
   return (
     <div
       className="pricing-banner"
-      style={{ height: winWidth > 640 && winWidth < 1700 ? 1770 : 1140 }}
+      style={{ height: winWidth > 640 && winWidth < 1547 ? 1770 : 1140 }}
     >
       <p className="pricing-banner-title">Pricing plans</p>
       <p className="pricing-banner-description">

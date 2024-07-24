@@ -41,7 +41,7 @@
 
     .plan-table {
         @apply bg-transparent rounded-lg px-4;
-        @apply px-0 py-0 xl:py-6 2xl:py-0 w-full xl:w-8/12;
+        @apply px-0 py-0 xl:py-6 2xl:py-0 w-full lg:w-8/12 xl:w-9/12;
         @apply overflow-clip;
     }
 
