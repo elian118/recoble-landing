@@ -47,7 +47,8 @@
     }
 
     .prediction-swiper-container {
-        @apply w-11/12 h-2/5 sm:h-auto sm:w-2/3 lg:w-1/2 mb-8 xl:mb-0 overflow-clip;
+        @apply w-11/12 h-2/5 sm:h-auto sm:w-2/3 lg:w-1/2 xl:max-w-[910px] xl:max-h-[520px];
+        @apply mb-8 xl:mb-0 overflow-clip;
         @apply flex gap-12 justify-center lg:justify-start;
         @apply items-center flex-wrap md:flex-nowrap;
     }
@@ -80,7 +81,7 @@
     }
 
     .personalization-image-container {
-        @apply w-full sm:w-3/5 lg:w-1/2 2xl:w-[715px];
+        @apply w-full sm:w-3/5 lg:w-1/2;
         @apply justify-center lg:justify-end invisible;
     }
 

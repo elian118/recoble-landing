@@ -50,14 +50,16 @@ const MenuBar = () => {
             className="flex items-center gap-4 text-3xl font-semibold cursor-pointer text-gray-900 btn btn-ghost"
             href={'/'}
           >
-            <div className="size-[43px] flex items-center justify-center">
+            <div className="flex items-center justify-center">
               <Image
+                className="size-[43px] object-contain"
                 src={logo as StaticImageData}
                 alt="logo"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <Image
+              className="w-[110px] object-contain"
               src={trademark}
               alt="trademark"
               style={{ width: 'auto', height: 'auto' }}

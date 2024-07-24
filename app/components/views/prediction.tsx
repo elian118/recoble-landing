@@ -28,6 +28,7 @@ export const Prediction = () => {
         </div>
         <div className="prediction-swiper-container content card-graph invisible">
           <Swiper
+            className=""
             modules={[Autoplay, Mousewheel]}
             spaceBetween={20}
             slidesPerView={1}

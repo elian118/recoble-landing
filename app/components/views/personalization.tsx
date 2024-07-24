@@ -23,7 +23,7 @@ export const Personalization = () => {
         </div>
         <div className="personalization-image-container content card-graph">
           <Image
-            className="object-contain"
+            className="xl:w-[715px] xl:h-[445px] object-contain px-4 xl:px-0"
             src={personalizationSlide as StaticImageData}
             alt="recoble personalization"
             style={{ width: 'auto', height: 'auto' }}
